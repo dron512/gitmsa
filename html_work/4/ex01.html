@@ -1,0 +1,41 @@
+<!-- html,css -> javascript -> vuejs -->
+<!-- java spring springboot -->
+<!-- database -->
+<!-- aws 서버구축 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input-a">
+    <input type="text" id="input-b">
+    <div id="my-div"></div>
+    <div id="reusult">출력공간</div>
+</body>
+</html>
+<script>
+    const myDiv = document.getElementById("my-div");
+    const inputA = document.getElementById("input-a");
+    const inputB = document.getElementById("input-b");
+    const result = document.getElementById("result");
+
+    myDiv.addEventListener('click',()=>{
+        const a = 10;
+        const b = 20;
+        alert(a);
+        alert(b);
+        alert(inputA.value);
+        alert(inputB.value);
+        result.textContent = inputA.value+ inputB.value;
+    })
+</script>
