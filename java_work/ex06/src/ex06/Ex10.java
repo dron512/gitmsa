@@ -15,7 +15,7 @@ package ex06;
  * 
  * 다 하신분은 위의 문제를 함수호출로 변경해보세요....
 
- 변경
+ 변경변경변경
 */
 public class Ex10 {
 	public static void main(String[] args) {
