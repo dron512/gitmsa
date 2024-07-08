@@ -14,6 +14,8 @@ package ex06;
  * 4. for 문을 while 문으로 변경하시오
  * 
  * 다 하신분은 위의 문제를 함수호출로 변경해보세요....
+
+ 변경
 */
 public class Ex10 {
 	public static void main(String[] args) {
