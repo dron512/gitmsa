@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".slider").bxSlider({
+                auto: true,
+                speed: 300,
+                nextSelector: '#slider-next',
+                prevSelector: '#slider-prev',
+                nextText: 'Go next →',
+                prevText: '← Go back'
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1 class="logo">Logo</h1>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#" class="sign">Sign in</a></li>
+                    <li><a href="#" class="register">Register</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="prevnext">
+            <span id="slider-prev"></span>
+            <span id="slider-next"></span>
+        </div>
+        <div class="slide" style="background-color: white;">
+            <div class="slider">
+                <div>
+                    <img src="images/aaa.jpg" />
+                    I am a slide.
+                </div>
+                <div>
+                    <img src="images/bbb.jpg" />
+                    I am another slide.
+                </div>
+                <div>
+                    <img src="images/ccc.jpg" />
+                    I am AAA slide.
+                </div>
+                <div>
+                    <img src="images/ddd.png" />
+                    I am BBB slide.
+                </div>
+            </div>
+        </div>
+        <div class="heading">
+            <h1>Heading</h1>
+            <h2>SubHeading</h2>
+            <div class="sub-heading">
+                <div>
+                    <h1>홍길동</h1>
+                    <p>
+                        😊 내사랑내곁에<br>
+                        황당하다
+                    </p>
+                </div>
+                <div>
+                    <h1>박길동</h1>
+                    <p>
+                        😊 내사랑내곁에<br>
+                        황당하다
+                    </p>
+                </div>
+                <div>
+                    <h1>김길동</h1>
+                    <p>
+                        😊 내사랑내곁에<br>
+                        황당하다
+                    </p>
+                </div>
+            </div>
+            <div class="sub-heading">
+                <div>
+                    <h1>홍길동</h1>
+                    <p>
+                        😊 내사랑내곁에<br>
+                        황당하다
+                    </p>
+                </div>
+                <div>
+                    <h1>박길동</h1>
+                    <p>
+                        😊 내사랑내곁에<br>
+                        황당하다
+                    </p>
+                </div>
+                <div>
+                    <h1>김길동</h1>
+                    <p>
+                        😊 내사랑내곁에<br>
+                        황당하다
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
