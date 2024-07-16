@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            margin: 30px;
+            line-height: 100px;
+            text-transform: uppercase;
+        }
+        li{ 
+            list-style: none;
+            display: inline-block;
+        }
+        .container{
+            background-color: #475c5c;
+            width: 1140px;
+            margin: 0 auto;
+            height: 100px;
+        }
+        .active{
+            border: 1px solid white;
+        }
+        a{
+            border: 1px solid 475c5c;
+        }
+        a:hover{
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li><a class="active" href="#" id="menu1">MENU1</a></li>
+            <li><a href="#" id="menu2">abcdef</a></li>
+            <li><a href="#" id="menu3">newMenu</a></li>
+            <li><a href="#" id="menu4">SignIn</a></li>
+            <li><a href="#" id="menu5">SignUP</a></li>
+        </ul>
+        <div id="div1">
+            <p>애국가(愛國歌)는 ‘나라를 사랑하는 노래’라는 뜻이에요. 우리나라는 애국가에 특별한 이름을 붙이지 않고 국가(國歌)로 사용하고 있어요.
+                오늘날 불리고 있는 애국가 노랫말은 우리나라가 외세의 침략으로 위기에 처해있던 시기(1907년 전후)에 나라 사랑하는 마음과 우리 민족의 자주의식을 북돋우기 위해 만들어진 것으로 보여져요.
+                그 후 여러 선각자의 손을 거쳐 현재와 같은 내용을 담게 되었는데 이 노랫말에 붙여진 곡조는 스코틀랜드 민요 ‘올드 랭 사인 (Auld Lang Syne)’ 이었답니다. 당시 해외에서 활동 중이던 작곡가 안익태(安益泰) 선생은 애국가에 남의 나라 곡을 붙여 부르는 것을 안타깝게 여겨 1935년에 오늘날의 애국가를 작곡하였다고 해요.
+                1948년 대한민국 정부가 수립된 이후 현재의 애국가가 정부의 공식행사에서 불려지고, 교과서에도 실리면서 전국적으로 불려지기 시작했답니다.
+                한 세기 가까운 세월 동안 슬플 때나 기쁠 때나 우리 겨레와 운명을 같이 해 온 애국가를 부를 때마다 우리 모두 선조들의 나라 사랑 정신을 새롭게 되새겨보아요.</p>
+        </div>
+        <div id="div2">
+            <p>북한 또한 광복 이후 정부수립 전까지 올드 랭 사인 곡조에 맞춘 애국가를 사용했다. 그러다가 1948년 중순부터는 새로 제작한 애국가를 사용하기 시작한다.
+                그 영향 덕분인지 옛 배경의 일부 드라마에서도 이 가곡의 음을 붙여 부르기도 한다. 실제로 야인시대에서 김좌진 앞에서 독립군 병사들이 애국가를 부르는 장면과 이후 만해 한용운이 애국가를 부르는 장면 모두 이 가곡의 음으로 불렀다.
+                2021년 8월 15일, 홍범도 장군 유해송환식에서 홍범도 장군 생전에 불리었던 올드랭 사인 애국가가 제창됐다. # [5]
+                탈북한 국군포로 조창호 중위도 한국에 돌아온 이후 올드랭 사인 애국가를 제창하는 모습을 보여주었는데, 한국전쟁 시기까지도 올드랭 사인 애국가가 꽤 불렸다는 것을 짐작할 수 있는 대목이다.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    $(document).ready( function(){ 
+        $('#menu1').mouseenter( function(){  $('#div1').fadeIn(); } );
+        $('#menu1').mouseleave( function(){  $('#div1').fadeOut(); } );
+        $('#menu2').click( function(){  $('#div2').fadeToggle(); } );
+     } );
+</script>

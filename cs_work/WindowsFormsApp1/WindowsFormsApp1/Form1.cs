@@ -21,6 +21,9 @@ namespace WindowsFormsApp1
         {
             int a = 10;
             MessageBox.Show("Test "+ a);
+
+            Button sendBtn = (Button)sender;
+            sendBtn.Text = "3";
         }
     }
 }
