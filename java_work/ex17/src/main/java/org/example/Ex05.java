@@ -26,6 +26,8 @@ public class Ex05 {
         return max;
     }
     public static void main(String[] args) {
+        char st = 'A';
+        System.out.println((int)st);
         int[] arr = {10,20,5,9,35,100};
 
         System.out.println("최솟값 = "+minValue(arr));
