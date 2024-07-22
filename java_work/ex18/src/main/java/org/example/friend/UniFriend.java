@@ -6,10 +6,14 @@ public class UniFriend extends Friend{
         super(name,phone);
         this.major = major;
     }
+
+    @Override
     public void showInfo(){
         super.showInfo();
         System.out.println("전공 = "+major);
     }
+
+    public void doA(){}
 
     @Override
     public String toString() {

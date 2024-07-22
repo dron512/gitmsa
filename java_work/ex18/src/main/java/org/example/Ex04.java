@@ -10,6 +10,7 @@ public class Ex04 {
 
     public static void main(String[] args) {
 
+
         int cnt = 0;
         Friend friend[] = new Friend[10];
 
