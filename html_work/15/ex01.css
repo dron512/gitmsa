@@ -18,7 +18,7 @@ li{
     margin: 0 auto;
     padding: 2rem;
     width: 70%;
-    background-color: pink;
+    background-color: rgb(245, 201, 208);
     border-radius: 1rem;
 }
 .container ul{
@@ -38,7 +38,7 @@ input{
     padding: 10px;
 }
 input:focus{
-    border: 3px solid rgb(237, 106, 106);
+    border: 3px solid rgb(165, 30, 30);
 }
 .btn-div{
     margin-top: 1rem;
