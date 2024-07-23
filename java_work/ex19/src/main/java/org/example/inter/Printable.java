@@ -9,4 +9,12 @@ public interface Printable {
 
     void print(String mydoc);
 
+    default void clean(){
+        System.out.println("청소기능 추가");
+    }
+
+    static void printLine(){
+        System.out.println("한줄출력할때 줄바꿈.....");
+    }
+
 }
