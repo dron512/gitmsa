@@ -18,7 +18,7 @@ public class Ex05 {
         ABox<Integer> box1 = new ABox<>();
         box1.setOb(99);
         ABox<Integer> box2 = new ABox<>();
-        box1.setOb(55);
+        box2.setOb(55);
         System.out.println(box1.getOb() + " & " + box2.getOb());
 //        swapBox(box1,box2);
         System.out.println(box1.getOb() + " & " + box2.getOb());
