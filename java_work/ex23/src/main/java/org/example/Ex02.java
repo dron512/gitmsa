@@ -11,6 +11,18 @@ public class Ex02 {
 
         BB bb1 = BoxFactory.getMyBox1(new Box<>(new BB()));
         AA aa1 = BoxFactory.getMyBox1(new Box<>(new AA()));
+
+        Object obj = new Object();
+        String str = "asdfsadf";
+
+        System.out.println(obj.getClass());
+        System.out.println(str.getClass());
+
+        obj = str;
+        System.out.println(obj.getClass());
+        int a = 10;
+        obj = a;
+        System.out.println(obj.getClass());
     }
 
 }
