@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,200px);
+        }
+        .box1{
+            background-color: yellow;
+            grid-column: 1/4;
+        }
+        .box2{
+            grid-row: 2/4;
+            background-color: green;
+        }
+        .box3{
+            background-color: black;
+            grid-column: 2/4;
+            grid-row-start: 2;
+            color: white;
+        }
+        .box4{
+            grid-column-start: 3;
+            grid-row-start: 3;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="items box1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, neque placeat. Eum
+            illo vero omnis, eaque dolore quisquam quod ab magni dolorem ipsam velit aliquam esse, nemo rem quae. Alias.
+        </div>
+        <div class="items box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cumque culpa voluptate
+            natus, quam vitae aperiam molestias omnis incidunt enim reiciendis sed porro eligendi nam libero, qui itaque
+            ut esse.</div>
+        <div class="items box3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, quis? Doloremque tempora
+            maxime in cum tempore consequuntur minima laudantium soluta, ut nostrum quod explicabo quasi dicta deleniti,
+            vitae architecto eveniet?</div>
+        <div class="items box4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga rerum odio, dolorum amet unde
+            distinctio laborum eius dolores odit quibusdam, doloribus nobis dignissimos inventore eligendi labore
+            repudiandae voluptatem, nulla natus?</div>
+        <div class="items">Lorem, ipsum dolor</div>
+    </div>
+</body>
+</html>
