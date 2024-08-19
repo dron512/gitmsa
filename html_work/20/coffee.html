@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container mx-auto flex flex-col">
+        <div class="flex py-2 space-x-3 border border-gray-200 border-b-0">
+            <div class="pl-3">
+                <i class="fa-sharp-duotone fa-solid fa-bell text-xl"></i>
+            </div>
+            <div>
+                <i class="fa-sharp-duotone fa-solid fa-barcode text-xl"></i>
+            </div>
+            <div class="flex-1 flex justify-center cursor-pointer">
+                <span class="rounded-full p-4 hover:bg-gray-100">
+                    <i class="fa-sharp-duotone fa-solid fa-mug-hot text-5xl"></i>
+                </span>
+            </div>
+            <div>
+                <i class="fa-sharp-duotone fa-solid fa-magnifying-glass text-xl"></i>
+            </div>
+            <div class="pr-3">
+                <i class="fa-sharp-duotone fa-solid fa-cart-shopping text-xl"></i>
+            </div>
+        </div>
+        <div class="border border-gray-200 py-3 border-t-0">
+            <ul class="flex justify-around text-xl">
+                <li>커피</li>
+                <li>에이드</li>
+                <li>스무디</li>
+                <li>티</li>
+                <li>디저트</li>
+                <li>MD</li>
+            </ul>
+        </div>
+        <div class="h-96 bg-gray-100 flex items-center justify-center">
+            <h1>로그인</h1>
+        </div>
+        <div class="h-20">
+            <h1>내용</h1>
+        </div>
+    </div>
+</body>
+
+</html>
