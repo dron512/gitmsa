@@ -21,6 +21,12 @@ public class Main {
             if(cho==1){
                 dbRepository.insert();
             }
+            else if(cho==2){
+                dbRepository.select();
+            }
+            else if(cho==3){
+                dbRepository.update();
+            }
             else if(cho==4){
                 dbRepository.delete();
             }
