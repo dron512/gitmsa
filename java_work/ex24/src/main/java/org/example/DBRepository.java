@@ -94,9 +94,15 @@ public class DBRepository {
             // sql구문 실행
             rs = pstmt.executeQuery();
             while(rs.next()){
-                System.out.println("idx = "+rs.getInt("idx"));
-                System.out.println("name =  "+rs.getString("name"));
-                System.out.println("age =  "+rs.getInt("age"));
+//                System.out.println("idx = "+rs.getInt("idx"));
+//                System.out.println("name =  "+rs.getString("name"));
+//                System.out.println("age =  "+rs.getInt("age"));
+                System.out.println("""
+                        idx = %d
+                        name = %s age = %d
+                        """.formatted( rs.getInt("idx"),
+                                        rs.getString("name"),
+                                        rs.getInt("age") ));
             }
         }catch (Exception e){
             e.printStackTrace();
