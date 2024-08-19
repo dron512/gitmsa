@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class DBMain {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         DBRepository dbRepository = new DBRepository();
+
         while(true){
             System.out.println("""
                     뭐할래?
