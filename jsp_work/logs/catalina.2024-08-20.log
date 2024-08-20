@@ -1,0 +1,1292 @@
+20-Aug-2024 10:13:14.186 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ì„œë²„ ë²„ì „ ì´ë¦„:    Apache Tomcat/10.1.28
+20-Aug-2024 10:13:14.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ë¹Œë“œ ì‹œê°:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:13:14.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ë²„ì „ ë²ˆí˜¸:  10.1.28.0
+20-Aug-2024 10:13:14.189 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ìš´ì˜ì²´ì œ ì´ë¦„:     Windows 10
+20-Aug-2024 10:13:14.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ìš´ì˜ì²´ì œ ë²„ì „:     10.0
+20-Aug-2024 10:13:14.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ì•„í‚¤í…ì²˜:          amd64
+20-Aug-2024 10:13:14.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ìë°” í™ˆ:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:13:14.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ë²„ì „:          17.0.11+7-LTS-207
+20-Aug-2024 10:13:14.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ë²¤ë”:          Oracle Corporation
+20-Aug-2024 10:13:14.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:13:14.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:13:14.203 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:13:14.203 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:13:14.203 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:13:14.203 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:13:14.203 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:13:14.204 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:13:14.204 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:13:14.204 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:13:14.218 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent í”„ë¡œë•ì…˜ í™˜ê²½ë“¤ì—ì„œ ìµœì ì˜ ì„±ëŠ¥ì„ ì œê³µí•˜ëŠ”, APR ê¸°ë°˜ Apache Tomcat Native ë¼ì´ë¸ŒëŸ¬ë¦¬ê°€, ë‹¤ìŒ java.library.pathì—ì„œ ë°œê²¬ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:13:14.441 INFO [main] org.apache.coyote.AbstractProtocol.init í”„ë¡œí† ì½œ í•¸ë“¤ëŸ¬ ["http-nio-8080"]ì„(ë¥¼) ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
+20-Aug-2024 10:13:14.463 INFO [main] org.apache.catalina.startup.Catalina.load [467] ë°€ë¦¬ì´ˆ ë‚´ì— ì„œë²„ê°€ ì´ˆê¸°í™”ë˜ì—ˆìŠµë‹ˆë‹¤.
+20-Aug-2024 10:13:14.499 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ì§€ì •ëœ ì‚¬ìš©ì ë°ì´í„°ë² ì´ìŠ¤ [conf/tomcat-users.xml]ì„(ë¥¼) ì°¾ì„ ìˆ˜ ì—†ì—ˆìŠµë‹ˆë‹¤.
+20-Aug-2024 10:13:14.506 INFO [main] org.apache.catalina.core.StandardService.startInternal ì„œë¹„ìŠ¤ [Catalina]ì„(ë¥¼) ì‹œì‘í•©ë‹ˆë‹¤.
+20-Aug-2024 10:13:14.506 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ì„œë²„ ì—”ì§„ì„ ì‹œì‘í•©ë‹ˆë‹¤: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:13:14.529 INFO [main] org.apache.coyote.AbstractProtocol.start í”„ë¡œí† ì½œ í•¸ë“¤ëŸ¬ ["http-nio-8080"]ì„(ë¥¼) ì‹œì‘í•©ë‹ˆë‹¤.
+20-Aug-2024 10:13:14.640 INFO [main] org.apache.catalina.startup.Catalina.start ì„œë²„ê°€ [176] ë°€ë¦¬ì´ˆ ë‚´ì— ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤.
+20-Aug-2024 10:30:09.339 INFO [main] org.apache.catalina.core.StandardServer.await ì…§ë‹¤ìš´ í¬íŠ¸ë¥¼ í†µí•´ ìœ íš¨í•œ ì…§ë‹¤ìš´ ëª…ë ¹ì„ ë°›ì•˜ìŠµë‹ˆë‹¤. ì„œë²„ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ì¤‘ì§€ì‹œí‚µë‹ˆë‹¤.
+20-Aug-2024 10:30:09.340 INFO [main] org.apache.coyote.AbstractProtocol.pause í”„ë¡œí† ì½œ í•¸ë“¤ëŸ¬ ["http-nio-8080"]ì„(ë¥¼) ì¼ì‹œ ì •ì§€ ì¤‘
+20-Aug-2024 10:30:09.458 INFO [main] org.apache.catalina.core.StandardService.stopInternal ì„œë¹„ìŠ¤ [Catalina]ì„(ë¥¼) ì¤‘ì§€ì‹œí‚µë‹ˆë‹¤.
+20-Aug-2024 10:30:09.460 INFO [main] org.apache.coyote.AbstractProtocol.stop í”„ë¡œí† ì½œ í•¸ë“¤ëŸ¬ ["http-nio-8080"]ì„(ë¥¼) ì¤‘ì§€ì‹œí‚µë‹ˆë‹¤.
+20-Aug-2024 10:30:09.476 INFO [main] org.apache.coyote.AbstractProtocol.destroy í”„ë¡œí† ì½œ í•¸ë“¤ëŸ¬ ["http-nio-8080"]ì„(ë¥¼) ì†Œë©¸ì‹œí‚µë‹ˆë‹¤.
+20-Aug-2024 10:30:14.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ì„œë²„ ë²„ì „ ì´ë¦„:    Apache Tomcat/10.1.28
+20-Aug-2024 10:30:14.486 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ë¹Œë“œ ì‹œê°:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:30:14.487 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ë²„ì „ ë²ˆí˜¸:  10.1.28.0
+20-Aug-2024 10:30:14.487 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ìš´ì˜ì²´ì œ ì´ë¦„:     Windows 10
+20-Aug-2024 10:30:14.487 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ìš´ì˜ì²´ì œ ë²„ì „:     10.0
+20-Aug-2024 10:30:14.487 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ì•„í‚¤í…ì²˜:          amd64
+20-Aug-2024 10:30:14.487 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ìë°” í™ˆ:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:30:14.488 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ë²„ì „:          17.0.11+7-LTS-207
+20-Aug-2024 10:30:14.488 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ë²¤ë”:          Oracle Corporation
+20-Aug-2024 10:30:14.488 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:30:14.488 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:30:14.501 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:30:14.501 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:30:14.501 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:30:14.501 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:30:14.501 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:30:14.502 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:30:14.502 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:30:14.502 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ëª…ë ¹ í–‰ ì•„ê·œë¨¼íŠ¸:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:30:14.520 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent í”„ë¡œë•ì…˜ í™˜ê²½ë“¤ì—ì„œ ìµœì ì˜ ì„±ëŠ¥ì„ ì œê³µí•˜ëŠ”, APR ê¸°ë°˜ Apache Tomcat Native ë¼ì´ë¸ŒëŸ¬ë¦¬ê°€, ë‹¤ìŒ java.library.pathì—ì„œ ë°œê²¬ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:30:14.753 INFO [main] org.apache.coyote.AbstractProtocol.init í”„ë¡œí† ì½œ í•¸ë“¤ëŸ¬ ["http-nio-8080"]ì„(ë¥¼) ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
+20-Aug-2024 10:30:14.788 INFO [main] org.apache.catalina.startup.Catalina.load [517] ë°€ë¦¬ì´ˆ ë‚´ì— ì„œë²„ê°€ ì´ˆê¸°í™”ë˜ì—ˆìŠµë‹ˆë‹¤.
+20-Aug-2024 10:30:14.825 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ì§€ì •ëœ ì‚¬ìš©ì ë°ì´í„°ë² ì´ìŠ¤ [conf/tomcat-users.xml]ì„(ë¥¼) ì°¾ì„ ìˆ˜ ì—†ì—ˆìŠµë‹ˆë‹¤.
+20-Aug-2024 10:30:14.831 INFO [main] org.apache.catalina.core.StandardService.startInternal ì„œë¹„ìŠ¤ [Catalina]ì„(ë¥¼) ì‹œì‘í•©ë‹ˆë‹¤.
+20-Aug-2024 10:30:14.831 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ì„œë²„ ì—”ì§„ì„ ì‹œì‘í•©ë‹ˆë‹¤: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:30:14.851 INFO [main] org.apache.coyote.AbstractProtocol.start í”„ë¡œí† ì½œ í•¸ë“¤ëŸ¬ ["http-nio-8080"]ì„(ë¥¼) ì‹œì‘í•©ë‹ˆë‹¤.
+20-Aug-2024 10:30:14.990 INFO [main] org.apache.catalina.startup.Catalina.start ì„œë²„ê°€ [202] ë°€ë¦¬ì´ˆ ë‚´ì— ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤.
+20-Aug-2024 10:33:10.571 INFO [main] org.apache.catalina.core.StandardServer.await ì…§ë‹¤ìš´ í¬íŠ¸ë¥¼ í†µí•´ ìœ íš¨í•œ ì…§ë‹¤ìš´ ëª…ë ¹ì„ ë°›ì•˜ìŠµë‹ˆë‹¤. ì„œë²„ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ì¤‘ì§€ì‹œí‚µë‹ˆë‹¤.
+20-Aug-2024 10:33:10.572 INFO [main] org.apache.coyote.AbstractProtocol.pause í”„ë¡œí† ì½œ í•¸ë“¤ëŸ¬ ["http-nio-8080"]ì„(ë¥¼) ì¼ì‹œ ì •ì§€ ì¤‘
+20-Aug-2024 10:33:10.680 INFO [main] org.apache.catalina.core.StandardService.stopInternal ì„œë¹„ìŠ¤ [Catalina]ì„(ë¥¼) ì¤‘ì§€ì‹œí‚µë‹ˆë‹¤.
+20-Aug-2024 10:33:10.683 INFO [main] org.apache.coyote.AbstractProtocol.stop í”„ë¡œí† ì½œ í•¸ë“¤ëŸ¬ ["http-nio-8080"]ì„(ë¥¼) ì¤‘ì§€ì‹œí‚µë‹ˆë‹¤.
+20-Aug-2024 10:33:10.698 INFO [main] org.apache.coyote.AbstractProtocol.destroy í”„ë¡œí† ì½œ í•¸ë“¤ëŸ¬ ["http-nio-8080"]ì„(ë¥¼) ì†Œë©¸ì‹œí‚µë‹ˆë‹¤.
+20-Aug-2024 10:33:12.866 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:33:12.869 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:33:12.869 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:33:12.869 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:33:12.869 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:33:12.870 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:33:12.870 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:33:12.870 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:33:12.870 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:33:12.870 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:33:12.870 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:33:12.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:33:12.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:33:12.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:33:12.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:33:12.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:33:12.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:33:12.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:33:12.884 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:33:12.898 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:33:13.100 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:33:13.122 INFO [main] org.apache.catalina.startup.Catalina.load [456] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:33:13.156 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:33:13.162 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:33:13.163 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:33:13.178 INFO [main] org.apache.coyote.AbstractProtocol.start ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:33:13.287 INFO [main] org.apache.catalina.startup.Catalina.start ¼­¹ö°¡ [164] ¹Ğ¸®ÃÊ ³»¿¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:34:26.764 INFO [main] org.apache.catalina.core.StandardServer.await ¼Ë´Ù¿î Æ÷Æ®¸¦ ÅëÇØ À¯È¿ÇÑ ¼Ë´Ù¿î ¸í·ÉÀ» ¹Ş¾Ò½À´Ï´Ù. ¼­¹ö ÀÎ½ºÅÏ½º¸¦ ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:34:26.764 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:34:26.877 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:34:26.879 INFO [main] org.apache.coyote.AbstractProtocol.stop ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:34:26.884 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:34:29.498 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:34:29.502 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:34:29.502 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:34:29.502 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:34:29.503 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:34:29.503 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:34:29.503 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:34:29.503 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:34:29.504 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:34:29.504 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:34:29.504 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:34:29.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:34:29.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:34:29.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:34:29.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:34:29.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:34:29.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:34:29.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:34:29.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:34:29.535 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:34:29.748 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:34:29.774 INFO [main] org.apache.catalina.startup.Catalina.load [461] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:34:29.803 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:34:29.813 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:34:29.813 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:34:29.829 INFO [main] org.apache.coyote.AbstractProtocol.start ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:34:29.946 INFO [main] org.apache.catalina.startup.Catalina.start ¼­¹ö°¡ [172] ¹Ğ¸®ÃÊ ³»¿¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:35:49.491 SEVERE [main] org.apache.tomcat.util.digester.Digester.fatalError [163] Çà [9] ¿­¿¡¼­ ½É°¢ÇÑ ÆÄ½Ì ¿À·ù ¹ß»ı
+	org.xml.sax.SAXParseException; systemId: file:/D:/work/jsp_work/conf/server.xml; lineNumber: 163; columnNumber: 9; The element type "Context" must be terminated by the matching end-tag "</Context>".
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1695)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1522)
+		at org.apache.catalina.startup.Catalina.parseServerXml(Catalina.java:603)
+		at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:634)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:393)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+20-Aug-2024 10:35:49.495 WARNING [main] org.apache.catalina.startup.Catalina.parseServerXml [D:\work\jsp_work\conf\server.xml](À¸)·ÎºÎÅÍ ¼­¹ö ¼³Á¤À» ·ÎµåÇÒ ¼ö ¾ø½À´Ï´Ù.
+	org.xml.sax.SAXParseException; systemId: file:/D:/work/jsp_work/conf/server.xml; lineNumber: 163; columnNumber: 9; The element type "Context" must be terminated by the matching end-tag "</Context>".
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1251)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1522)
+		at org.apache.catalina.startup.Catalina.parseServerXml(Catalina.java:603)
+		at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:634)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:393)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+20-Aug-2024 10:35:49.495 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Catalina¸¦ ÁßÁö½ÃÅ°´Â Áß ¿À·ù ¹ß»ı
+20-Aug-2024 10:35:54.694 SEVERE [main] org.apache.tomcat.util.digester.Digester.fatalError [163] Çà [9] ¿­¿¡¼­ ½É°¢ÇÑ ÆÄ½Ì ¿À·ù ¹ß»ı
+	org.xml.sax.SAXParseException; systemId: file:/D:/work/jsp_work/conf/server.xml; lineNumber: 163; columnNumber: 9; The element type "Context" must be terminated by the matching end-tag "</Context>".
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1695)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1522)
+		at org.apache.catalina.startup.Catalina.parseServerXml(Catalina.java:603)
+		at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:634)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:393)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+20-Aug-2024 10:35:54.697 WARNING [main] org.apache.catalina.startup.Catalina.parseServerXml [D:\work\jsp_work\conf\server.xml](À¸)·ÎºÎÅÍ ¼­¹ö ¼³Á¤À» ·ÎµåÇÒ ¼ö ¾ø½À´Ï´Ù.
+	org.xml.sax.SAXParseException; systemId: file:/D:/work/jsp_work/conf/server.xml; lineNumber: 163; columnNumber: 9; The element type "Context" must be terminated by the matching end-tag "</Context>".
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1251)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1522)
+		at org.apache.catalina.startup.Catalina.parseServerXml(Catalina.java:603)
+		at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:634)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:393)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+20-Aug-2024 10:35:54.698 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Catalina¸¦ ÁßÁö½ÃÅ°´Â Áß ¿À·ù ¹ß»ı
+20-Aug-2024 10:36:07.977 INFO [main] org.apache.catalina.core.StandardServer.await ¼Ë´Ù¿î Æ÷Æ®¸¦ ÅëÇØ À¯È¿ÇÑ ¼Ë´Ù¿î ¸í·ÉÀ» ¹Ş¾Ò½À´Ï´Ù. ¼­¹ö ÀÎ½ºÅÏ½º¸¦ ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:36:07.977 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:36:08.083 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:36:08.085 INFO [main] org.apache.coyote.AbstractProtocol.stop ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:36:08.088 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:36:11.122 WARNING [main] org.apache.catalina.core.StandardContext.setPath ÄÁÅØ½ºÆ® °æ·Î´Â ¹İµå½Ã ºó ¹®ÀÚ¿­ÀÌ°Å³ª, ¶Ç´Â '/'·Î ½ÃÀÛÇÏ°í '/'·Î ³¡³ªÁö ¾Ê´Â ¹®ÀÚ¿­ÀÌ¾î¾ß ÇÕ´Ï´Ù. ÇØ´ç °æ·Î [webapps]Àº(´Â) ÀÌ Á¶°ÇÀ» ÃæÁ·½ÃÅ°Áö ¾Ê¾Æ [/webapps](À¸)·Î º¯°æµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:36:11.133 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:36:11.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:36:11.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:36:11.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:36:11.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:36:11.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:36:11.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:36:11.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:36:11.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:36:11.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:36:11.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:36:11.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:36:11.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:36:11.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:36:11.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:36:11.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:36:11.138 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:36:11.138 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:36:11.138 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:36:11.156 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:36:11.350 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:36:11.373 INFO [main] org.apache.catalina.startup.Catalina.load [462] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:36:11.401 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:36:11.407 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:36:11.407 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:36:11.514 INFO [main] org.apache.catalina.startup.ContextConfig.getDefaultWebXmlFragment ±Û·Î¹ú web.xml ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.
+20-Aug-2024 10:36:11.642 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Àû¾îµµ ÇÏ³ªÀÇ JAR°¡ TLDµéÀ» Ã£±â À§ÇØ ½ºÄµµÇ¾úÀ¸³ª ¾Æ¹« °Íµµ Ã£Áö ¸øÇß½À´Ï´Ù. ½ºÄµÇßÀ¸³ª TLD°¡ ¾ø´Â JARµéÀÇ ÀüÃ¼ ¸ñ·ÏÀ» º¸½Ã·Á¸é, ·Î±× ·¹º§À» µğ¹ö±× ·¹º§·Î ¼³Á¤ÇÏ½Ê½Ã¿À. ½ºÄµ °úÁ¤¿¡¼­ ºÒÇÊ¿äÇÑ JARµéÀ» °Ç³Ê¶Ù¸é, ½Ã½ºÅÛ ½ÃÀÛ ½Ã°£°ú JSP ÄÄÆÄÀÏ ½Ã°£À» ´ÜÃà½ÃÅ³ ¼ö ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:36:11.736 INFO [main] org.apache.coyote.AbstractProtocol.start ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:36:11.801 INFO [main] org.apache.catalina.startup.Catalina.start ¼­¹ö°¡ [428] ¹Ğ¸®ÃÊ ³»¿¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:36:29.476 INFO [main] org.apache.catalina.core.StandardServer.await ¼Ë´Ù¿î Æ÷Æ®¸¦ ÅëÇØ À¯È¿ÇÑ ¼Ë´Ù¿î ¸í·ÉÀ» ¹Ş¾Ò½À´Ï´Ù. ¼­¹ö ÀÎ½ºÅÏ½º¸¦ ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:36:29.477 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:36:29.588 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:36:29.593 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesObjectStreamClassCaches Java 9 ¶Ç´Â ÀÌÈÄ ¹öÀüÀ» »ç¿ëÇÒ ¶§¿¡´Â, "--add-opens=java.base/java.io=ALL-UNNAMED" À»(¸¦) JVM ¸í·ÉÇà ¾Æ±Ô¸ÕÆ®µé¿¡ Ãß°¡ÇØ¼­, ObjectStream Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» È°¼ºÈ­ÇÒ ÇÊ¿ä°¡ ÀÖ½À´Ï´Ù. ¶Ç´Â ¿øÇÏ½Ã´Â °æ¿ì, ObjectStream Å¬·¡½º Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ÇØ¼­ ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:36:29.593 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalsForLeaks ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ À§ÇØ¼­´Â "--add-opens=java.base/java.lang=ALL-UNNAMED" ÀÚ¹Ù ¸í·É Çà ¾Æ±Ô¸ÕÆ®¸¦ Ãß°¡ÇÏ½Ê½Ã¿À. ¶Ç´Â ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ö°í ½Í´Ù¸é ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ ½ÃÅ°½Ê½Ã¿À.
+20-Aug-2024 10:36:29.595 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesRmiTargets Java 9¿¡¼­ ½ÇÇàÇÏ¸é¼­ RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ë °¡´ÉÇÏ°Ô ÇÏ·Á¸é, "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED"¸¦ JVM ¸í·É Çà ¾Æ±Ô¸ÕÆ®¿¡ Ãß°¡ÇØ¾ß ÇÕ´Ï´Ù. ¶Ç´Â, RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ëºÒ´É »óÅÂ·Î ¼³Á¤ÇÔÀ¸·Î½á, ÀÌ °æ°í¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:36:29.599 INFO [main] org.apache.coyote.AbstractProtocol.stop ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:36:29.617 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:36:30.103 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:36:30.107 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:36:30.107 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:36:30.107 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:36:30.107 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:36:30.107 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:36:30.107 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:36:30.107 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:36:30.107 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:36:30.108 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:36:30.108 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:36:30.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:36:30.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:36:30.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:36:30.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:36:30.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:36:30.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:36:30.125 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:36:30.125 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:36:30.141 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:36:30.339 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:36:30.363 INFO [main] org.apache.catalina.startup.Catalina.load [476] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:36:30.394 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:36:30.399 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:36:30.399 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:36:30.493 INFO [main] org.apache.catalina.startup.ContextConfig.getDefaultWebXmlFragment ±Û·Î¹ú web.xml ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.
+20-Aug-2024 10:36:30.613 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Àû¾îµµ ÇÏ³ªÀÇ JAR°¡ TLDµéÀ» Ã£±â À§ÇØ ½ºÄµµÇ¾úÀ¸³ª ¾Æ¹« °Íµµ Ã£Áö ¸øÇß½À´Ï´Ù. ½ºÄµÇßÀ¸³ª TLD°¡ ¾ø´Â JARµéÀÇ ÀüÃ¼ ¸ñ·ÏÀ» º¸½Ã·Á¸é, ·Î±× ·¹º§À» µğ¹ö±× ·¹º§·Î ¼³Á¤ÇÏ½Ê½Ã¿À. ½ºÄµ °úÁ¤¿¡¼­ ºÒÇÊ¿äÇÑ JARµéÀ» °Ç³Ê¶Ù¸é, ½Ã½ºÅÛ ½ÃÀÛ ½Ã°£°ú JSP ÄÄÆÄÀÏ ½Ã°£À» ´ÜÃà½ÃÅ³ ¼ö ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:36:30.707 INFO [main] org.apache.coyote.AbstractProtocol.start ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:36:30.778 INFO [main] org.apache.catalina.startup.Catalina.start ¼­¹ö°¡ [414] ¹Ğ¸®ÃÊ ³»¿¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:36:39.999 INFO [main] org.apache.catalina.core.StandardServer.await ¼Ë´Ù¿î Æ÷Æ®¸¦ ÅëÇØ À¯È¿ÇÑ ¼Ë´Ù¿î ¸í·ÉÀ» ¹Ş¾Ò½À´Ï´Ù. ¼­¹ö ÀÎ½ºÅÏ½º¸¦ ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:36:39.999 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:36:40.113 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:36:40.117 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesObjectStreamClassCaches Java 9 ¶Ç´Â ÀÌÈÄ ¹öÀüÀ» »ç¿ëÇÒ ¶§¿¡´Â, "--add-opens=java.base/java.io=ALL-UNNAMED" À»(¸¦) JVM ¸í·ÉÇà ¾Æ±Ô¸ÕÆ®µé¿¡ Ãß°¡ÇØ¼­, ObjectStream Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» È°¼ºÈ­ÇÒ ÇÊ¿ä°¡ ÀÖ½À´Ï´Ù. ¶Ç´Â ¿øÇÏ½Ã´Â °æ¿ì, ObjectStream Å¬·¡½º Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ÇØ¼­ ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:36:40.117 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalsForLeaks ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ À§ÇØ¼­´Â "--add-opens=java.base/java.lang=ALL-UNNAMED" ÀÚ¹Ù ¸í·É Çà ¾Æ±Ô¸ÕÆ®¸¦ Ãß°¡ÇÏ½Ê½Ã¿À. ¶Ç´Â ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ö°í ½Í´Ù¸é ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ ½ÃÅ°½Ê½Ã¿À.
+20-Aug-2024 10:36:40.118 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesRmiTargets Java 9¿¡¼­ ½ÇÇàÇÏ¸é¼­ RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ë °¡´ÉÇÏ°Ô ÇÏ·Á¸é, "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED"¸¦ JVM ¸í·É Çà ¾Æ±Ô¸ÕÆ®¿¡ Ãß°¡ÇØ¾ß ÇÕ´Ï´Ù. ¶Ç´Â, RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ëºÒ´É »óÅÂ·Î ¼³Á¤ÇÔÀ¸·Î½á, ÀÌ °æ°í¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:36:40.121 INFO [main] org.apache.coyote.AbstractProtocol.stop ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:36:40.127 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:37:13.190 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:37:13.193 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:37:13.193 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:37:13.193 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:37:13.193 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:37:13.194 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:37:13.194 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:37:13.194 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:37:13.194 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:37:13.195 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:37:13.195 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:37:13.214 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:37:13.214 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:37:13.214 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:37:13.214 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:37:13.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:37:13.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:37:13.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:37:13.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:37:13.235 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:37:13.439 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:37:13.460 INFO [main] org.apache.catalina.startup.Catalina.load [471] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:37:13.489 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:37:13.494 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:37:13.494 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:37:13.512 INFO [main] org.apache.coyote.AbstractProtocol.start ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:37:13.608 INFO [main] org.apache.catalina.startup.Catalina.start ¼­¹ö°¡ [148] ¹Ğ¸®ÃÊ ³»¿¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:37:55.306 INFO [main] org.apache.catalina.core.StandardServer.await ¼Ë´Ù¿î Æ÷Æ®¸¦ ÅëÇØ À¯È¿ÇÑ ¼Ë´Ù¿î ¸í·ÉÀ» ¹Ş¾Ò½À´Ï´Ù. ¼­¹ö ÀÎ½ºÅÏ½º¸¦ ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:37:55.306 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:37:55.420 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:37:55.421 INFO [main] org.apache.coyote.AbstractProtocol.stop ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:37:55.425 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:37:55.879 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:37:55.882 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:37:55.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:37:55.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:37:55.883 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:37:55.885 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:37:55.885 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:37:55.885 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:37:55.886 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:37:55.886 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:37:55.886 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:37:55.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:37:55.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:37:55.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:37:55.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:37:55.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:37:55.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:37:55.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:37:55.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:37:55.913 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:37:56.119 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:37:56.141 INFO [main] org.apache.catalina.startup.Catalina.load [442] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:37:56.172 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:37:56.178 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:37:56.178 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:37:56.194 INFO [main] org.apache.coyote.AbstractProtocol.start ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:37:56.299 INFO [main] org.apache.catalina.startup.Catalina.start ¼­¹ö°¡ [158] ¹Ğ¸®ÃÊ ³»¿¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:38:48.851 INFO [main] org.apache.catalina.core.StandardServer.await ¼Ë´Ù¿î Æ÷Æ®¸¦ ÅëÇØ À¯È¿ÇÑ ¼Ë´Ù¿î ¸í·ÉÀ» ¹Ş¾Ò½À´Ï´Ù. ¼­¹ö ÀÎ½ºÅÏ½º¸¦ ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:38:48.852 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:38:48.957 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:38:48.959 INFO [main] org.apache.coyote.AbstractProtocol.stop ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:38:48.979 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:38:49.477 WARNING [main] org.apache.catalina.core.StandardContext.setPath ÄÁÅØ½ºÆ® °æ·Î´Â ¹İµå½Ã ºó ¹®ÀÚ¿­ÀÌ°Å³ª, ¶Ç´Â '/'·Î ½ÃÀÛÇÏ°í '/'·Î ³¡³ªÁö ¾Ê´Â ¹®ÀÚ¿­ÀÌ¾î¾ß ÇÕ´Ï´Ù. ÇØ´ç °æ·Î [d:/work/jsp_work/webapps]Àº(´Â) ÀÌ Á¶°ÇÀ» ÃæÁ·½ÃÅ°Áö ¾Ê¾Æ [/d:/work/jsp_work/webapps](À¸)·Î º¯°æµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:38:49.490 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:38:49.491 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:38:49.491 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:38:49.491 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:38:49.491 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:38:49.491 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:38:49.491 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:38:49.491 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:38:49.492 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:38:49.493 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:38:49.493 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:38:49.498 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:38:49.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:38:49.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:38:49.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:38:49.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:38:49.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:38:49.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:38:49.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:38:49.515 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:38:49.712 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:38:49.734 INFO [main] org.apache.catalina.startup.Catalina.load [472] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:38:49.765 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:38:49.770 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:38:49.770 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:38:49.781 WARNING [main] org.apache.catalina.util.LifecycleMBeanBase.register ±¸¼º¿ä¼Ò ÃÊ±âÈ­ Áß, [Catalina:j2eeType=WebModule,name=//localhost/d:/work/jsp_work/webapps,J2EEApplication=none,J2EEServer=none](ÀÌ)¶ó´Â ÀÌ¸§À» °¡Áø °´Ã¼ [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/d:/work/jsp_work/webapps]]À»(¸¦) µî·ÏÇÏÁö ¸øÇß½À´Ï´Ù.
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.util.LifecycleMBeanBase.register(LifecycleMBeanBase.java:121)
+		at org.apache.catalina.util.LifecycleMBeanBase.initInternal(LifecycleMBeanBase.java:46)
+		at org.apache.catalina.core.StandardContext.initInternal(StandardContext.java:5419)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:155)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:38:49.793 WARNING [main] org.apache.catalina.core.StandardContext.postWorkDirectory ÄÁÅØ½ºÆ® [/d:/work/jsp_work/webapps]À»(¸¦) À§ÇÑ ÀÛ¾÷ µğ·ºÅä¸® [D:\work\jsp_work\work\Catalina\localhost\d:#work#jsp_work#webapps]À»(¸¦) »ı¼ºÇÏÁö ¸øÇß½À´Ï´Ù.
+20-Aug-2024 10:38:49.805 WARNING [main] org.apache.catalina.util.LifecycleMBeanBase.register ±¸¼º¿ä¼Ò ÃÊ±âÈ­ Áß, [Catalina:type=WebResourceRoot,host=localhost,context=/d:/work/jsp_work/webapps](ÀÌ)¶ó´Â ÀÌ¸§À» °¡Áø °´Ã¼ [org.apache.catalina.webresources.StandardRoot@1e16c0aa]À»(¸¦) µî·ÏÇÏÁö ¸øÇß½À´Ï´Ù.
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.util.LifecycleMBeanBase.register(LifecycleMBeanBase.java:121)
+		at org.apache.catalina.util.LifecycleMBeanBase.initInternal(LifecycleMBeanBase.java:46)
+		at org.apache.catalina.webresources.StandardRoot.initInternal(StandardRoot.java:678)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:155)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4110)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4232)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:38:49.806 WARNING [main] org.apache.catalina.util.LifecycleMBeanBase.register ±¸¼º¿ä¼Ò ÃÊ±âÈ­ Áß, [Catalina:type=WebResourceRoot,host=localhost,context=/d:/work/jsp_work/webapps,name=Cache](ÀÌ)¶ó´Â ÀÌ¸§À» °¡Áø °´Ã¼ [org.apache.catalina.webresources.Cache@565f390]À»(¸¦) µî·ÏÇÏÁö ¸øÇß½À´Ï´Ù.
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.util.LifecycleMBeanBase.register(LifecycleMBeanBase.java:121)
+		at org.apache.catalina.webresources.StandardRoot.initInternal(StandardRoot.java:684)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:155)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4110)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4232)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:38:49.831 WARNING [main] org.apache.catalina.util.LifecycleMBeanBase.register ±¸¼º¿ä¼Ò ÃÊ±âÈ­ Áß, [Catalina:type=Loader,host=localhost,context=/d:/work/jsp_work/webapps](ÀÌ)¶ó´Â ÀÌ¸§À» °¡Áø °´Ã¼ [WebappLoader[StandardEngine[Catalina].StandardHost[localhost].StandardContext[/d:/work/jsp_work/webapps]]]À»(¸¦) µî·ÏÇÏÁö ¸øÇß½À´Ï´Ù.
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.util.LifecycleMBeanBase.register(LifecycleMBeanBase.java:121)
+		at org.apache.catalina.util.LifecycleMBeanBase.initInternal(LifecycleMBeanBase.java:46)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:155)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4279)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:38:49.845 SEVERE [main] org.apache.catalina.core.ContainerBase.startInternal ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+	java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:756)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:344)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4279)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		... 21 more
+	Caused by: javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:338)
+		... 30 more
+20-Aug-2024 10:38:49.846 SEVERE [main] org.apache.catalina.core.ContainerBase.startInternal ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+	java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+		at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:756)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:768)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		... 13 more
+	Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:756)
+		... 21 more
+	Caused by: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:344)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4279)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		... 21 more
+	Caused by: javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:338)
+		... 30 more
+20-Aug-2024 10:38:49.848 SEVERE [main] org.apache.catalina.startup.Catalina.start ÇÊ¼ö Ç×¸ñÀÎ ¼­¹ö ±¸¼º¿ä¼Ò°¡ Á¦´ë·Î ½ÃÀÛµÇÁö ¸øÇÏ¿©, TomcatÀÌ ½ÃÀÛµÉ ¼ö ¾ø½À´Ï´Ù.
+	org.apache.catalina.LifecycleException: ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:768)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+		at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:756)
+		... 13 more
+	Caused by: org.apache.catalina.LifecycleException: ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:768)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		... 13 more
+	Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:756)
+		... 21 more
+	Caused by: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:344)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4279)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		... 21 more
+	Caused by: javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:338)
+		... 30 more
+20-Aug-2024 10:38:49.849 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:38:49.849 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:38:49.851 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:38:49.852 WARNING [main] org.apache.catalina.util.LifecycleMBeanBase.register ±¸¼º¿ä¼Ò ÃÊ±âÈ­ Áß, [Catalina:type=NamingResources,host=localhost,context=/d:/work/jsp_work/webapps](ÀÌ)¶ó´Â ÀÌ¸§À» °¡Áø °´Ã¼ [org.apache.catalina.deploy.NamingResourcesImpl@6b0d80ed]À»(¸¦) µî·ÏÇÏÁö ¸øÇß½À´Ï´Ù.
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.util.LifecycleMBeanBase.register(LifecycleMBeanBase.java:121)
+		at org.apache.catalina.util.LifecycleMBeanBase.initInternal(LifecycleMBeanBase.java:46)
+		at org.apache.catalina.deploy.NamingResourcesImpl.initInternal(NamingResourcesImpl.java:884)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardContext.setNamingResources(StandardContext.java:1966)
+		at org.apache.catalina.core.StandardContext.getNamingResources(StandardContext.java:1924)
+		at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:204)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:226)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:266)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:671)
+		at org.apache.catalina.core.ContainerBase.destroyInternal(ContainerBase.java:866)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:671)
+		at org.apache.catalina.core.ContainerBase.destroyInternal(ContainerBase.java:866)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.StandardService.destroyInternal(StandardService.java:545)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.StandardServer.destroyInternal(StandardServer.java:969)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:38:49.857 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesObjectStreamClassCaches Java 9 ¶Ç´Â ÀÌÈÄ ¹öÀüÀ» »ç¿ëÇÒ ¶§¿¡´Â, "--add-opens=java.base/java.io=ALL-UNNAMED" À»(¸¦) JVM ¸í·ÉÇà ¾Æ±Ô¸ÕÆ®µé¿¡ Ãß°¡ÇØ¼­, ObjectStream Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» È°¼ºÈ­ÇÒ ÇÊ¿ä°¡ ÀÖ½À´Ï´Ù. ¶Ç´Â ¿øÇÏ½Ã´Â °æ¿ì, ObjectStream Å¬·¡½º Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ÇØ¼­ ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:38:49.857 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalsForLeaks ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ À§ÇØ¼­´Â "--add-opens=java.base/java.lang=ALL-UNNAMED" ÀÚ¹Ù ¸í·É Çà ¾Æ±Ô¸ÕÆ®¸¦ Ãß°¡ÇÏ½Ê½Ã¿À. ¶Ç´Â ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ö°í ½Í´Ù¸é ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ ½ÃÅ°½Ê½Ã¿À.
+20-Aug-2024 10:38:49.858 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesRmiTargets Java 9¿¡¼­ ½ÇÇàÇÏ¸é¼­ RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ë °¡´ÉÇÏ°Ô ÇÏ·Á¸é, "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED"¸¦ JVM ¸í·É Çà ¾Æ±Ô¸ÕÆ®¿¡ Ãß°¡ÇØ¾ß ÇÕ´Ï´Ù. ¶Ç´Â, RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ëºÒ´É »óÅÂ·Î ¼³Á¤ÇÔÀ¸·Î½á, ÀÌ °æ°í¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:38:49.864 WARNING [main] org.apache.catalina.loader.WebappLoader.stopInternal ·Î´õ¸¦ ÁßÁö½ÃÅ°´Â Áß ¿À·ù ¹ß»ı
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:387)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4687)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:266)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:671)
+		at org.apache.catalina.core.ContainerBase.destroyInternal(ContainerBase.java:866)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:671)
+		at org.apache.catalina.core.ContainerBase.destroyInternal(ContainerBase.java:866)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.StandardService.destroyInternal(StandardService.java:545)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.StandardServer.destroyInternal(StandardServer.java:969)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:39:38.795 WARNING [main] org.apache.catalina.core.StandardContext.setPath ÄÁÅØ½ºÆ® °æ·Î´Â ¹İµå½Ã ºó ¹®ÀÚ¿­ÀÌ°Å³ª, ¶Ç´Â '/'·Î ½ÃÀÛÇÏ°í '/'·Î ³¡³ªÁö ¾Ê´Â ¹®ÀÚ¿­ÀÌ¾î¾ß ÇÕ´Ï´Ù. ÇØ´ç °æ·Î [D:\work\jsp_work\webapps]Àº(´Â) ÀÌ Á¶°ÇÀ» ÃæÁ·½ÃÅ°Áö ¾Ê¾Æ [/D:\work\jsp_work\webapps](À¸)·Î º¯°æµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:39:38.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:39:38.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:39:38.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:39:38.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:39:38.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:39:38.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:39:38.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:39:38.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:39:38.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:39:38.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:39:38.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:39:38.811 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:39:38.812 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:39:38.812 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:39:38.812 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:39:38.812 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:39:38.812 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:39:38.812 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:39:38.812 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:39:38.828 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:39:39.034 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:39:39.057 INFO [main] org.apache.catalina.startup.Catalina.load [475] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:39:39.086 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:39:39.092 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:39:39.093 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:39:39.101 WARNING [main] org.apache.catalina.util.LifecycleMBeanBase.register ±¸¼º¿ä¼Ò ÃÊ±âÈ­ Áß, [Catalina:j2eeType=WebModule,name=//localhost/D:\work\jsp_work\webapps,J2EEApplication=none,J2EEServer=none](ÀÌ)¶ó´Â ÀÌ¸§À» °¡Áø °´Ã¼ [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/D:\work\jsp_work\webapps]]À»(¸¦) µî·ÏÇÏÁö ¸øÇß½À´Ï´Ù.
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.util.LifecycleMBeanBase.register(LifecycleMBeanBase.java:121)
+		at org.apache.catalina.util.LifecycleMBeanBase.initInternal(LifecycleMBeanBase.java:46)
+		at org.apache.catalina.core.StandardContext.initInternal(StandardContext.java:5419)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:155)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:39:39.113 WARNING [main] org.apache.catalina.core.StandardContext.postWorkDirectory ÄÁÅØ½ºÆ® [/D:\work\jsp_work\webapps]À»(¸¦) À§ÇÑ ÀÛ¾÷ µğ·ºÅä¸® [D:\work\jsp_work\work\Catalina\localhost\D:_work_jsp_work_webapps]À»(¸¦) »ı¼ºÇÏÁö ¸øÇß½À´Ï´Ù.
+20-Aug-2024 10:39:39.126 WARNING [main] org.apache.catalina.util.LifecycleMBeanBase.register ±¸¼º¿ä¼Ò ÃÊ±âÈ­ Áß, [Catalina:type=WebResourceRoot,host=localhost,context=/D:\work\jsp_work\webapps](ÀÌ)¶ó´Â ÀÌ¸§À» °¡Áø °´Ã¼ [org.apache.catalina.webresources.StandardRoot@1224144a]À»(¸¦) µî·ÏÇÏÁö ¸øÇß½À´Ï´Ù.
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.util.LifecycleMBeanBase.register(LifecycleMBeanBase.java:121)
+		at org.apache.catalina.util.LifecycleMBeanBase.initInternal(LifecycleMBeanBase.java:46)
+		at org.apache.catalina.webresources.StandardRoot.initInternal(StandardRoot.java:678)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:155)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4110)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4232)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:39:39.127 WARNING [main] org.apache.catalina.util.LifecycleMBeanBase.register ±¸¼º¿ä¼Ò ÃÊ±âÈ­ Áß, [Catalina:type=WebResourceRoot,host=localhost,context=/D:\work\jsp_work\webapps,name=Cache](ÀÌ)¶ó´Â ÀÌ¸§À» °¡Áø °´Ã¼ [org.apache.catalina.webresources.Cache@700fb871]À»(¸¦) µî·ÏÇÏÁö ¸øÇß½À´Ï´Ù.
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.util.LifecycleMBeanBase.register(LifecycleMBeanBase.java:121)
+		at org.apache.catalina.webresources.StandardRoot.initInternal(StandardRoot.java:684)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:155)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4110)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4232)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:39:39.151 WARNING [main] org.apache.catalina.util.LifecycleMBeanBase.register ±¸¼º¿ä¼Ò ÃÊ±âÈ­ Áß, [Catalina:type=Loader,host=localhost,context=/D:\work\jsp_work\webapps](ÀÌ)¶ó´Â ÀÌ¸§À» °¡Áø °´Ã¼ [WebappLoader[StandardEngine[Catalina].StandardHost[localhost].StandardContext[/D:\work\jsp_work\webapps]]]À»(¸¦) µî·ÏÇÏÁö ¸øÇß½À´Ï´Ù.
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.util.LifecycleMBeanBase.register(LifecycleMBeanBase.java:121)
+		at org.apache.catalina.util.LifecycleMBeanBase.initInternal(LifecycleMBeanBase.java:46)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:155)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4279)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:39:39.163 SEVERE [main] org.apache.catalina.core.ContainerBase.startInternal ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+	java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:756)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:344)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4279)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		... 21 more
+	Caused by: javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:338)
+		... 30 more
+20-Aug-2024 10:39:39.164 SEVERE [main] org.apache.catalina.core.ContainerBase.startInternal ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+	java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+		at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:756)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:768)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		... 13 more
+	Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:756)
+		... 21 more
+	Caused by: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:344)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4279)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		... 21 more
+	Caused by: javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:338)
+		... 30 more
+20-Aug-2024 10:39:39.166 SEVERE [main] org.apache.catalina.startup.Catalina.start ÇÊ¼ö Ç×¸ñÀÎ ¼­¹ö ±¸¼º¿ä¼Ò°¡ Á¦´ë·Î ½ÃÀÛµÇÁö ¸øÇÏ¿©, TomcatÀÌ ½ÃÀÛµÉ ¼ö ¾ø½À´Ï´Ù.
+	org.apache.catalina.LifecycleException: ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:768)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:757)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+		at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:756)
+		... 13 more
+	Caused by: org.apache.catalina.LifecycleException: ÀÚ½Ä ÄÁÅ×ÀÌ³Ê¸¦ ½ÃÀÛ Áß ½ÇÆĞÇß½À´Ï´Ù.
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:768)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		... 13 more
+	Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+		at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:756)
+		... 21 more
+	Caused by: org.apache.catalina.LifecycleException: ·Î´õ¸¦ ½ÃÀÛÇÏ´Â Áß ¿À·ù ¹ß»ı
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:344)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4279)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		... 21 more
+	Caused by: javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.loader.WebappLoader.startInternal(WebappLoader.java:338)
+		... 30 more
+20-Aug-2024 10:39:39.166 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:39:39.166 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:39:39.168 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:39:39.169 WARNING [main] org.apache.catalina.util.LifecycleMBeanBase.register ±¸¼º¿ä¼Ò ÃÊ±âÈ­ Áß, [Catalina:type=NamingResources,host=localhost,context=/D:\work\jsp_work\webapps](ÀÌ)¶ó´Â ÀÌ¸§À» °¡Áø °´Ã¼ [org.apache.catalina.deploy.NamingResourcesImpl@6b0d80ed]À»(¸¦) µî·ÏÇÏÁö ¸øÇß½À´Ï´Ù.
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.util.LifecycleMBeanBase.register(LifecycleMBeanBase.java:121)
+		at org.apache.catalina.util.LifecycleMBeanBase.initInternal(LifecycleMBeanBase.java:46)
+		at org.apache.catalina.deploy.NamingResourcesImpl.initInternal(NamingResourcesImpl.java:884)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardContext.setNamingResources(StandardContext.java:1966)
+		at org.apache.catalina.core.StandardContext.getNamingResources(StandardContext.java:1924)
+		at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:204)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:226)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:266)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:671)
+		at org.apache.catalina.core.ContainerBase.destroyInternal(ContainerBase.java:866)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:671)
+		at org.apache.catalina.core.ContainerBase.destroyInternal(ContainerBase.java:866)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.StandardService.destroyInternal(StandardService.java:545)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.StandardServer.destroyInternal(StandardServer.java:969)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:39:39.172 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesObjectStreamClassCaches Java 9 ¶Ç´Â ÀÌÈÄ ¹öÀüÀ» »ç¿ëÇÒ ¶§¿¡´Â, "--add-opens=java.base/java.io=ALL-UNNAMED" À»(¸¦) JVM ¸í·ÉÇà ¾Æ±Ô¸ÕÆ®µé¿¡ Ãß°¡ÇØ¼­, ObjectStream Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» È°¼ºÈ­ÇÒ ÇÊ¿ä°¡ ÀÖ½À´Ï´Ù. ¶Ç´Â ¿øÇÏ½Ã´Â °æ¿ì, ObjectStream Å¬·¡½º Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ÇØ¼­ ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:39:39.173 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalsForLeaks ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ À§ÇØ¼­´Â "--add-opens=java.base/java.lang=ALL-UNNAMED" ÀÚ¹Ù ¸í·É Çà ¾Æ±Ô¸ÕÆ®¸¦ Ãß°¡ÇÏ½Ê½Ã¿À. ¶Ç´Â ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ö°í ½Í´Ù¸é ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ ½ÃÅ°½Ê½Ã¿À.
+20-Aug-2024 10:39:39.174 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesRmiTargets Java 9¿¡¼­ ½ÇÇàÇÏ¸é¼­ RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ë °¡´ÉÇÏ°Ô ÇÏ·Á¸é, "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED"¸¦ JVM ¸í·É Çà ¾Æ±Ô¸ÕÆ®¿¡ Ãß°¡ÇØ¾ß ÇÕ´Ï´Ù. ¶Ç´Â, RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ëºÒ´É »óÅÂ·Î ¼³Á¤ÇÔÀ¸·Î½á, ÀÌ °æ°í¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:39:39.177 WARNING [main] org.apache.catalina.loader.WebappLoader.stopInternal ·Î´õ¸¦ ÁßÁö½ÃÅ°´Â Áß ¿À·ù ¹ß»ı
+	javax.management.MalformedObjectNameException: Invalid character ':' in value part of property
+		at java.management/javax.management.ObjectName.construct(ObjectName.java:622)
+		at java.management/javax.management.ObjectName.<init>(ObjectName.java:1407)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:387)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4687)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:266)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:671)
+		at org.apache.catalina.core.ContainerBase.destroyInternal(ContainerBase.java:866)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:671)
+		at org.apache.catalina.core.ContainerBase.destroyInternal(ContainerBase.java:866)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.StandardService.destroyInternal(StandardService.java:545)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.core.StandardServer.destroyInternal(StandardServer.java:969)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:294)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+20-Aug-2024 10:40:01.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:40:01.736 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:40:01.736 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:40:01.736 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:40:01.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:40:01.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:40:01.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:40:01.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:40:01.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:40:01.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:40:01.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:40:01.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:40:01.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:40:01.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:40:01.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:40:01.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:40:01.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:40:01.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:40:01.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:40:01.766 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:40:01.969 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:40:01.999 INFO [main] org.apache.catalina.startup.Catalina.load [497] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:40:02.032 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:40:02.037 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:40:02.038 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:40:02.129 INFO [main] org.apache.catalina.startup.ContextConfig.getDefaultWebXmlFragment ±Û·Î¹ú web.xml ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.
+20-Aug-2024 10:40:02.253 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Àû¾îµµ ÇÏ³ªÀÇ JAR°¡ TLDµéÀ» Ã£±â À§ÇØ ½ºÄµµÇ¾úÀ¸³ª ¾Æ¹« °Íµµ Ã£Áö ¸øÇß½À´Ï´Ù. ½ºÄµÇßÀ¸³ª TLD°¡ ¾ø´Â JARµéÀÇ ÀüÃ¼ ¸ñ·ÏÀ» º¸½Ã·Á¸é, ·Î±× ·¹º§À» µğ¹ö±× ·¹º§·Î ¼³Á¤ÇÏ½Ê½Ã¿À. ½ºÄµ °úÁ¤¿¡¼­ ºÒÇÊ¿äÇÑ JARµéÀ» °Ç³Ê¶Ù¸é, ½Ã½ºÅÛ ½ÃÀÛ ½Ã°£°ú JSP ÄÄÆÄÀÏ ½Ã°£À» ´ÜÃà½ÃÅ³ ¼ö ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:40:02.347 INFO [main] org.apache.coyote.AbstractProtocol.start ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:40:02.410 INFO [main] org.apache.catalina.startup.Catalina.start ¼­¹ö°¡ [411] ¹Ğ¸®ÃÊ ³»¿¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:40:20.916 INFO [main] org.apache.catalina.core.StandardServer.await ¼Ë´Ù¿î Æ÷Æ®¸¦ ÅëÇØ À¯È¿ÇÑ ¼Ë´Ù¿î ¸í·ÉÀ» ¹Ş¾Ò½À´Ï´Ù. ¼­¹ö ÀÎ½ºÅÏ½º¸¦ ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:40:20.917 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:40:21.022 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:40:21.027 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesObjectStreamClassCaches Java 9 ¶Ç´Â ÀÌÈÄ ¹öÀüÀ» »ç¿ëÇÒ ¶§¿¡´Â, "--add-opens=java.base/java.io=ALL-UNNAMED" À»(¸¦) JVM ¸í·ÉÇà ¾Æ±Ô¸ÕÆ®µé¿¡ Ãß°¡ÇØ¼­, ObjectStream Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» È°¼ºÈ­ÇÒ ÇÊ¿ä°¡ ÀÖ½À´Ï´Ù. ¶Ç´Â ¿øÇÏ½Ã´Â °æ¿ì, ObjectStream Å¬·¡½º Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ÇØ¼­ ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:40:21.029 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalsForLeaks ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ À§ÇØ¼­´Â "--add-opens=java.base/java.lang=ALL-UNNAMED" ÀÚ¹Ù ¸í·É Çà ¾Æ±Ô¸ÕÆ®¸¦ Ãß°¡ÇÏ½Ê½Ã¿À. ¶Ç´Â ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ö°í ½Í´Ù¸é ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ ½ÃÅ°½Ê½Ã¿À.
+20-Aug-2024 10:40:21.030 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesRmiTargets Java 9¿¡¼­ ½ÇÇàÇÏ¸é¼­ RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ë °¡´ÉÇÏ°Ô ÇÏ·Á¸é, "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED"¸¦ JVM ¸í·É Çà ¾Æ±Ô¸ÕÆ®¿¡ Ãß°¡ÇØ¾ß ÇÕ´Ï´Ù. ¶Ç´Â, RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ëºÒ´É »óÅÂ·Î ¼³Á¤ÇÔÀ¸·Î½á, ÀÌ °æ°í¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:40:21.032 INFO [main] org.apache.coyote.AbstractProtocol.stop ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:40:21.036 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:40:21.469 WARNING [main] org.apache.catalina.core.StandardContext.setPath ÄÁÅØ½ºÆ® °æ·Î´Â ¹İµå½Ã ºó ¹®ÀÚ¿­ÀÌ°Å³ª, ¶Ç´Â '/'·Î ½ÃÀÛÇÏ°í '/'·Î ³¡³ªÁö ¾Ê´Â ¹®ÀÚ¿­ÀÌ¾î¾ß ÇÕ´Ï´Ù. ÇØ´ç °æ·Î [webapps]Àº(´Â) ÀÌ Á¶°ÇÀ» ÃæÁ·½ÃÅ°Áö ¾Ê¾Æ [/webapps](À¸)·Î º¯°æµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:40:21.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:40:21.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:40:21.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:40:21.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:40:21.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:40:21.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:40:21.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:40:21.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:40:21.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:40:21.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:40:21.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:40:21.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:40:21.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:40:21.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:40:21.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:40:21.518 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:40:21.518 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:40:21.518 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:40:21.518 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:40:21.531 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:40:21.723 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:40:21.745 INFO [main] org.apache.catalina.startup.Catalina.load [480] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:40:21.777 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:40:21.781 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:40:21.782 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:40:21.876 INFO [main] org.apache.catalina.startup.ContextConfig.getDefaultWebXmlFragment ±Û·Î¹ú web.xml ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.
+20-Aug-2024 10:40:22.003 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Àû¾îµµ ÇÏ³ªÀÇ JAR°¡ TLDµéÀ» Ã£±â À§ÇØ ½ºÄµµÇ¾úÀ¸³ª ¾Æ¹« °Íµµ Ã£Áö ¸øÇß½À´Ï´Ù. ½ºÄµÇßÀ¸³ª TLD°¡ ¾ø´Â JARµéÀÇ ÀüÃ¼ ¸ñ·ÏÀ» º¸½Ã·Á¸é, ·Î±× ·¹º§À» µğ¹ö±× ·¹º§·Î ¼³Á¤ÇÏ½Ê½Ã¿À. ½ºÄµ °úÁ¤¿¡¼­ ºÒÇÊ¿äÇÑ JARµéÀ» °Ç³Ê¶Ù¸é, ½Ã½ºÅÛ ½ÃÀÛ ½Ã°£°ú JSP ÄÄÆÄÀÏ ½Ã°£À» ´ÜÃà½ÃÅ³ ¼ö ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:40:22.097 INFO [main] org.apache.coyote.AbstractProtocol.start ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:40:22.164 INFO [main] org.apache.catalina.startup.Catalina.start ¼­¹ö°¡ [418] ¹Ğ¸®ÃÊ ³»¿¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:40:47.113 INFO [main] org.apache.catalina.core.StandardServer.await ¼Ë´Ù¿î Æ÷Æ®¸¦ ÅëÇØ À¯È¿ÇÑ ¼Ë´Ù¿î ¸í·ÉÀ» ¹Ş¾Ò½À´Ï´Ù. ¼­¹ö ÀÎ½ºÅÏ½º¸¦ ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:40:47.113 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:40:47.220 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:40:47.224 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesObjectStreamClassCaches Java 9 ¶Ç´Â ÀÌÈÄ ¹öÀüÀ» »ç¿ëÇÒ ¶§¿¡´Â, "--add-opens=java.base/java.io=ALL-UNNAMED" À»(¸¦) JVM ¸í·ÉÇà ¾Æ±Ô¸ÕÆ®µé¿¡ Ãß°¡ÇØ¼­, ObjectStream Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» È°¼ºÈ­ÇÒ ÇÊ¿ä°¡ ÀÖ½À´Ï´Ù. ¶Ç´Â ¿øÇÏ½Ã´Â °æ¿ì, ObjectStream Å¬·¡½º Ä³½Ã ¸Ş¸ğ¸® ¸¯ ¹æÁö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ÇØ¼­ ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:40:47.225 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalsForLeaks ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ À§ÇØ¼­´Â "--add-opens=java.base/java.lang=ALL-UNNAMED" ÀÚ¹Ù ¸í·É Çà ¾Æ±Ô¸ÕÆ®¸¦ Ãß°¡ÇÏ½Ê½Ã¿À. ¶Ç´Â ÀÌ °æ°í ¸Ş½ÃÁö¸¦ ¾ø¾Ö°í ½Í´Ù¸é ThreadLocal ¸Ş¸ğ¸® ´©¼ö Å½Áö ¿É¼ÇÀ» ºñÈ°¼ºÈ­ ½ÃÅ°½Ê½Ã¿À.
+20-Aug-2024 10:40:47.226 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesRmiTargets Java 9¿¡¼­ ½ÇÇàÇÏ¸é¼­ RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ë °¡´ÉÇÏ°Ô ÇÏ·Á¸é, "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED"¸¦ JVM ¸í·É Çà ¾Æ±Ô¸ÕÆ®¿¡ Ãß°¡ÇØ¾ß ÇÕ´Ï´Ù. ¶Ç´Â, RMI Target ¸Ş¸ğ¸® ´©¼ö Å½Áö¸¦ »ç¿ëºÒ´É »óÅÂ·Î ¼³Á¤ÇÔÀ¸·Î½á, ÀÌ °æ°í¸¦ ¾ø¾Ù ¼öµµ ÀÖ½À´Ï´Ù.
+20-Aug-2024 10:40:47.230 INFO [main] org.apache.coyote.AbstractProtocol.stop ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:40:47.244 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:40:47.697 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:40:47.700 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:40:47.700 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:40:47.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:40:47.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:40:47.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:40:47.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:40:47.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:40:47.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:40:47.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:40:47.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:40:47.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:40:47.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:40:47.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:40:47.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:40:47.722 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:40:47.722 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:40:47.722 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:40:47.722 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:40:47.736 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:40:47.941 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:40:47.964 INFO [main] org.apache.catalina.startup.Catalina.load [454] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:40:47.997 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:40:48.005 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:40:48.005 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:40:48.019 INFO [main] org.apache.coyote.AbstractProtocol.start ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:40:48.117 INFO [main] org.apache.catalina.startup.Catalina.start ¼­¹ö°¡ [153] ¹Ğ¸®ÃÊ ³»¿¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:41:09.248 INFO [main] org.apache.catalina.core.StandardServer.await ¼Ë´Ù¿î Æ÷Æ®¸¦ ÅëÇØ À¯È¿ÇÑ ¼Ë´Ù¿î ¸í·ÉÀ» ¹Ş¾Ò½À´Ï´Ù. ¼­¹ö ÀÎ½ºÅÏ½º¸¦ ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:41:09.249 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:41:09.354 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:41:09.356 INFO [main] org.apache.coyote.AbstractProtocol.stop ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:41:09.359 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:42:57.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:42:57.435 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:42:57.436 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:42:57.436 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:42:57.436 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:42:57.436 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:42:57.436 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:42:57.436 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:42:57.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:42:57.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:42:57.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:42:57.454 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:42:57.454 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:42:57.454 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:42:57.454 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:42:57.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:42:57.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:42:57.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:42:57.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:42:57.470 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:42:57.681 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:42:57.708 INFO [main] org.apache.catalina.startup.Catalina.load [460] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:42:57.743 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:42:57.753 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:42:57.753 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:42:57.771 INFO [main] org.apache.coyote.AbstractProtocol.start ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:42:57.886 INFO [main] org.apache.catalina.startup.Catalina.start ¼­¹ö°¡ [178] ¹Ğ¸®ÃÊ ³»¿¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:43:35.647 INFO [main] org.apache.catalina.core.StandardServer.await ¼Ë´Ù¿î Æ÷Æ®¸¦ ÅëÇØ À¯È¿ÇÑ ¼Ë´Ù¿î ¸í·ÉÀ» ¹Ş¾Ò½À´Ï´Ù. ¼­¹ö ÀÎ½ºÅÏ½º¸¦ ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:43:35.647 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:43:35.758 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:43:35.759 INFO [main] org.apache.coyote.AbstractProtocol.stop ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:43:35.779 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:43:36.256 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¼­¹ö ¹öÀü ÀÌ¸§:    Apache Tomcat/10.1.28
+20-Aug-2024 10:43:36.259 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ºôµå ½Ã°¢:  Aug 2 2024 15:14:43 UTC
+20-Aug-2024 10:43:36.259 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server ¹öÀü ¹øÈ£:  10.1.28.0
+20-Aug-2024 10:43:36.259 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ÀÌ¸§:     Windows 10
+20-Aug-2024 10:43:36.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¿î¿µÃ¼Á¦ ¹öÀü:     10.0
+20-Aug-2024 10:43:36.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¾ÆÅ°ÅØÃ³:          amd64
+20-Aug-2024 10:43:36.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ÀÚ¹Ù È¨:           C:\Program Files\Java\jdk-17
+20-Aug-2024 10:43:36.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ¹öÀü:          17.0.11+7-LTS-207
+20-Aug-2024 10:43:36.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM º¥´õ:          Oracle Corporation
+20-Aug-2024 10:43:36.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     D:\work\jsp_work
+20-Aug-2024 10:43:36.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\apache-tomcat-10.1.28
+20-Aug-2024 10:43:36.272 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.config.file=D:\work\jsp_work/conf/logging.properties
+20-Aug-2024 10:43:36.273 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Aug-2024 10:43:36.273 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djdk.tls.ephemeralDHKeySize=2048
+20-Aug-2024 10:43:36.273 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Aug-2024 10:43:36.273 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Aug-2024 10:43:36.273 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.base=D:\work\jsp_work
+20-Aug-2024 10:43:36.273 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Dcatalina.home=d:\apache-tomcat-10.1.28
+20-Aug-2024 10:43:36.273 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log ¸í·É Çà ¾Æ±Ô¸ÕÆ®:  -Djava.io.tmpdir=D:\work\jsp_work/temp
+20-Aug-2024 10:43:36.290 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent ÇÁ·Î´ö¼Ç È¯°æµé¿¡¼­ ÃÖÀûÀÇ ¼º´ÉÀ» Á¦°øÇÏ´Â, APR ±â¹İ Apache Tomcat Native ¶óÀÌºê·¯¸®°¡, ´ÙÀ½ java.library.path¿¡¼­ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù: [C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Bandizip\;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\pmh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.1.4\bin;;C:\Users\pmh\.dotnet\tools;C:\Users\pmh\AppData\Roaming\npm;.]
+20-Aug-2024 10:43:36.528 INFO [main] org.apache.coyote.AbstractProtocol.init ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÃÊ±âÈ­ÇÕ´Ï´Ù.
+20-Aug-2024 10:43:36.554 INFO [main] org.apache.catalina.startup.Catalina.load [497] ¹Ğ¸®ÃÊ ³»¿¡ ¼­¹ö°¡ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:43:36.584 SEVERE [main] org.apache.catalina.users.MemoryUserDatabase.open ÁöÁ¤µÈ »ç¿ëÀÚ µ¥ÀÌÅÍº£ÀÌ½º [conf/tomcat-users.xml]À»(¸¦) Ã£À» ¼ö ¾ø¾ú½À´Ï´Ù.
+20-Aug-2024 10:43:36.592 INFO [main] org.apache.catalina.core.StandardService.startInternal ¼­ºñ½º [Catalina]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:43:36.592 INFO [main] org.apache.catalina.core.StandardEngine.startInternal ¼­¹ö ¿£ÁøÀ» ½ÃÀÛÇÕ´Ï´Ù: [Apache Tomcat/10.1.28]
+20-Aug-2024 10:43:36.610 INFO [main] org.apache.coyote.AbstractProtocol.start ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ½ÃÀÛÇÕ´Ï´Ù.
+20-Aug-2024 10:43:36.717 INFO [main] org.apache.catalina.startup.Catalina.start ¼­¹ö°¡ [163] ¹Ğ¸®ÃÊ ³»¿¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.
+20-Aug-2024 10:45:27.995 INFO [main] org.apache.catalina.core.StandardServer.await ¼Ë´Ù¿î Æ÷Æ®¸¦ ÅëÇØ À¯È¿ÇÑ ¼Ë´Ù¿î ¸í·ÉÀ» ¹Ş¾Ò½À´Ï´Ù. ¼­¹ö ÀÎ½ºÅÏ½º¸¦ ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:45:27.995 INFO [main] org.apache.coyote.AbstractProtocol.pause ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÀÏ½Ã Á¤Áö Áß
+20-Aug-2024 10:45:28.101 INFO [main] org.apache.catalina.core.StandardService.stopInternal ¼­ºñ½º [Catalina]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:45:28.102 INFO [main] org.apache.coyote.AbstractProtocol.stop ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ÁßÁö½ÃÅµ´Ï´Ù.
+20-Aug-2024 10:45:28.106 INFO [main] org.apache.coyote.AbstractProtocol.destroy ÇÁ·ÎÅäÄİ ÇÚµé·¯ ["http-nio-8080"]À»(¸¦) ¼Ò¸ê½ÃÅµ´Ï´Ù.
