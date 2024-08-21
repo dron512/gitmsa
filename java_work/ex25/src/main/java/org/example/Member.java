@@ -9,6 +9,16 @@ public class Member {
     private String password;
 
     @Override
+    public boolean equals(Object obj) {
+        return this.idx == ((Member)obj).idx;
+    }
+
+    @Override
+    public int hashCode() {
+        return idx;
+    }
+
+    @Override
     public String toString() {
         return "Member{" +
                 "idx=" + idx +

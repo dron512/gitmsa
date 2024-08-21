@@ -8,12 +8,13 @@ public class Main {
 
     public Main() {
         List<Member> list = dbRepository.select();
-        System.out.println(list);
+//        System.out.println(list);
+
+        list.stream()
+            .forEach(System.out::println);
     }
 
     public static void main(String[] args) {
-
         new Main();
-        
     }
 }

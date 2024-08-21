@@ -17,6 +17,7 @@ public class DBRepository {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://192.168.0.29:3307/pmh","root","1234");
             pstmt = conn.prepareStatement("select * from member");  //sql 작성
+            // insert update delete -> executeUpdate();
             rs = pstmt.executeQuery();  // sql 실행
             while(rs.next()){
                 Member member = new Member();
