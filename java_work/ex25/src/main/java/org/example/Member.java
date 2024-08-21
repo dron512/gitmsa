@@ -1,6 +1,6 @@
 package org.example;
 
-public class Member {
+public class Member implements Comparable<Member> {
 
     private int idx;
     private String name;
@@ -9,8 +9,13 @@ public class Member {
     private String password;
 
     @Override
+    public int compareTo(Member o) {
+        return this.age - o.age;
+    }
+
+    @Override
     public boolean equals(Object obj) {
-        return this.idx == ((Member)obj).idx;
+        return this.idx == ((Member) obj).idx;
     }
 
     @Override
@@ -68,4 +73,6 @@ public class Member {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 }
