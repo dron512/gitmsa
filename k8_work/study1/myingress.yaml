@@ -1,0 +1,33 @@
+# https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pmh-ingress
+  namespace: default
+spec:
+  rules:
+  - host: pmhingress.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: web
+            port:
+              number: 80
+      - path: /v2
+        pathType: Prefix
+        backend:
+          service:
+            name: web2
+            port:
+              number: 8080
+      - path: /prometheus
+        pathType: Prefix
+        backend:
+          service:
+            name: prometheus-app
+            port:
+              number: 30990
