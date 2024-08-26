@@ -30,7 +30,7 @@
   </div>
 
   <div class="flex flex-col items-center">
-    <h1>좌석</h1>
+    <h1>앞</h1>
     <div id="print"></div>
   </div>
   <script>
@@ -50,17 +50,29 @@
       }
       console.log(`total.value = ${total.value} colcount.value= ${colcount.value}`);
       // console.log('test'+total.value+colcount.value);
-      const arr = ["김길동", "이길동", "최길동","박길동","홍길동","윤길동"];
+      const arr = ["김길동", "이길동", "최길동","박길동","홍길동","윤길동","오오오","윤윤윤","빅빅빅","김김김"];
       const arrIndex = []
       let temp = 0;
       for (var i = 0; i < arr.length; i++) {
         do{
           temp = parseInt(Math.random() * arr.length);
-          console.log(temp);
-        }while(!arrIndex.indexOf(temp))
-        arrIndex.push[temp];
+        }while(arrIndex.indexOf(temp)>-1)
+        arrIndex.push(temp);
       }
-      console.log(arrIndex);
+      let 행 = "";
+      let num = 0;
+      for (var i = 0; i < arrIndex.length; i++) {
+        행 = 행 + '<tr>';
+        for (let j = 1; j <Number(colcount.value)+1; j++) {
+          if ( arr[arrIndex[num]] == undefined) break;
+          행 = 행 + `<td class="border border-gray-300 px-3">${arr[arrIndex[num]]}</td>`;
+          if(j==4)
+          행 = 행 + `<td class="border border-gray-300 px-8"></td>`;
+          num++;
+        }
+        행 = 행 + '</tr>';
+      }
+      print.innerHTML = `${start}${행}${end}`;
 
       // 0~20명 랜덤한숫자
       // 중복이 안나와야되요
@@ -69,6 +81,7 @@
       // for 구문
       // arr[arrIndex]
 
+      /*
       const lineNum = total.value / colcount.value;
       let 행 = "";
       let num = 1;
@@ -83,6 +96,7 @@
         행 = 행 + '</tr>';
       }
       print.innerHTML = `${start}${행}${end}`;
+      */
     }
   </script>
 </body>
