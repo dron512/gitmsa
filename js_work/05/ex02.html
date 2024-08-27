@@ -8,7 +8,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans');
-
     * {
       font-family: "Black Han Sans", system-ui;
       font-style: normal;
@@ -52,13 +51,16 @@
       // console.log('test'+total.value+colcount.value);
       const arr = ["김길동", "이길동", "최길동","박길동","홍길동","윤길동","오오오","윤윤윤","빅빅빅","김김김"];
       const arrIndex = []
+
       let temp = 0;
+
       for (var i = 0; i < arr.length; i++) {
         do{
           temp = parseInt(Math.random() * arr.length);
         }while(arrIndex.indexOf(temp)>-1)
         arrIndex.push(temp);
       }
+
       let 행 = "";
       let num = 0;
       for (var i = 0; i < arrIndex.length; i++) {
