@@ -61,7 +61,8 @@
     <script>
       const btn = document.getElementById('btn');
       const print = document.getElementById('print');
-      const arr = ["홍길동", "김길동", "이길동", "박길동", "최길동", "윤길동", "오길동"];
+      const arr = ["홍길동", "김길동", "이길동",
+                 "박길동", "최길동", "윤길동", "오길동" ,"고길동","함길동"];
 
       // console.log(arr.indexOf('홍길동'));
       // console.log(arr.indexOf('길동'));
@@ -76,7 +77,7 @@
           // Number("11.1") => 11.1
           // parseInt("11.1") => 11
           do {
-            temp = parseInt(Math.random() * 7);
+            temp = parseInt(Math.random() *  arr.length);
           } while (indexArr.indexOf(temp) > -1);
           indexArr.push(parseInt(temp));
         }
