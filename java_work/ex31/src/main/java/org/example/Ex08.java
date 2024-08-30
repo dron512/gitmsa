@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Ex08 {
@@ -28,6 +29,11 @@ public class Ex08 {
                         , (integers, integers2) -> { }
                 );
         System.out.println(evenList);
+
+        List<Integer> evenList2 = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+                .filter(integer -> integer % 2 == 0)
+                .collect(Collectors.toList());
+        System.out.println(evenList2);
 
         // 중복제거  10,20,30,10,40,30 모으는거
         Set<Integer> mset = Stream.of(10, 20, 30, 10, 40, 30)
