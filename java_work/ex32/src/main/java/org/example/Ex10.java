@@ -21,10 +21,15 @@ public class Ex10 {
         while(true) {
             System.out.println("""
                 뭐할래?
-                1. select()
-                2. insert()
-                3. update()
-                4. delete()
+                0. 로그인
+                1. member select()
+                2. member insert()
+                3. member update()
+                4. member delete()
+                5. todo select() -> user 사용자
+                6. todo insert() -> user 정보...
+                7. todo update()
+                8. todo delete()
                 """);
             int ra = scanner.nextInt();
 
