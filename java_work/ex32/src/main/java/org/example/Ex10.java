@@ -9,33 +9,39 @@ import java.sql.ResultSet;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Ex10 {
 
-    public static void main(String[] args) {
-        List<Member> list = new ArrayList<>();
-        try( Connection conn
-                     = DriverManager.getConnection(
-                             "jdbc:mysql://192.168.0.29:3307/pmh","root","1234") ){
-            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM member ORDER BY IDX DESC");
-            ResultSet rs = pstmt.executeQuery();
-            while(rs.next()){
-                Member member = Member.builder()
-                        .name(rs.getString("name"))
-                        .idx(rs.getInt("idx"))
-                        .age(rs.getInt("age"))
-                        .email(rs.getString("email"))
-                        .password(rs.getString("password"))
-                        .regdate(rs.getObject("regdate", LocalDateTime.class))
-                        .mydate(rs.getObject("mydate", LocalDateTime.class))
-                        .build();
-                list.add(member);
+    private MemberRepository memberRepository =
+            new MemberRepository();
+
+    Ex10(){
+        Scanner scanner = new Scanner(System.in);
+        while(true) {
+            System.out.println("""
+                뭐할래?
+                1. select()
+                2. insert()
+                3. update()
+                4. delete()
+                """);
+            int ra = scanner.nextInt();
+
+            if (ra == 1) {
+                memberRepository.select();
+            } else if (ra == 2) {
+                memberRepository.insert();
             }
-            list.stream()
-                    .forEach(System.out::println);
-        }catch (Exception e){
-            e.printStackTrace();
+            else{
+                System.out.println("종료됩니다.");
+                break;
+            }
         }
+    }
+
+    public static void main(String[] args) {
+        new Ex10();
     }
 
 }
