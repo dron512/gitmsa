@@ -1,4 +1,4 @@
-package org.example;
+package org.example.member;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -61,12 +61,16 @@ public class MemberRepository {
         }
     }
 
-    // 사용자존재유무 확인 2시20분.. 3시20분.. todoInsert javascript
+    // 사용자존재유무 확인
     public Member findByIdx(int idx){
-        try( Connection conn =
+        try(Connection conn =
                     DriverManager.getConnection(
-                            "jdbc:mysql://192.168.0.29:3307/pmh","root","1234") ){
-            PreparedStatement pstmt = conn.prepareStatement("SELECT * from member where idx = ? ");
+                            "jdbc:mysql://192.168.0.29:3307/pmh",
+                            "root",
+                            "1234")
+        ){
+            PreparedStatement pstmt = conn.prepareStatement(
+                    "SELECT * from member where idx = ? ");
             pstmt.setInt(1, idx);
             ResultSet rs = pstmt.executeQuery();
             if( rs.next()){
