@@ -36,9 +36,8 @@ public class MemberRepository {
         }
     }
 
-    public void insert(){
+    public void insert(String name,int age){
         LocalDateTime mydate = LocalDateTime.now();
-
         try( Connection conn
                      = DriverManager.getConnection(
                 "jdbc:mysql://192.168.0.29:3307/pmh","root","1234") ){
@@ -49,8 +48,8 @@ public class MemberRepository {
                         values
                             (?,?,?,?,?)
                     """);
-            pstmt.setString(1,"홍길동");
-            pstmt.setInt(2,30);
+            pstmt.setString(1,name);
+            pstmt.setInt(2,age);
             pstmt.setString(3,"aaaa@naver.com");
             pstmt.setString(4,"password");
             pstmt.setObject(5, mydate);
