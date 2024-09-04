@@ -15,7 +15,10 @@
   document.getElementById('btn').addEventListener('click',()=>{
     fetch(`http://127.0.0.1:8080/aa`)
     .then(res =>{
-      console.log(res);
+      return res.text();
+    })
+    .then( data=>{
+      console.log(data);
     })
   })
   
