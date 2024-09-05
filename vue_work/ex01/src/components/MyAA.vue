@@ -1,9 +1,11 @@
 <template>
   <div>
-    <h1>MyAA = {{myname}}</h1>
+    <h1>MyAA = {{name}}</h1>
+    <button @click="doAction">바꾸기</button>
   </div>
 </template>
 <script>
+import {ref} from 'vue';
 export default {
   props: {
     aa:{
@@ -15,11 +17,14 @@ export default {
       default:''
     }
   },
-  setup (props) {
-    // const name = '홍길동';
-    // return {name}
+  setup (props,context) {
+    const name = ref(props.myname);
     console.log(props);
-    return {}
+    const doAction = ()=>{
+      name.value="바뀐이름";
+      context.emit('myClick');
+    }
+    return {name,doAction}
   }
 }
 </script>
