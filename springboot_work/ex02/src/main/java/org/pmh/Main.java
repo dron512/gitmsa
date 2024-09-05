@@ -6,6 +6,9 @@ import org.pmh.conf.MyConf;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 // html/css/javascript - springboot
 public class Main {
     public static void main(String[] args) {
@@ -13,6 +16,11 @@ public class Main {
         // 객체를... 하나 가지고.. 메모리 낭비가 줄어든다..
         ApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext( MyConf.class );
+
+        Arrays.stream(applicationContext.getBeanDefinitionNames())
+                .forEach(System.out::println);
+
+//        System.out.println(Arrays.toString(applicationContext.getBeanDefinitionNames()));
 
         AA aa1 = applicationContext.getBean(AA.class);
         AA aa2 = applicationContext.getBean(AA.class);
