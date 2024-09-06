@@ -29,4 +29,11 @@ class Ex03ApplicationTests {
 		userRepository.save(user);
 	}
 
+	@Test
+	void selectTest(){
+		userRepository.findAll()
+				.stream()
+				.forEach(System.out::println);
+	}
+
 }
