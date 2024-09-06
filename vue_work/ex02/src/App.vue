@@ -1,27 +1,25 @@
 <template>
   <div>
-    <TheCounter></TheCounter>
-    <TheCounter></TheCounter>
-    <TheCounter></TheCounter>
-    <AA></AA>
+    <TheNav></TheNav>
     <RouterView></RouterView>
+    <AA></AA>
   </div>
 </template>
 
 <script>
-import TheCounter from './views/TheCounter.vue';
+import TheNav from './views/TheNav.vue';
 import AA from './views/AA.vue';
 import { RouterView } from 'vue-router';
 
 export default {
   components: {
-    TheCounter,
     AA,
-    RouterView
+    RouterView,
+    TheNav
   },
   setup() {
 
-    return { TheCounter, AA, RouterView }
+    return { AA, RouterView, TheNav }
   }
 }
 </script>
