@@ -1,6 +1,7 @@
 package com.pmh.ex04.user;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -26,6 +27,7 @@ import java.time.LocalDateTime;
 @ToString
 @Getter
 @Setter
+// Table 정의...
 public class User {
 
     @Id
@@ -35,11 +37,12 @@ public class User {
     private String name;
     private int age;
 
+    @Column(length = 100, unique = true)
     private String email;
+
+    @Column(length = 100)
     private String password;
 
     private LocalDateTime wdate;
-
-    // JPA CLASS -> talbe CREATE가 됩니다.
 
 }
