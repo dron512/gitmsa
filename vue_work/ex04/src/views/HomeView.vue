@@ -6,6 +6,7 @@
         <tr>
           <th class="border border-gray-500">idx</th>
           <th class="border border-gray-500">name</th>
+          <th class="border border-gray-500">email</th>
           <th class="border border-gray-500">age</th>
           <th class="border border-gray-500">password</th>
           <th class="border border-gray-500">wdate</th>
@@ -13,6 +14,7 @@
         <tr v-for="user in list" v-bind:key="user.idx">
           <td class="border border-gray-500">{{ user.idx }}</td>
           <td class="border border-gray-500">{{ user.name }}</td>
+          <td class="border border-gray-500">{{ user.email }}</td>
           <td class="border border-gray-500">{{ user.age }}</td>
           <td class="border border-gray-500">{{ user.password }}</td>
           <td class="border border-gray-500">{{ user.wdate }}</td>
@@ -31,15 +33,15 @@
       age = <input class="border border-yellow-400 focus:ring-2
                 focus:ring-yellow-500 focus:outline-none rounded-lg p-3 w-64
                 text-yellow-900 placeholder-yellow-500 bg-yellow-100 transition-all duration-300 shadow-md
-                hover:bg-yellow-200 hover:shadow-lg" type="text" name="name" id="" v-model="age"><br>
+                hover:bg-yellow-200 hover:shadow-lg" type="number" name="name" id="" v-model="age"><br>
       password = <input class="border border-yellow-400 focus:ring-2
                 focus:ring-yellow-500 focus:outline-none rounded-lg p-3 w-64
                 text-yellow-900 placeholder-yellow-500 bg-yellow-100 transition-all duration-300 shadow-md
                 hover:bg-yellow-200 hover:shadow-lg" type="text" name="name" id="" v-model="password"><br>
-      wdate = <input class="border border-yellow-400 focus:ring-2
-                  focus:ring-yellow-500 focus:outline-none rounded-lg p-3 w-64
+      email = <input class="border border-yellow-400 focus:ring-2
+                focus:ring-yellow-500 focus:outline-none rounded-lg p-3 w-64
                 text-yellow-900 placeholder-yellow-500 bg-yellow-100 transition-all duration-300 shadow-md
-                hover:bg-yellow-200 hover:shadow-lg" type="text" name="name" id="" v-model="wdate"><br>
+                hover:bg-yellow-200 hover:shadow-lg" type="text" name="name" id="" v-model="email"><br>
       <button @click="insert" class="bg-yellow-200 p-3 m-3 hover:bg-yellow-100 border border-gray-300">입력</button>
     </div>
   </div>
@@ -47,7 +49,6 @@
 
 <script>
 import { ref } from 'vue';
-
 export default {
   setup() {
     const mylist = [10, 20, 30];
@@ -63,7 +64,9 @@ export default {
     const name = ref('');
     const age = ref('');
     const password = ref('');
-    const wdate = ref('');
+
+    const email = ref('');
+
     const select = () => {
       fetch(`http://localhost:8080/user/select`)
         .then(res => {
@@ -78,11 +81,31 @@ export default {
         })
     }
     const insert = () => {
-      console.log("name.value "+name.value);
-      console.log("age.value "+age.value);
+      const data = {
+        name: name.value,
+        age: age.value,
+        password: password.value,
+        email: email.value
+      }
+      try{
+        fetch('http://192.168.0.29:8080/user/insert', {
+          method: "POST", 
+          headers: { 'Content-Type': 'application/json' }, 
+          body: JSON.stringify(data)
+        })
+          .then(res => {
+            if(!res.status.toString().startsWith('2'))
+              alert('입력이 실패했습니다.');
+            else{
+              alert('입력하였습니다.');
+            }
+          })
+      }catch(e){
+        console.log(e);
+      }
     }
 
-    return { list, mylist, select, insert, name, age, password, wdate }
+    return { list, mylist, select, insert, name, age, password, email }
   }
 }
 </script>
