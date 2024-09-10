@@ -29,6 +29,16 @@ public class UserController {
         return "ok";
     }
 
+    @PutMapping("update")
+    public String update(@Valid @RequestBody UserReqDto userReqDto){
+        System.out.println("실행"+ userReqDto);
+        ModelMapper modelMapper = new ModelMapper();
+        User user = modelMapper.map(userReqDto, User.class);
+        System.out.println("user = "+ user);
+        userRepository.save(user);
+        return "ok";
+    }
+
     // delete * from user where idx = ?
     @DeleteMapping("delete/{idx}")
     public String delete(@PathVariable long idx){
