@@ -19,17 +19,8 @@ public class UserController {
         return userRepository.findAll();
     }
 
-    // insert 를 하기 전에 .. 유효성검사.. email password...를 검사를 validation jar을 추가
-    // ReqDto -> User  ModelMapper jar 추가...
-    // localhost:8080/aa?aa=ccc&dd=eee
-    // @Vaild @PathVariable @Requestparam
-
-    // npm init vue
-    // npm i vue-router -> component
-    // insert select delete..
     @PostMapping("insert")
     public String insert(@Valid @RequestBody UserReqDto userReqDto){
-//    public String insert(@Valid @RequestBody UserReqDto userReqDto,@RequestParam(name = "aa") String aa){
         System.out.println("실행"+ userReqDto);
         ModelMapper modelMapper = new ModelMapper();
         User user = modelMapper.map(userReqDto, User.class);
@@ -38,6 +29,7 @@ public class UserController {
         return "ok";
     }
 
+    // delete * from user where idx = ?
     @DeleteMapping("delete/{idx}")
     public String delete(@PathVariable long idx){
         userRepository.deleteById(idx);
