@@ -3,6 +3,7 @@
     <h1>TheHeader</h1>
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/join">JOIN</RouterLink>
+    <RouterLink to="/about">ABOUT</RouterLink>
   </div>
 </template>
 

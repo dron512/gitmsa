@@ -2,7 +2,9 @@
   <div>
     <h1>{{ myVar }}</h1>
     <TheHader />
-    <RouterView></RouterView>
+    <div class="flex items-center justify-center">
+      <RouterView></RouterView>
+    </div>
   </div>
 </template>
 
