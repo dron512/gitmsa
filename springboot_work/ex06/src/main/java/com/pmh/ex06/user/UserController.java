@@ -25,19 +25,8 @@ public class UserController {
     @PostMapping("insert")
     public ResponseEntity<String> insert(@Valid @RequestBody UserReqDto userReqDto){
 
-        userService.insert();
-        // select * from where idx =?
-//        userRepository.findAllById()
+        userService.insert(userReqDto);
 
-        // select * from where email =?
-//        userRepository.find
-
-
-        System.out.println("실행"+ userReqDto);
-        ModelMapper modelMapper = new ModelMapper();
-        User user = modelMapper.map(userReqDto, User.class);
-        System.out.println("user = "+ user);
-        userRepository.save(user);
         return ResponseEntity.status(200).body("success insert");
     }
 
