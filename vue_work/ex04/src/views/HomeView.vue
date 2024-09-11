@@ -3,22 +3,26 @@
     <h1 class="text-5xl">HOME</h1>
     <div class="p-5">
       <table class="border border-gray-500 w-full">
-        <tr>
-          <th class="border border-gray-500">idx</th>
-          <th class="border border-gray-500">name</th>
-          <th class="border border-gray-500">email</th>
-          <th class="border border-gray-500">age</th>
-          <th class="border border-gray-500">password</th>
-          <th class="border border-gray-500">wdate</th>
-        </tr>
-        <tr v-for="user in list" v-bind:key="user.idx">
-          <td class="border border-gray-500">{{ user.idx }}</td>
-          <td class="border border-gray-500">{{ user.name }}</td>
-          <td class="border border-gray-500">{{ user.email }}</td>
-          <td class="border border-gray-500">{{ user.age }}</td>
-          <td class="border border-gray-500">{{ user.password }}</td>
-          <td class="border border-gray-500">{{ user.wdate }}</td>
-        </tr>
+        <thead>
+          <tr>
+            <th class="border border-gray-500">idx</th>
+            <th class="border border-gray-500">name</th>
+            <th class="border border-gray-500">email</th>
+            <th class="border border-gray-500">age</th>
+            <th class="border border-gray-500">password</th>
+            <th class="border border-gray-500">wdate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="user in list" v-bind:key="user.idx">
+            <td class="border border-gray-500">{{ user.idx }}</td>
+            <td class="border border-gray-500">{{ user.name }}</td>
+            <td class="border border-gray-500">{{ user.email }}</td>
+            <td class="border border-gray-500">{{ user.age }}</td>
+            <td class="border border-gray-500">{{ user.password }}</td>
+            <td class="border border-gray-500">{{ user.wdate }}</td>
+          </tr>
+        </tbody>
       </table>
       <button @click="select" class="bg-yellow-200 p-3 m-3 hover:bg-yellow-100 border border-gray-300">불러오기</button>
     </div>
@@ -33,7 +37,7 @@
       age = <input class="border border-yellow-400 focus:ring-2
                 focus:ring-yellow-500 focus:outline-none rounded-lg p-3 w-64
                 text-yellow-900 placeholder-yellow-500 bg-yellow-100 transition-all duration-300 shadow-md
-                hover:bg-yellow-200 hover:shadow-lg" type="number" name="name" id="" v-model="age"><br>
+                hover:bg-yellow-200 hover:shadow-lg" type="number" name="name" id="" v-model.number="age"><br>
       password = <input class="border border-yellow-400 focus:ring-2
                 focus:ring-yellow-500 focus:outline-none rounded-lg p-3 w-64
                 text-yellow-900 placeholder-yellow-500 bg-yellow-100 transition-all duration-300 shadow-md
@@ -87,20 +91,20 @@ export default {
         password: password.value,
         email: email.value
       }
-      try{
+      try {
         fetch('http://192.168.0.29:8080/user/insert', {
-          method: "POST", 
-          headers: { 'Content-Type': 'application/json' }, 
+          method: "POST",
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
         })
           .then(res => {
-            if(!res.status.toString().startsWith('2'))
+            if (!res.status.toString().startsWith('2'))
               alert('입력이 실패했습니다.');
-            else{
+            else {
               alert('입력하였습니다.');
             }
           })
-      }catch(e){
+      } catch (e) {
         console.log(e);
       }
     }
