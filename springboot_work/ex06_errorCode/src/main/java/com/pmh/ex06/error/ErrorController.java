@@ -34,6 +34,9 @@ public class ErrorController {
 //                .stream()
 //                .forEach( fieldError -> System.out.println(fieldError.getDefaultMessage()));
 
+//        Object temp = Arrays.stream(e.getDetailMessageArguments()).reduce("",(o, o2) -> o.toString()+o2.toString());
+//        System.out.println(temp);
+
         ErrorResponse errorResponse = ErrorResponse.builder()
                 .httpStatus(HttpStatus.BAD_REQUEST)
                 .message( Arrays.toString( e.getDetailMessageArguments() ))
