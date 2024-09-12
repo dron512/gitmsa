@@ -2,9 +2,7 @@ package com.pmh.ex07.freeboard;
 
 import com.pmh.ex07.user.User;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -12,6 +10,9 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@ToString
+@Getter
+@Setter
 public class FreeBoard {
 
     @Id
@@ -21,7 +22,7 @@ public class FreeBoard {
     private String title;
     private String content;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private User user;
 
     private LocalDateTime regDate;
