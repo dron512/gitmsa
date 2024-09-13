@@ -1,6 +1,7 @@
 package com.pmh.ex08.user;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -25,6 +26,7 @@ public class User {
     private int age;
 
     @Column(length = 100, unique = true)
+    @Email
     private String email;
 
     @Column(length = 100)
