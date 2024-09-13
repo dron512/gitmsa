@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("freeboard")
 @RequiredArgsConstructor
+@CrossOrigin
 public class FreeBoardController {
 
     private final FreeBoardRepository freeBoardRepository;
