@@ -3,7 +3,9 @@ package com.pmh.ex08.freeboard;
 import com.pmh.ex08.user.User;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -17,6 +19,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @EntityListeners(AuditingEntityListener.class)
+//@Table(name = "freeboard")
 public class FreeBoard {
 
     @Id
@@ -29,12 +32,18 @@ public class FreeBoard {
     @ManyToOne(cascade = CascadeType.ALL)
     private User user;
 
+    @CreatedBy
+    private String creAuthor;
+
+    @LastModifiedBy
+    private String modAuthor;
+
     @CreatedDate
     private LocalDateTime regDate;
 
     @LastModifiedDate
     private LocalDateTime modDate;
 
-    @Column(columnDefinition = "default 0")
+    @Column(columnDefinition = "int default 0")
     private int viewCount;
 }

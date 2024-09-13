@@ -22,12 +22,9 @@ public class FreeBoardController {
 
     @PostMapping
     public ResponseEntity<FreeBoard> save(@RequestBody FreeBoardReqDto freeBoardReqDto){
-
         FreeBoard freeBoard = new ModelMapper().map(freeBoardReqDto,FreeBoard.class);
-        System.out.println(freeBoard);
-
+        freeBoardRepository.save(freeBoard);
         return ResponseEntity.status(200).body(freeBoard);
     }
-
 
 }
