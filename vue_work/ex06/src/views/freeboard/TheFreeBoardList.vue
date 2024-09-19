@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pb-10">
     <h1 class="h1-red">FreeBoardList</h1>
     <div class="px-5">
       <table class="border border-b-gray-500 w-full">
@@ -45,9 +45,6 @@ axios.get('http://localhost:8080/freeboard')
   .catch(e => {
     console.log(e);
   })
-
-
-
 </script>
 
 <style scoped></style>
