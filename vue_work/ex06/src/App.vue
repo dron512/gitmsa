@@ -14,7 +14,13 @@ import { RouterLink, RouterView } from 'vue-router'
         </div>
         <div class="group relative">
           <RouterLink to="/freeboardlist">FreeBoard</RouterLink>
-          <div class="hidden group-hover:block absolute bg-slate-600 p-5 rounded">
+          <div class="opacity-0 
+                    group-hover:opacity-100 
+                    transition absolute 
+                    bg-slate-500 
+                    p-5 top-8
+                    -left-5
+                    rounded">
             <div>
               <RouterLink to="/freeboardlist">FreeBoardList</RouterLink>
             </div>
