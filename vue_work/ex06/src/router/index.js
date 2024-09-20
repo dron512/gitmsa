@@ -25,7 +25,12 @@ const router = createRouter(   {
     {
       path: '/freeboardlist',
       name: 'freeboardlist',
-      component: TheFreeBoardList
+      component: TheFreeBoardList,
+    },
+    {
+      path: '/freeboardone/:aa/:bb',
+      name: 'freeboardone',
+      component: TheFreeBoardList,
     }
   ]
 }   )

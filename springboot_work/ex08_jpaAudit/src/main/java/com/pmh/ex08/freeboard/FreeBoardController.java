@@ -21,20 +21,26 @@ public class FreeBoardController {
     private final FreeBoardRepository freeBoardRepository;
 
     @GetMapping
-    public ResponseEntity<List<FreeBoard>> findALl(){
+    public ResponseEntity<FreeBoardResponsePageDto> findALl(){
         // select * from freeboard oder by idx desc, name desc,
         Sort sort = Sort.by(Sort.Direction.DESC,"idx");
 
-        int page = 0;
-        int size = 5;
+        int pageNum= 0;
+        int size = 10;
 
-        Pageable pageable = PageRequest.of(page, size, sort);
-        Page<FreeBoard> list = freeBoardRepository.findAll(pageable);
+        Pageable pageable = PageRequest.of(pageNum, size, sort);
 
-        System.out.println("elements = "+list.getTotalElements());
-        System.out.println("pages = "+list.getTotalPages());
+        // Page List
+        Page<FreeBoard> page = freeBoardRepository.findAll(pageable);
 
-        return ResponseEntity.ok(list.get().toList());
+        System.out.println("elements = "+page.getTotalElements());
+        System.out.println("pages = "+page.getTotalPages());
+
+        FreeBoardResponsePageDto freeBoardResponsePageDto
+                                            = new ModelMapper()
+                                              .map(page, FreeBoardResponsePageDto.class);
+
+        return ResponseEntity.ok(freeBoardResponsePageDto);
     }
 
     @PostMapping

@@ -23,23 +23,25 @@
         </tbody>
       </table>
     </div>
+    <div class="flex justify-center mt-5">
+      <ul class="flex space-x-5">
+        <li v-for="num in totalPages" v-bind:key="num">
+          {{ num }}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script setup>
 import axios from 'axios';
-import { useRoute } from 'vue-router';
 import { ref } from 'vue';
 
-const route = useRoute();
 const arr = ref([]);
-
-console.log("route.params.aa = " + route.params.aa);
-console.log("route.params.bb = " + route.params.bb);
+const totalPages = 10;
 
 axios.get('http://localhost:8080/freeboard')
   .then(res => {
-    console.log(res.data);
     arr.value = res.data;
   })
   .catch(e => {
