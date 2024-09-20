@@ -4,6 +4,8 @@ export const aa = ()=>{
   console.log("test")
 }
 
+<img v-if="imageSrc" :src="imageSrc" alt="Downloaded Image" />
+
 export const data = {
   async downloadImage() {
     try {
