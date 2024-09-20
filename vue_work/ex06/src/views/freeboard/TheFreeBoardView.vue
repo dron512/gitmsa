@@ -31,6 +31,7 @@ import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
 const router = useRouter();
+
 const title = ref('초기값');
 const content = ref('초기값');
 const regDate = ref('초기값');
