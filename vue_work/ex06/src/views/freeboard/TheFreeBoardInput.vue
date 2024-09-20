@@ -40,7 +40,7 @@ const save = () => {
     .then(res => {
       console.log(res);
       alert('저장하였습니다.');
-      router.push({ name: "freeboardlist", params: { aa: 10, bb: "안녕하세요" } });
+      router.push({ name: "freeboardlistpage", params: { pagenum: 0 } });
     })
     .catch(e => {
       console.log(e);

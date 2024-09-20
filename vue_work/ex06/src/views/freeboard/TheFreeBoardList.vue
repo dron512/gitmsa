@@ -13,19 +13,19 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in arr" :key="item.idx">
-            <td class="border text-center">{{ item.idx }}</td>
-            <td class="border text-center">{{ item.title }}</td>
-            <td class="border text-center">{{ item.creAuthor }}</td>
-            <td class="border text-center">{{ item.regDate }}</td>
-            <td class="border text-center">{{ item.viewCount }}</td>
+          <tr v-for="item in arr" :key="item.idx" class="cursor-pointer hover:bg-slate-200" @click="viewPage(item.idx)">
+            <td class="border text-center text-lg p-1">{{ item.idx }}</td>
+            <td class="border text-center text-lg p-1">{{ item.title }}</td>
+            <td class="border text-center text-lg p-1">{{ item.creAuthor }}</td>
+            <td class="border text-center text-lg p-1">{{ item.regDate }}</td>
+            <td class="border text-center text-lg p-1">{{ item.viewCount }}</td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="flex justify-center mt-5">
-      <ul class="flex space-x-5">
-        <li v-for="num in totalPages" v-bind:key="num">
+      <ul class="flex space-x-2">
+        <li class="cursor-pointer p-3" v-for="num in totalPages" v-bind:key="num" @click="setPageNum(num - 1)">
           {{ num }}
         </li>
       </ul>
@@ -36,18 +36,37 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const arr = ref([]);
 const totalPages = ref(10);
+const pageNum = ref(0);
 
-axios.get('http://localhost:8080/freeboard')
-  .then(res => {
-    arr.value = res.data.list;
-    totalPages.value = res.data.totalPages;
-  })
-  .catch(e => {
-    console.log(e);
-  })
+const setPageNum = (num) => {
+  pageNum.value = num;
+  getFreeBoard(num);
+}
+
+const viewPage = (idx) => {
+  const data = { name: 'freeboardview', params: { idx } };
+  router.push(data);
+}
+
+const getFreeBoard = (pageNum) => {
+  if (pageNum == undefined) pageNum = 0;
+  axios.get(`http://localhost:8080/freeboard?pageNum=${pageNum}`)
+    .then(res => {
+      arr.value = res.data.list;
+      totalPages.value = res.data.totalPages;
+    })
+    .catch(e => {
+      console.log(e);
+    })
+}
+
+// page 호출되자 마자 자동실행
+getFreeBoard();
 </script>
 
 <style scoped></style>

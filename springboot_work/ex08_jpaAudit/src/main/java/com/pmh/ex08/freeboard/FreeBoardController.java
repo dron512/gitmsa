@@ -23,28 +23,26 @@ public class FreeBoardController {
     private final FreeBoardRepository freeBoardRepository;
 
     @GetMapping
-    public ResponseEntity<FreeBoardResponsePageDto> findALl(){
+    public ResponseEntity<FreeBoardResponsePageDto> findALl(@RequestParam(name = "pageNum", defaultValue = "0") int pageNum
+                                                            , @RequestParam(name = "size", defaultValue = "5") int size) {
         // select * from freeboard oder by idx desc, name desc,
-        Sort sort = Sort.by(Sort.Direction.DESC,"idx");
-
-        int pageNum= 0;
-        int size = 10;
+        Sort sort = Sort.by(Sort.Direction.DESC, "idx");
 
         Pageable pageable = PageRequest.of(pageNum, size, sort);
 
         // Page List
         Page<FreeBoard> page = freeBoardRepository.findAll(pageable);
 
-        System.out.println("elements = "+page.getTotalElements());
-        System.out.println("pages = "+page.getTotalPages());
+        System.out.println("elements = " + page.getTotalElements());
+        System.out.println("pages = " + page.getTotalPages());
 
         FreeBoardResponsePageDto freeBoardResponsePageDto
-                                            = new ModelMapper()
-                                              .map(page, FreeBoardResponsePageDto.class);
+                = new ModelMapper()
+                .map(page, FreeBoardResponsePageDto.class);
 
         List<FreeBoardResponseDto> list = new ArrayList<>();
 
-        for (FreeBoard freeBoard : freeBoardResponsePageDto.getContent()){
+        for (FreeBoard freeBoard : freeBoardResponsePageDto.getContent()) {
             FreeBoardResponseDto freeBoardResponseDto
                     = new ModelMapper().map(freeBoard, FreeBoardResponseDto.class);
 
@@ -62,10 +60,11 @@ public class FreeBoardController {
     }
 
     @PostMapping
-    public ResponseEntity<FreeBoard> save(@Valid @RequestBody FreeBoardReqDto freeBoardReqDto){
-        FreeBoard freeBoard = new ModelMapper().map(freeBoardReqDto,FreeBoard.class);
+    public ResponseEntity<FreeBoard> save(@Valid @RequestBody FreeBoardReqDto freeBoardReqDto) {
+        FreeBoard freeBoard = new ModelMapper().map(freeBoardReqDto, FreeBoard.class);
         freeBoardRepository.save(freeBoard);
         return ResponseEntity.status(200).body(freeBoard);
     }
+
 
 }
