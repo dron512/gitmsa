@@ -38,12 +38,10 @@ public class FreeBoardController {
         // Page List
         Page<FreeBoard> page = freeBoardRepository.findAll(pageable);
 
-        System.out.println("elements = " + page.getTotalElements());
-        System.out.println("pages = " + page.getTotalPages());
+        //System.out.println("elements = " + page.getTotalElements());
+        //System.out.println("pages = " + page.getTotalPages());
 
-        FreeBoardResponsePageDto freeBoardResponsePageDto
-                = new ModelMapper()
-                .map(page, FreeBoardResponsePageDto.class);
+        FreeBoardResponsePageDto freeBoardResponsePageDto = modelMapper.map(page, FreeBoardResponsePageDto.class);
 
         List<FreeBoardResponseDto> list = new ArrayList<>();
 
@@ -87,6 +85,12 @@ public class FreeBoardController {
     }
 
 
+    @DeleteMapping("delete/{idx}")
+    public ResponseEntity<String> deleteById(@PathVariable(name="idx") long idx){
+        freeBoardRepository.findById(idx).orElseThrow(() -> new BizException(ErrorCode.NOT_FOUND));
+        freeBoardRepository.deleteById(idx);
+        return ResponseEntity.ok("삭제되었습니다.");
+    }
 
 
 }
