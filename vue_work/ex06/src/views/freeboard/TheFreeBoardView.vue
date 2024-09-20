@@ -5,14 +5,24 @@
 </template>
 
 <script setup>
+import axios from 'axios';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
-console.log(route.params.idx);
+console.log();
 
+const getFreeBoard = () => {
+  axios.get(`http://localhost:8080/freeboard/view/${route.params.idx}`)
+    .then(res => {
+      console.log(res);
+    })
+    .catch(e => {
+      console.log(e);
+    })
+}
+
+getFreeBoard();
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
