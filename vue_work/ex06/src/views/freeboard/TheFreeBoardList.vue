@@ -38,11 +38,12 @@ import axios from 'axios';
 import { ref } from 'vue';
 
 const arr = ref([]);
-const totalPages = 10;
+const totalPages = ref(10);
 
 axios.get('http://localhost:8080/freeboard')
   .then(res => {
-    arr.value = res.data;
+    arr.value = res.data.list;
+    totalPages.value = res.data.totalPages;
   })
   .catch(e => {
     console.log(e);

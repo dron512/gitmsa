@@ -10,6 +10,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -39,6 +41,22 @@ public class FreeBoardController {
         FreeBoardResponsePageDto freeBoardResponsePageDto
                                             = new ModelMapper()
                                               .map(page, FreeBoardResponsePageDto.class);
+
+        List<FreeBoardResponseDto> list = new ArrayList<>();
+
+        for (FreeBoard freeBoard : freeBoardResponsePageDto.getContent()){
+            FreeBoardResponseDto freeBoardResponseDto
+                    = new ModelMapper().map(freeBoard, FreeBoardResponseDto.class);
+
+            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yy/MM/dd hh:mm");
+
+            freeBoardResponseDto.setRegDate(dateTimeFormatter.format(freeBoard.getRegDate()));
+            freeBoardResponseDto.setModDate(dateTimeFormatter.format(freeBoard.getModDate()));
+
+            list.add(freeBoardResponseDto);
+        }
+
+        freeBoardResponsePageDto.setList(list);
 
         return ResponseEntity.ok(freeBoardResponsePageDto);
     }
