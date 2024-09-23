@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ex09
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://192.168.0.40:3306/pmh
+    username: root
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate.format_sql: true
+    show-sql: true
+    open-in-view: false
+
+my:
+  value: "welcome to my value"
