@@ -13,16 +13,28 @@
         전송
       </button>
     </div>
-    myfile = {{ myfile }}
+    <div @dragover.prevent="" @drop.prevent="dropFile" class="p-5 bg-slate-400">
+      <h1 class="w-full bg-white py-3 my-2 text-center">여기에 파일을 올리세요 {{ myfile.name }}</h1>
+      myfile = {{ myfile.name }}
+      <div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
-const myfile = ref(null);
+const myfile = ref('null');
+const imgDiv = ref('');
 
-console.log('user3');
+const dropFile = (e)=>{
+  const data = e.dataTransfer;
+  for(let i=0; i<data.files.length; i++){
+    alert(data.files[i].name);
+    myfile.value = data.files[i];
+  }
+}
 
 const save = () => {
   if (!myfile.value) {
