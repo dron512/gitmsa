@@ -22,6 +22,8 @@
 import { ref } from 'vue';
 const myfile = ref(null);
 
+console.log("user3");
+
 const save = () => {
   if (!myfile.value) {
     alert('파일을 선택하세요');
