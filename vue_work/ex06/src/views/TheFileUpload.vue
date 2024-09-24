@@ -18,11 +18,11 @@
 </template>
 
 <script setup>
-// import axios from 'axios';
+import axios from 'axios';
 import { ref } from 'vue';
 const myfile = ref(null);
 
-console.log("user3");
+console.log('user3');
 
 const save = () => {
   if (!myfile.value) {
@@ -30,10 +30,28 @@ const save = () => {
     return;
   }
 
-  // axios.post('http://localhost:10000/file/upload')
+  const formData = new FormData();
+  formData.append('file', myfile.value); // 'file'이 key여야 함
+  formData.append(
+    'fileDto',
+    new Blob([JSON.stringify({ name: 'filename' })], { type: 'application/json' })
+  );
+
+  axios
+    .post('http://localhost:10000/file/upload', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 };
 const onFileChange = (e) => {
-  myfile.value = e.target.value;
+  myfile.value = e.target.files[0];
 };
 </script>
 

@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/ex01" />
-    <file type="web" url="file://$PROJECT_DIR$/ex03" />
-    <file type="web" url="file://$PROJECT_DIR$/ex04" />
-    <file type="web" url="file://$PROJECT_DIR$/ex04_select_insert_delete_modelmapper_validation" />
-    <file type="web" url="file://$PROJECT_DIR$/ex05" />
-    <file type="web" url="file://$PROJECT_DIR$/ex06" />
-    <file type="web" url="file://$PROJECT_DIR$/ex07" />
-    <file type="web" url="file://$PROJECT_DIR$/ex08" />
-    <file type="web" url="file://$PROJECT_DIR$/ex09" />
-    <file type="web" url="file://$PROJECT_DIR$/ex10" />
-  </component>
-  <component name="MavenProjectsManager">
-    <option name="originalFiles">
-      <list>
-        <option value="$PROJECT_DIR$/ex02/pom.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" default="true">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

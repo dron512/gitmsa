@@ -1,5 +1,7 @@
 package com.pmh.ex10.file;
 
+import lombok.Data;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -7,9 +9,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 
 @RestController
 @RequestMapping("file")
+@CrossOrigin
 public class FileController {
 
     private final Path imagePath;
@@ -17,7 +21,7 @@ public class FileController {
     public FileController() {
         this.imagePath = Paths.get("ex10/images/file/").toAbsolutePath();
 
-        try{
+        try {
             Files.createDirectories(this.imagePath);
         } catch (IOException e) {
             e.printStackTrace();
@@ -30,9 +34,18 @@ public class FileController {
         return "test";
     }
 
-    @PostMapping("upload")
-    public String upload(@RequestParam("file") MultipartFile file) {
+    @PostMapping(value = "upload", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String upload(@RequestPart(name = "file") MultipartFile file,
+                         @RequestPart(name = "fileDto") HashMap<String, String> map) {
+
+        System.out.println(map);
         System.out.println(file);
         return "upload";
+
     }
+}
+
+@Data
+class FileDto{
+    private String name;
 }
