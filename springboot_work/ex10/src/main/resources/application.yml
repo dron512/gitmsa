@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: ex10
+  # sql 구문 실행해라
+  sql:
+    init:
+      mode: always
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
@@ -13,11 +17,13 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
     properties:
       hibernate.format_sql: true
     show-sql: true
     open-in-view: false
+    # 스프링부트 시작 한 후에 data.sql 에 있는 insert 구문 실행해라
+    defer-datasource-initialization: true
 
 my:
   value: "welcome to my value"
