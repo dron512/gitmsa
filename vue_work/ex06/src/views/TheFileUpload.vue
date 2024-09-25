@@ -26,7 +26,6 @@
 import axios from 'axios';
 import { ref } from 'vue';
 const myfile = ref('null');
-const imgDiv = ref('');
 
 const dropFile = (e)=>{
   const data = e.dataTransfer;
