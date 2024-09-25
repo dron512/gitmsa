@@ -6,7 +6,7 @@ spring:
     name: ex10
   sql:
     init:
-      mode: never
+      mode: always
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
@@ -16,7 +16,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
     properties:
       hibernate.format_sql: true
     show-sql: true

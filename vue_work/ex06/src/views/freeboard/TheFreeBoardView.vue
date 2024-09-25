@@ -36,6 +36,7 @@ const title = ref('초기값');
 const content = ref('초기값');
 const regDate = ref('초기값');
 const creAuthor = ref('초기값');
+const list = ref([]);
 const idx = ref(0);
 
 const doDelete = (idx) => {
@@ -61,6 +62,7 @@ const getFreeBoard = () => {
       regDate.value = res.data.regDate;
       creAuthor.value = res.data.creAuthor;
       idx.value = res.data.idx;
+      list.value = res.data.list;
     })
     .catch(e => {
       console.log(e);
