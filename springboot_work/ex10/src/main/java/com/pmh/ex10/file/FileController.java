@@ -1,15 +1,17 @@
 package com.pmh.ex10.file;
 
-import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
 
 @RestController
 @RequestMapping("file")
@@ -17,16 +19,20 @@ import java.util.HashMap;
 public class FileController {
 
     private final Path imagePath;
+    private final FileRepository fileRepository;
+    private final ModelMapper modelMapper;
 
-    public FileController() {
-        this.imagePath = Paths.get("ex10/images/file/").toAbsolutePath();
+    @Autowired
+    public FileController(FileRepository fileRepository, ModelMapper modelMapper) {
+        this.imagePath = Paths.get("images/file/").toAbsolutePath();
+        this.fileRepository = fileRepository;
+        this.modelMapper = modelMapper;
 
         try {
             Files.createDirectories(this.imagePath);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @GetMapping("test")
@@ -36,16 +42,24 @@ public class FileController {
 
     @PostMapping(value = "upload", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public String upload(@RequestPart(name = "file") MultipartFile file,
-                         @RequestPart(name = "fileDto") HashMap<String, String> map) {
+                         @RequestPart(name = "fileDto") FileReqDto fileReqDto) {
 
-        System.out.println(map);
-        System.out.println(file);
+        try {
+            String myFilePath = imagePath.toAbsolutePath() + "\\" + file.getOriginalFilename();
+
+            File saveFile = new File(myFilePath);
+            file.transferTo(saveFile);
+
+            // DB 저장...
+            FileEntity fileEntity = modelMapper.map(fileReqDto, FileEntity.class);
+            fileRepository.save(fileEntity);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         return "upload";
 
     }
 }
 
-@Data
-class FileDto{
-    private String name;
-}
