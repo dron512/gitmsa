@@ -62,11 +62,25 @@ public class FileController {
         }catch (Exception e){
             e.printStackTrace();
         }
-
         return "upload";
-
     }
 
-  
+
+    @GetMapping("/download/{fileName}")
+    public ResponseEntity<Resource> downloadFile(@PathVariable String fileName) throws IOException {
+        // 파일이 저장된 경로
+        Path filePath = imagePath.resolve(fileName);
+        Resource resource = new UrlResource(filePath.toUri());
+
+        if (!resource.exists()) {
+            throw new FileNotFoundException("파일을 찾을 수 없습니다: " + fileName);
+        }
+
+        // 파일을 전송
+        return ResponseEntity.ok()
+                .contentType(MediaType.IMAGE_JPEG) // 또는 MediaType.IMAGE_PNG 등으로 변경 가능
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + fileName + "\"")
+                .body(resource);
+    }
 }
 
