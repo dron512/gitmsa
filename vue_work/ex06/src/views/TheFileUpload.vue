@@ -13,12 +13,6 @@
         전송
       </button>
     </div>
-    <div @dragover.prevent="" @drop.prevent="dropFile" class="p-5 bg-slate-400">
-      <h1 class="w-full bg-white py-3 my-2 text-center">여기에 파일을 올리세요 {{ myfile.name }}</h1>
-      myfile = {{ myfile.name }}
-      <div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -26,14 +20,6 @@
 import axios from 'axios';
 import { ref } from 'vue';
 const myfile = ref('null');
-
-const dropFile = (e)=>{
-  const data = e.dataTransfer;
-  for(let i=0; i<data.files.length; i++){
-    alert(data.files[i].name);
-    myfile.value = data.files[i];
-  }
-}
 
 const save = () => {
   if (!myfile.value) {
@@ -45,7 +31,10 @@ const save = () => {
   formData.append('file', myfile.value); // 'file'이 key여야 함
   formData.append(
     'fileDto',
-    new Blob([JSON.stringify({ name: 'filename', desc: 'aValue' })], { type: 'application/json' })
+    new Blob(
+      [JSON.stringify({ name: 'filename', desc: 'aValue' })],
+      { type: 'application/json' }
+    )
   );
 
   axios

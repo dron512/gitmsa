@@ -40,17 +40,18 @@ public class FileController {
         return "test";
     }
 
-    @PostMapping(value = "upload", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public String upload(@RequestPart(name = "file") MultipartFile file,
-                         @RequestPart(name = "fileDto") FileReqDto fileReqDto) {
-
+    @PostMapping(value = "upload",
+            produces = MediaType.APPLICATION_JSON_VALUE,
+            consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String upload(
+            @RequestPart(name = "file") MultipartFile file,
+             @RequestPart(name = "fileDto") FileReqDto fileReqDto) {
         try {
             String myFilePath = imagePath.toAbsolutePath() + "\\" + file.getOriginalFilename();
 
             File saveFile = new File(myFilePath);
             file.transferTo(saveFile);
 
-            // DB 저장...
             FileEntity fileEntity = modelMapper.map(fileReqDto, FileEntity.class);
             fileRepository.save(fileEntity);
 
