@@ -46,17 +46,10 @@ public class FreeBoardController {
     @GetMapping
     public ResponseEntity<FreeBoardResponsePageDto> findALl(@RequestParam(name = "pageNum", defaultValue = "0") int pageNum
             , @RequestParam(name = "size", defaultValue = "5") int size) {
-        // select * from freeboard oder by idx desc, name desc,
         Sort sort = Sort.by(Sort.Direction.DESC, "idx");
-
         Pageable pageable = PageRequest.of(pageNum, size, sort);
 
-        // Page List
         Page<FreeBoard> page = freeBoardRepository.findAll(pageable);
-
-        //System.out.println("elements = " + page.getTotalElements());
-        //System.out.println("pages = " + page.getTotalPages());
-
         FreeBoardResponsePageDto freeBoardResponsePageDto = modelMapper.map(page, FreeBoardResponsePageDto.class);
 
         List<FreeBoardResponseDto> list = freeBoardResponsePageDto
