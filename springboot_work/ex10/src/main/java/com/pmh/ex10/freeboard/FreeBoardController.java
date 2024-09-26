@@ -59,19 +59,29 @@ public class FreeBoardController {
 
         FreeBoardResponsePageDto freeBoardResponsePageDto = modelMapper.map(page, FreeBoardResponsePageDto.class);
 
-        List<FreeBoardResponseDto> list = new ArrayList<>();
+        List<FreeBoardResponseDto> list = freeBoardResponsePageDto
+                .getContent()
+                .stream()
+                .map(freeBoard -> {
+                    FreeBoardResponseDto freeBoardResponseDto = modelMapper.map(freeBoard, FreeBoardResponseDto.class);
+                    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yy/MM/dd hh:mm");
 
-        for (FreeBoard freeBoard : freeBoardResponsePageDto.getContent()) {
-            FreeBoardResponseDto freeBoardResponseDto
-                    = new ModelMapper().map(freeBoard, FreeBoardResponseDto.class);
+                    freeBoardResponseDto.setRegDate(dateTimeFormatter.format(freeBoard.getRegDate()));
+                    freeBoardResponseDto.setModDate(dateTimeFormatter.format(freeBoard.getModDate()));
+                    return freeBoardResponseDto;
+                }).toList();
 
-            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yy/MM/dd hh:mm");
-
-            freeBoardResponseDto.setRegDate(dateTimeFormatter.format(freeBoard.getRegDate()));
-            freeBoardResponseDto.setModDate(dateTimeFormatter.format(freeBoard.getModDate()));
-
-            list.add(freeBoardResponseDto);
-        }
+//        for (FreeBoard freeBoard : freeBoardResponsePageDto.getContent()) {
+//            FreeBoardResponseDto freeBoardResponseDto
+//                    = new ModelMapper().map(freeBoard, FreeBoardResponseDto.class);
+//
+//            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yy/MM/dd hh:mm");
+//
+//            freeBoardResponseDto.setRegDate(dateTimeFormatter.format(freeBoard.getRegDate()));
+//            freeBoardResponseDto.setModDate(dateTimeFormatter.format(freeBoard.getModDate()));
+//
+//            list.add(freeBoardResponseDto);
+//        }
 
         freeBoardResponsePageDto.setList(list);
 
@@ -109,7 +119,7 @@ public class FreeBoardController {
             try {
                 File destFile = new File(myFilePath);
                 file.transferTo(destFile);
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -119,7 +129,7 @@ public class FreeBoardController {
 
         FileEntity fileEntity = new FileEntity();
         fileEntity.setName(file.getOriginalFilename());
-        fileEntity.setPath( Paths.get("images/file/").toAbsolutePath().toString() );
+        fileEntity.setPath(Paths.get("images/file/").toAbsolutePath().toString());
         fileEntity.setFreeBoard(freeBoard);
 
         fileRepository.save(fileEntity);

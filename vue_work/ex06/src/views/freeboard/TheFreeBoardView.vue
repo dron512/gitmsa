@@ -66,7 +66,7 @@ const getFreeBoard = () => {
       regDate.value = res.data.regDate;
       creAuthor.value = res.data.creAuthor;
       idx.value = res.data.idx;
-      list.value = res.data.list;
+
     })
     .catch(e => {
       console.log(e);

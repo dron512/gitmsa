@@ -23,10 +23,12 @@
         저장
       </button>
     </div>
+    <!-- <ComEditor /> -->
   </div>
 </template>
 
 <script setup>
+// import ComEditor from '@/components/ComEditor.vue';
 import axios from 'axios';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
