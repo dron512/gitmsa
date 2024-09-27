@@ -1,4 +1,5 @@
 <template>
+  
   <div class="pb-10">
     <h1 class="h1-blue">UserList</h1>
     <div class="flex flex-wrap">
@@ -10,7 +11,8 @@
           p-5 
           m-5
           w-80
-          text-white" 
+          text-white
+          rounded" 
           v-for="item in arr" :key="item.idx">
         <h1>idx = {{ item.idx }}</h1>
         <h1>name = {{ item.name }}</h1>
