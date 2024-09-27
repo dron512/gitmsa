@@ -13,6 +13,8 @@
           </tr>
         </thead>
         <tbody>
+          <!-- && <- 앞에꺼 true 이면 뒤에꺼 확인해봅니다. -->
+          <!-- || <- 앞에꺼 false 이면 뒤에꺼 확인해봅니다. -->
           <template v-if="arr && arr.length>0">
             <tr
               v-for="item in arr"
@@ -26,13 +28,9 @@
               <td class="border text-center text-lg p-1">{{ item.regDate }}</td>
               <td class="border text-center text-lg p-1">{{ item.viewCount }}</td>
               <template v-if="item.list[0]">
-                <!-- {{ `true ${JSON.stringify(item.list[0].name)}` }} -->
                 <td class="border text-center text-lg p-1">
                   <img :src="`http://localhost:10000/file/download/${item.list[0].name}`" alt="" srcset="" width="150">
                 </td>
-              </template>
-              <template v-else>
-                {{ `false` }}
               </template>
             </tr>
           </template>
@@ -51,6 +49,13 @@
         </li>
       </ul>
     </div>
+
+    <div v-if="temp">
+      <h1>나올수도 있고...</h1>
+    </div>
+    <div>
+      <button @click="changeTemp">나오게..하기</button>
+    </div>
   </div>
 </template>
 
@@ -58,6 +63,9 @@
 import axios from 'axios';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+
+const temp = ref(null);
+const changeTemp = ()=>{ temp.value = !temp.value }
 
 const router = useRouter();
 const arr = ref([]);
@@ -81,6 +89,8 @@ const getFreeBoard = (pageNum) => {
     .then((res) => {
       arr.value = res.data.list;
       totalPages.value = res.data.totalPages;
+      
+      console.log(arr.value);
     })
     .catch((e) => {
       console.log(e);
