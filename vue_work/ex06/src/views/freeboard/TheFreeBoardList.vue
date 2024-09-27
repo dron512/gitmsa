@@ -96,7 +96,6 @@ const getFreeBoard = (pageNum) => {
       console.log(e);
     });
 };
-
 // page 호출되자 마자 자동실행
 getFreeBoard();
 </script>
