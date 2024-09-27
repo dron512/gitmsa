@@ -1,13 +1,14 @@
 <template>
   <div class="pb-10">
     <h1 class="h1-blue">UserList</h1>
-    <div class="flex space-x-5">
+    <div class="flex flex-wrap">
       <div 
           @click="modalUser"
           class="
           cursor-pointer
         bg-slate-500 
           p-5 
+          m-5
           w-80
           text-white" 
           v-for="item in arr" :key="item.idx">
@@ -15,8 +16,7 @@
         <h1>name = {{ item.name }}</h1>
         <h1>email = {{ item.email }}</h1>
         <h1>가입날짜 = {{ item.wdate }}</h1>
-        <h1>작성한글 = {{ item.list.length }}
-        </h1>
+        <h1>작성한글 = {{ item.list.length }}</h1>
       </div>
     </div>
   </div>
