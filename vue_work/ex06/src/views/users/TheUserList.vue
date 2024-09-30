@@ -50,6 +50,7 @@
         <h1>email = {{ item.email }}</h1>
         <h1>가입날짜 = {{ item.wdate }}</h1>
         <h1>작성한글 = {{ item.list.length }}</h1>
+        <button @click.stop="doDelete(item.idx)">삭제</button>
       </div>
     </div>
   </div>
@@ -66,6 +67,9 @@ const wdate = ref();
 const email = ref();
 
 const isModal = ref(false);
+const doDelete = ()=>{
+  console.log("doDelete");
+}
 const modalUser = async (item) => {
   isModal.value = !isModal.value;
 
@@ -78,6 +82,9 @@ const modalUser = async (item) => {
                                   } );
     // update를 해야함..
     alert('수정하였습니다.'+result);
+    const retValue = await getUsers();
+    // console.log("retValue = "+JSON.stringify(retValue.data));
+    arr.value = retValue.data;
     return;
   }
 
