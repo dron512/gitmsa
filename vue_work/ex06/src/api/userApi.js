@@ -5,7 +5,7 @@ const URL = 'http://localhost:10000/user';
 export const getUsers = async () => {
   try {
     const res = await axios.get(`${URL}/select`);
-    console.log(res);
+    // console.log(res);
     return res;
   } catch (e) {
     console.log(e);

@@ -19,7 +19,7 @@ export default {
   },
   setup (props,context) {
     const name = ref(props.myname);
-    console.log(props);
+    // console.log(props);
     const doAction = ()=>{
       name.value="바뀐이름";
       context.emit('myClick');

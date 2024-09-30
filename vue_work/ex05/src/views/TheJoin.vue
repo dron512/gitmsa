@@ -50,7 +50,9 @@ const save = () => {
   };
   alert(JSON.stringify(data));
   axios.post('http://localhost:8080/user/insert', data)
-    .then(res => { console.log(res) })
+    .then(res => {
+      //  console.log(res) 
+      })
     .catch(e => { console.log(e) });
 }
 </script>
