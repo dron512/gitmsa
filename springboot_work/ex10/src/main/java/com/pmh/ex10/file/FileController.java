@@ -25,7 +25,7 @@ public class FileController {
     public FileController(ModelMapper modelMapper, FileRepository fileRepository) {
         this.modelMapper = modelMapper;
         this.fileRepository = fileRepository;
-        this.imagePath = Paths.get("ex10/images/file/").toAbsolutePath();
+        this.imagePath = Paths.get("images/file/").toAbsolutePath();
 
         try {
             Files.createDirectories(this.imagePath);
@@ -59,6 +59,26 @@ public class FileController {
             e.printStackTrace();
         }
         return "upload";
+    }
+
+    @PostMapping(value = "uploads", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String uploads(@RequestPart(name = "files") MultipartFile[] files,
+                          @RequestPart(name = "fileDto") HashMap<String, String> map) {
+        System.out.println("일로오나");
+        try{
+            for (MultipartFile file : files) {
+                String fileName = file.getOriginalFilename();
+                String filePath = imagePath.toString()+"\\"+fileName;
+                System.out.println(filePath);
+                File dest = new File(filePath);
+                file.transferTo(dest);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return "upload";
+
     }
 
 }
