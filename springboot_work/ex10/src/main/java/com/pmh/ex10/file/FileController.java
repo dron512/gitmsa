@@ -1,6 +1,7 @@
 package com.pmh.ex10.file;
 
 import lombok.Data;
+import org.modelmapper.ModelMapper;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -18,8 +19,12 @@ import java.util.HashMap;
 public class FileController {
 
     private final Path imagePath;
+    private final ModelMapper modelMapper;
+    private final FileRepository fileRepository;
 
-    public FileController() {
+    public FileController(ModelMapper modelMapper, FileRepository fileRepository) {
+        this.modelMapper = modelMapper;
+        this.fileRepository = fileRepository;
         this.imagePath = Paths.get("ex10/images/file/").toAbsolutePath();
 
         try {
@@ -58,7 +63,3 @@ public class FileController {
 
 }
 
-@Data
-class FileDto{
-    private String name;
-}
