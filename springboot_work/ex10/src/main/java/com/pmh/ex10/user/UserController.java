@@ -28,18 +28,13 @@ public class UserController {
 
     @PostMapping("insert")
     public ResponseEntity<String> insert(@Valid @RequestBody UserReqDto userReqDto){
-
         userService.insert(userReqDto);
-
         return ResponseEntity.status(200).body("success insert");
     }
 
     @PutMapping("update")
     public ResponseEntity<String> update(@Valid @RequestBody UserReqDto userReqDto){
-
-        System.out.println("일로오나");
         userService.update(userReqDto);
-
         return ResponseEntity.status(200).body("success update");
     }
 

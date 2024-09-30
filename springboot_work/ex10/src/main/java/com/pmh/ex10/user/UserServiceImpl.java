@@ -39,6 +39,8 @@ public class UserServiceImpl implements UserService{
                 user.getIdx()).orElseThrow(() -> { throw new BizException(ErrorCode.NOT_FOUND); } );
 
         user.setWdate(dbUser.getWdate());
+//        user.setEmail(dbUser.getEmail());
+//        user.setPassword(dbUser.getPassword());
 
         userRepository.save(user);
     }

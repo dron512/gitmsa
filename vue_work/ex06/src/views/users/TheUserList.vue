@@ -66,13 +66,18 @@ const wdate = ref();
 const email = ref();
 
 const isModal = ref(false);
-const modalUser = (item) => {
+const modalUser = async (item) => {
   isModal.value = !isModal.value;
 
   if(item =='save'){
-    saveUser('');
+    const result = await saveUser( { 
+                                    idx:idx.value,
+                                    name:name.value,
+                                    email:email.value,
+                                    password:"마이패스워드"
+                                  } );
     // update를 해야함..
-    alert('수정하였습니다.');
+    alert('수정하였습니다.'+result);
     return;
   }
 
