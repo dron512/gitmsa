@@ -31,7 +31,10 @@ const save = () => {
   formData.append('file', myfile.value); // 'file'이 key여야 함
   formData.append(
     'fileDto',
-    new Blob([JSON.stringify({ name: 'filename' })], { type: 'application/json' })
+    new Blob(
+      [JSON.stringify({ name: 'filename', desc: 'aValue' })],
+      { type: 'application/json' }
+    )
   );
 
   axios

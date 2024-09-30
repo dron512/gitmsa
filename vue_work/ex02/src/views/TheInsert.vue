@@ -22,7 +22,7 @@ export default {
         body: JSON.stringify(mydata)
       })
         .then(res => {
-          console.log(res);
+          // console.log(res);
         })
     }
     return { userSend }

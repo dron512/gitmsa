@@ -1,5 +1,7 @@
 package com.pmh.ex10.freeboard;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.pmh.ex10.file.FileEntity;
 import com.pmh.ex10.user.User;
 import jakarta.persistence.*;
 import lombok.*;
@@ -10,6 +12,8 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -29,9 +33,6 @@ public class FreeBoard {
     private String title;
     private String content;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    private User user;
-
     @CreatedBy
     private String creAuthor;
 
@@ -47,4 +48,21 @@ public class FreeBoard {
 
     @Column(columnDefinition = "int default 0")
     private int viewCount;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "freeBoard", cascade = CascadeType.ALL)
+    private List<FileEntity> list = new ArrayList<>();
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JsonIgnore
+    private User user;
+
 }
+
+
+
+
+
+
+
+
+

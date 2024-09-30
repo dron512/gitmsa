@@ -80,8 +80,8 @@ export default {
           list.value = result;
         })
         .catch(e => {
-          console.log("예외가 발생했습니다");
-          console.log(e);
+          // console.log("예외가 발생했습니다");
+          // console.log(e);
         })
     }
     const insert = () => {
@@ -105,7 +105,7 @@ export default {
             }
           })
       } catch (e) {
-        console.log(e);
+        // console.log(e);
       }
     }
 

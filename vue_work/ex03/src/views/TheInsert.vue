@@ -19,7 +19,7 @@ export default {
   setup() {
     const email = ref('');
     const doInsert = () => {
-      console.log(email.value);
+      // console.log(email.value);
       // fetch(`http://localhost:8080/user/insert`,)
       //   .then()
     }
