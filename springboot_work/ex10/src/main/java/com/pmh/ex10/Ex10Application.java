@@ -20,6 +20,7 @@ public class Ex10Application {
 
 //		Arrays.stream(applicationContext.getBeanDefinitionNames())
 //				.forEach(System.out::println);
+
 	}
 
 	@Bean

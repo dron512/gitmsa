@@ -1,8 +1,9 @@
 <template>
-  
+  <div class="overlay"></div>
   <div class="pb-10">
     <h1 class="h1-blue">UserList</h1>
-    <div class="flex flex-wrap">
+    <div style="" class="flex flex-wrap">
+    <!-- <div style="display: flex;flex-wrap: wrap;" class=""> -->
       <div 
           @click="modalUser"
           class="
@@ -43,5 +44,9 @@ watchEffect( async() => {
 .h1-blue {
   font-size: 5rem;
   color: blue;
+}
+.overlay{
+  position: fixed; top:0; left:0; width: 100%; height: 100%; z-index: 1000; background-color: rgb(0,0,0,0.1);
+  /* display: none; */
 }
 </style>
