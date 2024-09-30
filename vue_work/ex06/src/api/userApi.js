@@ -22,5 +22,7 @@ export const getUsers = async () => {
   // });
 };
 
-export const saveUser = () => {};
+export const saveUser = () => {
+  console.log("save");
+};
 export const deleteUser = () => {};

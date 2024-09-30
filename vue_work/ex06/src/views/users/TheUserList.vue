@@ -4,7 +4,19 @@
     <h1 class="text-5xl">USER 수정</h1>
     <div class="cursor-pointer bg-slate-500 p-5 m-5 w-80 text-white rounded">
       <h1>idx = {{ idx }}</h1>
-      <h1>name = <input type="text" v-model="name" class="text-black"></h1>
+      <h1>name = 
+        <input type="text" v-model="name" 
+            class="p-1 w-full 
+                    border
+                    border-gray-300
+                    rounded-lg 
+                    shadow-sm 
+                    focus:outline-none 
+                    focus:ring-2
+                    focus:ring-blue-500
+                    focus:border-blue-500
+                    text-gray-700">
+      </h1>
       <h1>email = {{ email }}</h1>
       <h1>가입날짜 = {{ wdate }}</h1>
     </div>
@@ -17,7 +29,7 @@
       </button>
       <button
         class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
-        @click="modalUser"
+        @click="modalUser('save')"
       >
         저장
       </button>
@@ -43,7 +55,7 @@
   </div>
 </template>
 <script setup>
-import { getUsers } from '@/api/userApi.js';
+import { getUsers,saveUser } from '@/api/userApi.js';
 import { ref, watchEffect } from 'vue';
 
 const arr = ref([]);
@@ -56,6 +68,14 @@ const email = ref();
 const isModal = ref(false);
 const modalUser = (item) => {
   isModal.value = !isModal.value;
+
+  if(item =='save'){
+    saveUser('');
+    // update를 해야함..
+    alert('수정하였습니다.');
+    return;
+  }
+
   idx.value = item.idx;
   name.value = item.name;
   wdate.value = item.wdate;
