@@ -1,11 +1,18 @@
 <script setup>
 import dayjs from 'dayjs';
+import { useRoute, useRouter } from 'vue-router';
 
-const getDayColor = (day) => {
-  return day === 0 ? '#e67639' : day === 6 ? '#5872d1' : '#2b2b2b';
-};
+const doPrint = (day)=>{
+  console.log(day.format('YYYY/MM/DD'));
+}
 
-const now = dayjs();
+const router = useRouter();
+const route = useRoute();
+let now = dayjs();
+if(route.query.month<0){
+  now = dayjs(now).subtract(Number(route.query.month),'month');
+}
+
 
 const date1 = dayjs('2023-06-30'); // 2023-06-30T00:00:00+09:00
 const date2 = dayjs('2023.06.30', 'YYYY.MM.DD'); // 2023.06,30T00:00:00+09:00
@@ -14,8 +21,40 @@ const currentTime = dayjs().format('YYYY-MM-DD HH:mm:ss'); // 현재날짜 + 시
 
 const start = dayjs(now).startOf('month');
 console.log(start.format('YYYY/MM/DD'));
+const end = dayjs(now).endOf('month');
+console.log(end.format('YYYY/MM/DD'));
 const startDay = dayjs(start).get('day');
 console.log(startDay);
+const endDay = dayjs(end).get('day');
+console.log(endDay);
+
+const dayColumns = [];
+// 현재 달력
+for(let i=0;i<end.get('date');i++){
+  const date = dayjs(start).add(i,"day");
+  dayColumns.push(date);
+}
+// 저번 달력
+for(let i=1 ; i<startDay+1;i++){
+  const date = dayjs(start).subtract(i,"day");
+  dayColumns.unshift(date);
+}
+// 다음 달력
+for(let i=1 ; i<7-endDay;i++){
+  const date = dayjs(end).add(i,"day");
+  dayColumns.push(date);
+}
+
+const weeks = [];
+for(let i=0; i<dayColumns.length; i+=7){
+  weeks.push(dayColumns.slice(i,i+7));
+}
+console.log(weeks);
+
+const beforeMonth = ()=>{
+  router.push({query:{month:-1}})
+}
+
 </script>
 <style>
 td,
@@ -31,7 +70,9 @@ td {
 <template>
   <div>
     <div>
+      <button @click="beforeMonth">&lt;&lt;</button>
       <h1 class="text-5xl">{{ now.format('YYYY/MM/DD') }}</h1>
+      <button @click="afterMonth">&gt;&gt;</button>
       <table>
         <thead>
           <tr>
@@ -44,9 +85,14 @@ td {
             <th>토</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td v-for="index in 7" :key="index">{{ index }}</td>
+        <tbody class="cursor-pointer">
+          <tr v-for="week in weeks" :key="week">
+            <td v-for="(day,dayIndex) in week" :key="day" @click="doPrint(day)" 
+            :class="{'opacity-10': day.isBefore(start),'opacity-15':day.isAfter(end)}"
+            :style="{ color: dayIndex === 0 ? '#e67639' :  dayIndex === 6 ? '#5872d1' : '#2b2b2b' }"
+            >
+              {{ day.format('DD') }}
+            </td>
           </tr>
         </tbody>
       </table>
