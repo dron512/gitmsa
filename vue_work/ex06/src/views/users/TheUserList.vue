@@ -96,9 +96,7 @@ const modalUser = async (item) => {
 
 watchEffect(async () => {
   const retValue = await getUsers();
-  // console.log("retValue = "+JSON.stringify(retValue.data));
   arr.value = retValue.data;
-  // console.log(arr.value);
 });
 </script>
 <style scoped>
