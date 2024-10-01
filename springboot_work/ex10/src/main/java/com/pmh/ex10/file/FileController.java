@@ -1,6 +1,7 @@
 package com.pmh.ex10.file;
 
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -21,6 +22,7 @@ import java.util.HashMap;
 @RestController
 @RequestMapping("file")
 @CrossOrigin
+@Slf4j
 public class FileController {
 
     private final Path imagePath;
@@ -30,7 +32,7 @@ public class FileController {
     public FileController(ModelMapper modelMapper, FileRepository fileRepository) {
         this.modelMapper = modelMapper;
         this.fileRepository = fileRepository;
-        this.imagePath = Paths.get("images/file/").toAbsolutePath();
+        this.imagePath = Paths.get("images/file").toAbsolutePath();
 
         try {
             Files.createDirectories(this.imagePath);
@@ -52,10 +54,11 @@ public class FileController {
             @RequestPart(name = "file") MultipartFile file,
             @RequestPart(name = "fileDto") FileReqDto fileReqDto) {
         try {
-            String myFilePath = imagePath.toAbsolutePath() + "\\" + file.getOriginalFilename();
+            String fileName = file.getOriginalFilename();
+            String filePath = imagePath.toString()+File.separator+fileName;
 
-            File saveFile = new File(myFilePath);
-            file.transferTo(saveFile);
+            File dest = new File(filePath);
+            file.transferTo(dest);
 
             FileEntity fileEntity = modelMapper.map(fileReqDto, FileEntity.class);
             fileRepository.save(fileEntity);
@@ -69,12 +72,10 @@ public class FileController {
     @PostMapping(value = "uploads", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public String uploads(@RequestPart(name = "files") MultipartFile[] files,
                           @RequestPart(name = "fileDto") HashMap<String, String> map) {
-        System.out.println("일로오나");
         try{
             for (MultipartFile file : files) {
                 String fileName = file.getOriginalFilename();
-                String filePath = imagePath.toString()+"\\"+fileName;
-                System.out.println(filePath);
+                String filePath = imagePath.toString()+File.separator+fileName;
                 File dest = new File(filePath);
                 file.transferTo(dest);
             }

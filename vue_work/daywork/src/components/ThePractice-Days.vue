@@ -2,7 +2,6 @@
 import dayjs from 'dayjs';
 
 const getDayColor = (day) => {
-  /* Ex 1 */
   return day === 0 ? '#e67639' : day === 6 ? '#5872d1' : '#2b2b2b';
 };
 

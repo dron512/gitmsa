@@ -105,7 +105,7 @@ public class FreeBoardController {
         freeBoardRepository.save(freeBoard);
 
         if (file != null) {
-            String myFilePath = Paths.get("images/file/").toAbsolutePath() + "\\" + file.getOriginalFilename();
+            String myFilePath = Paths.get("images/file/").toAbsolutePath() + File.separator + file.getOriginalFilename();
             try {
                 File destFile = new File(myFilePath);
                 file.transferTo(destFile);
