@@ -4,6 +4,8 @@ import com.pmh.ex10.error.BizException;
 import com.pmh.ex10.error.ErrorCode;
 import com.pmh.ex10.file.FileEntity;
 import com.pmh.ex10.file.FileRepository;
+import com.pmh.ex10.user.User;
+import com.pmh.ex10.user.UserRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -33,6 +35,8 @@ public class FreeBoardController {
 
     private final FreeBoardRepository freeBoardRepository;
     private final FileRepository fileRepository;
+    private final UserRepository userRepository;
+
     private final ModelMapper modelMapper;
 
     @Value("${my.value}")
@@ -104,6 +108,13 @@ public class FreeBoardController {
             @RequestPart(name = "file", required = false) MultipartFile file) {
 
         FreeBoard freeBoard = new ModelMapper().map(freeBoardReqDto, FreeBoard.class);
+
+        // Todo...
+        // 1번 사용자가 무조건 작성 한걸로..
+        // jwt 로그인 하면 ... 로그인한 사용자를 넣을꺼예요
+        User user = userRepository.findById(1l).orElse(null);
+        freeBoard.setUser(user);
+
         freeBoardRepository.save(freeBoard);
 
         if (file != null) {

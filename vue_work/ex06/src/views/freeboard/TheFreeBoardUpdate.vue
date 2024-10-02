@@ -27,8 +27,9 @@
 </template>
 
 <script setup>
+import { getFreeBoardView, saveFreeboard } from '@/api/freeboardApi';
 import axios from 'axios';
-import { ref } from 'vue';
+import { ref, watchEffect } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 const title = ref('');
@@ -45,29 +46,26 @@ const onFileChange = (e)=>{
   myfile.value = e.target.files[0];
 }
 
-const getfreeboard = ()=>{
-  axios.get(`http://localhost:10000/freeboard/view/${route.query.idx}`)
-    .then(res => {
-      title.value = res.data.title;
-      content.value = res.data.content;
-      regDate.value = res.data.regDate;
-      creAuthor.value = res.data.creAuthor;
-      idx.value = res.data.idx;
-    })
-    .catch(e => {
-      console.log(e);
-      alert(e.response.data.message);
-      router.push({ name: "freeboardlist" });
-    })
-}
+watchEffect(async () => {
+  const res = await getFreeBoardView(route.query.idx);
+  if (res.status == 200) {
+    title.value = res.data.title;
+    content.value = res.data.content;
+    regDate.value = res.data.regDate;
+    creAuthor.value = res.data.creAuthor;
+    idx.value = res.data.idx;
+  } else {
+    alert(res.response.data.message);
+    router.push({ name: 'freeboardlist' });
+  }
+});
 
-const save = () => {
+const save = async() => {
   const data = {
     idx: route.query.idx,
     title: title.value,
     content: content.value
   };
-
   const formData = new FormData();
   formData.append("data", new Blob(
                             [JSON.stringify(data)],
@@ -75,22 +73,10 @@ const save = () => {
                           )
                         );
   formData.append("file", myfile.value);
-  axios
-    .post('http://localhost:10000/freeboard', formData)
-    .then((res) => {
-      console.log(res);
-      alert('저장하였습니다.');
-      router.push({ name: 'freeboardlist', params: { pagenum: 0 } });
-    })
-    .catch((e) => {
-      console.log(e);
-      alert('에러' + e.response.data.message);
-    });
+  const res = await saveFreeboard(formData);
+  if(res.status==200)
+    router.push({name:"freeboardlist"})
 };
-
-getfreeboard();
-
-
 </script>
 
 <style scoped></style>

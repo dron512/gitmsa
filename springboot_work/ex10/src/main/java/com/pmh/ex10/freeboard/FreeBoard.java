@@ -34,6 +34,7 @@ public class FreeBoard {
     private String content;
 
     @CreatedBy
+    @Column(updatable = false)
     private String creAuthor;
 
     @LastModifiedBy
