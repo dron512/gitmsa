@@ -1,11 +1,13 @@
 package com.pmh.ex10.freeboard;
 
+import com.pmh.ex10.file.FileEntity;
 import com.pmh.ex10.user.User;
 import com.pmh.ex10.user.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Arrays;
 import java.util.List;
 
 // alt + 1 경로 선택..
@@ -73,6 +75,26 @@ class FreeBoardRepositoryTest {
                 .content("내용qwer")
                 .user(user)
                 .build();
+        freeBoardRepository.save(freeBoard);
+    }
+
+    @Test
+    void saveFreeBoardTest(){
+        User user = userRepository.findById(1l).orElseThrow();
+
+        List<FileEntity> list = Arrays.asList(
+                FileEntity.builder().name("afile").build(),
+                FileEntity.builder().name("bfile").build()
+        );
+
+        FreeBoard freeBoard = FreeBoard.builder()
+                .idx(10l)
+                .title("제목qwer")
+                .content("내용qwer")
+                .list(null)
+                .user(user)
+                .build();
+
         freeBoardRepository.save(freeBoard);
     }
 

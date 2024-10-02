@@ -17,6 +17,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -103,18 +104,27 @@ public class FreeBoardController {
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE
     )
+//    @Transactional
     public ResponseEntity<FreeBoard> save(
             @Valid @RequestPart(name = "data") FreeBoardReqDto freeBoardReqDto,
             @RequestPart(name = "file", required = false) MultipartFile file) {
 
-        FreeBoard freeBoard = new ModelMapper().map(freeBoardReqDto, FreeBoard.class);
+        FreeBoard freeBoard = modelMapper.map(freeBoardReqDto, FreeBoard.class);
+        freeBoardRepository.save(freeBoard);
+        /*
+            1.@Transactional
+                메서드에 @Transactional 애노테이션을 추가하여 트랜잭션을 관리하도록 합니다.
+                이러면 세션이 열려 있는 동안 모든 작업이 수행되어, detached 상태 문제를 피할 수 있습니다.
+                Freeboard에 ToString함수를 직접 만들어야함..
 
+            2. freeboard객체를 영속성으로 하고
+                user연결을 나중에 하는 방법
+         */
         // Todo...
         // 1번 사용자가 무조건 작성 한걸로..
         // jwt 로그인 하면 ... 로그인한 사용자를 넣을꺼예요
-        User user = userRepository.findById(1l).orElse(null);
+        User user = userRepository.findById(1l).orElse(new User());
         freeBoard.setUser(user);
-
         freeBoardRepository.save(freeBoard);
 
         if (file != null) {
@@ -131,8 +141,22 @@ public class FreeBoardController {
             fileEntity.setPath(Paths.get("images/file/").toAbsolutePath().toString());
             fileEntity.setFreeBoard(freeBoard);
             fileRepository.save(fileEntity);
-        }
+        }else{
+//            System.out.println("일로오나");
+            freeBoard.setList(null);
+            freeBoardRepository.save(freeBoard);
 
+//           database 에서 삭제....
+//            List<FileEntity> list = fileRepository.findByFreeBoardIdx(freeBoard.getIdx());
+//
+//            System.out.println(list);
+//            list.forEach(fileEntity -> {
+//                // delete * from free_board_file where idx = ?
+//                System.out.println("delete 실행전");
+//                fileRepository.deleteById(fileEntity.getIdx());
+//                System.out.println("delete 실행후");
+//            });
+        }
         return ResponseEntity.status(200).body(freeBoard);
     }
 
