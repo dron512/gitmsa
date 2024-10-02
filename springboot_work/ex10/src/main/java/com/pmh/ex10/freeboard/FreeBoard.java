@@ -52,7 +52,7 @@ public class FreeBoard {
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "freeBoard", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<FileEntity> list = new ArrayList<>();
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @ManyToOne(cascade = CascadeType.ALL)
     @JsonIgnore
     private User user;
 
