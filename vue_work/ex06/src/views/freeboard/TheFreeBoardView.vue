@@ -58,8 +58,8 @@ const pageMove = () => {
   router.push({ name: "freeboardupdate", query: { idx:idx.value } });
 }
 
-const getFreeBoard = () => {
-  axios.get(`http://localhost:10000/freeboard/view/${route.params.idx}`)
+const getFreeBoard = async() => {
+  const res = await axios.get(`http://localhost:10000/freeboard/view/${route.params.idx}`)
     .then(res => {
       title.value = res.data.title;
       content.value = res.data.content;

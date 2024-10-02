@@ -44,7 +44,8 @@ public class FreeBoardController {
     }
 
     @GetMapping
-    public ResponseEntity<FreeBoardResponsePageDto> findALl(@RequestParam(name = "pageNum", defaultValue = "0") int pageNum
+    public ResponseEntity<FreeBoardResponsePageDto> findALl(
+            @RequestParam(name = "pageNum", defaultValue = "0") int pageNum
             , @RequestParam(name = "size", defaultValue = "5") int size) {
 
         Sort sort = Sort.by(Sort.Direction.DESC, "idx");
@@ -58,20 +59,17 @@ public class FreeBoardController {
                 .stream()
                 .map(freeBoard -> {
                     FreeBoardResponseDto freeBoardResponseDto = modelMapper.map(freeBoard, FreeBoardResponseDto.class);
+
                     DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yy/MM/dd hh:mm");
                     freeBoardResponseDto.setRegDate(dateTimeFormatter.format(freeBoard.getRegDate()));
                     freeBoardResponseDto.setModDate(dateTimeFormatter.format(freeBoard.getModDate()));
+
+                    freeBoardResponseDto.setCreAuthor(freeBoard.getUser().getName());
+                    freeBoardResponseDto.setModAuthor(freeBoard.getUser().getName());
+                    freeBoardResponseDto.setUserIdx(freeBoard.getUser().getIdx());
+
                     return freeBoardResponseDto;
                 }).toList();
-
-//        for (FreeBoard freeBoard : freeBoardResponsePageDto.getContent()) {
-//            FreeBoardResponseDto freeBoardResponseDto
-//                    = new ModelMapper().map(freeBoard, FreeBoardResponseDto.class);
-//            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yy/MM/dd hh:mm");
-//            freeBoardResponseDto.setRegDate(dateTimeFormatter.format(freeBoard.getRegDate()));
-//            freeBoardResponseDto.setModDate(dateTimeFormatter.format(freeBoard.getModDate()));
-//            list.add(freeBoardResponseDto);
-//        }
 
         freeBoardResponsePageDto.setList(list);
         return ResponseEntity.ok(freeBoardResponsePageDto);
@@ -89,6 +87,10 @@ public class FreeBoardController {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yy/MM/dd hh:mm");
         freeBoardResponseDto.setRegDate(dateTimeFormatter.format(freeBoard.getRegDate()));
         freeBoardResponseDto.setModDate(dateTimeFormatter.format(freeBoard.getModDate()));
+
+        freeBoardResponseDto.setCreAuthor(freeBoard.getUser().getName());
+        freeBoardResponseDto.setModAuthor(freeBoard.getUser().getName());
+        freeBoardResponseDto.setUserIdx(freeBoard.getUser().getIdx());
 
         return ResponseEntity.ok(freeBoardResponseDto);
     }
