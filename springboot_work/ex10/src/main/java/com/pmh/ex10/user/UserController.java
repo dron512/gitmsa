@@ -1,11 +1,13 @@
 package com.pmh.ex10.user;
 
+import com.pmh.ex10.freeboard.FreeBoardRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -16,6 +18,7 @@ public class UserController {
 
     private final UserRepository userRepository;
     private final UserService userService;
+    private final FreeBoardRepository freeBoardRepository;
 
     @GetMapping("select")
     public ResponseEntity<List<User>> select(){
@@ -39,7 +42,17 @@ public class UserController {
     // delete * from user where idx = ?
     @DeleteMapping("delete/{idx}")
     public ResponseEntity<String> delete(@PathVariable(name = "idx") long idx){
-        userRepository.deleteById(idx);
+
+        // 유저 삭제시 작성한글을 삭제 하기 싫으면...
+        User dbUser = userRepository.findById(idx).orElseThrow();
+
+        dbUser.getList().stream().forEach(freeBoard -> {
+            freeBoard.setUser(null);
+            freeBoardRepository.save(freeBoard);
+        });
+
+        dbUser.setList(new ArrayList<>());
+        userRepository.delete(dbUser);
         return ResponseEntity.status(200).body("success delete");
     }
 }

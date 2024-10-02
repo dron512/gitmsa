@@ -70,9 +70,14 @@ public class FreeBoardController {
                     freeBoardResponseDto.setRegDate(dateTimeFormatter.format(freeBoard.getRegDate()));
                     freeBoardResponseDto.setModDate(dateTimeFormatter.format(freeBoard.getModDate()));
 
-                    freeBoardResponseDto.setCreAuthor(freeBoard.getUser().getName());
-                    freeBoardResponseDto.setModAuthor(freeBoard.getUser().getName());
-                    freeBoardResponseDto.setUserIdx(freeBoard.getUser().getIdx());
+                    if(freeBoard.getUser()!=null) {
+                        freeBoardResponseDto.setCreAuthor(freeBoard.getUser().getName());
+                        freeBoardResponseDto.setModAuthor(freeBoard.getUser().getName());
+                        freeBoardResponseDto.setUserIdx(freeBoard.getUser().getIdx());
+                    }else{
+                        freeBoardResponseDto.setCreAuthor("탈퇴한 회원");
+                        freeBoardResponseDto.setModAuthor("탈퇴한 회원");
+                    }
 
                     return freeBoardResponseDto;
                 }).toList();
@@ -94,9 +99,14 @@ public class FreeBoardController {
         freeBoardResponseDto.setRegDate(dateTimeFormatter.format(freeBoard.getRegDate()));
         freeBoardResponseDto.setModDate(dateTimeFormatter.format(freeBoard.getModDate()));
 
-        freeBoardResponseDto.setCreAuthor(freeBoard.getUser().getName());
-        freeBoardResponseDto.setModAuthor(freeBoard.getUser().getName());
-        freeBoardResponseDto.setUserIdx(freeBoard.getUser().getIdx());
+        if(freeBoard.getUser()!=null) {
+            freeBoardResponseDto.setCreAuthor(freeBoard.getUser().getName());
+            freeBoardResponseDto.setModAuthor(freeBoard.getUser().getName());
+            freeBoardResponseDto.setUserIdx(freeBoard.getUser().getIdx());
+        }else{
+            freeBoardResponseDto.setCreAuthor("탈퇴한 회원");
+            freeBoardResponseDto.setModAuthor("탈퇴한 회원");
+        }
 
         return ResponseEntity.ok(freeBoardResponseDto);
     }
@@ -153,15 +163,11 @@ public class FreeBoardController {
 
 
     @DeleteMapping("delete/{idx}")
-    @Transactional
     public ResponseEntity<String> deleteById(@PathVariable(name = "idx") long idx) {
-        System.out.println(idx);
         FreeBoard freeBoard = freeBoardRepository.findById(idx).orElseThrow(() -> new BizException(ErrorCode.NOT_FOUND));
-        System.out.println(freeBoard);
+        freeBoard.setUser(null);
+        freeBoardRepository.save(freeBoard);
         freeBoardRepository.delete(freeBoard);
-//        User user = freeBoard.getUser();
-//        user.setList(new ArrayList<>());
-//        userRepository.save(user);
         return ResponseEntity.ok("삭제되었습니다.");
     }
 

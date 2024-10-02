@@ -35,6 +35,7 @@ public class User {
     @Column(length = 100)
     private String password;
 
+    @Column(updatable = false)
     private LocalDateTime wdate;
 
     @OneToMany(mappedBy = "user",

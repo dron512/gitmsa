@@ -35,7 +35,6 @@
     <div style="" class="flex flex-wrap">
       <!-- <div style="display: flex;flex-wrap: wrap;" class=""> -->
       <div
-        @click="modalUser(item)"
         class="cursor-pointer bg-slate-500 p-5 m-5 w-80 text-white rounded"
         v-for="item in arr"
         :key="item.idx"
@@ -45,7 +44,12 @@
         <h1>email = {{ item.email }}</h1>
         <h1>가입날짜 = {{ item.wdate }}</h1>
         <h1>작성한글 = {{ item.list.length }}</h1>
-        <button @click.stop="doDelete(item.idx)">삭제</button>
+        <button 
+        class="mt-3 mr-3 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        @click.stop="modalUser(item.idx)">수정</button>
+        <button 
+        class="mt-3 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        @click.stop="doDelete(item.idx)">삭제</button>
       </div>
     </div>
   </div>
