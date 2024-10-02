@@ -111,7 +111,7 @@ public class FreeBoardController {
             @RequestPart(name = "file", required = false) MultipartFile file) {
 
         FreeBoard freeBoard = new ModelMapper().map(freeBoardReqDto, FreeBoard.class);
-        
+
         if(freeBoardReqDto.getIdx()==null) {
             freeBoardRepository.save(freeBoard);
         }

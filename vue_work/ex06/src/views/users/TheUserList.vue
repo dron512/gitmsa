@@ -4,18 +4,13 @@
     <h1 class="text-5xl">USER 수정</h1>
     <div class="cursor-pointer bg-slate-500 p-5 m-5 w-80 text-white rounded">
       <h1>idx = {{ idx }}</h1>
-      <h1>name = 
-        <input type="text" v-model="name" 
-            class="p-1 w-full 
-                    border
-                    border-gray-300
-                    rounded-lg 
-                    shadow-sm 
-                    focus:outline-none 
-                    focus:ring-2
-                    focus:ring-blue-500
-                    focus:border-blue-500
-                    text-gray-700">
+      <h1>
+        name =
+        <input
+          type="text"
+          v-model="name"
+          class="p-1 w-full border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
+        />
       </h1>
       <h1>email = {{ email }}</h1>
       <h1>가입날짜 = {{ wdate }}</h1>
@@ -56,7 +51,7 @@
   </div>
 </template>
 <script setup>
-import { getUsers,saveUser } from '@/api/userApi.js';
+import { deleteUser, getUsers, saveUser } from '@/api/userApi.js';
 import { ref, watchEffect } from 'vue';
 
 const arr = ref([]);
@@ -67,23 +62,22 @@ const wdate = ref();
 const email = ref();
 
 const isModal = ref(false);
-const doDelete = ()=>{
-  console.log("doDelete");
-}
+const doDelete = async (idx) => {
+  await deleteUser(idx);
+  const retValue = await getUsers();
+  arr.value = retValue.data;
+};
 const modalUser = async (item) => {
   isModal.value = !isModal.value;
-
-  if(item =='save'){
-    const result = await saveUser( { 
-                                    idx:idx.value,
-                                    name:name.value,
-                                    email:email.value,
-                                    password:"마이패스워드"
-                                  } );
-    // update를 해야함..
-    alert('수정하였습니다.'+result);
+  if (item == 'save') {
+   await saveUser({
+      idx: idx.value,
+      name: name.value,
+      email: email.value,
+      password: '마이패스워드'
+    });
+    alert('수정하였습니다.');
     const retValue = await getUsers();
-    // console.log("retValue = "+JSON.stringify(retValue.data));
     arr.value = retValue.data;
     return;
   }
