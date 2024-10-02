@@ -22,7 +22,6 @@ public class FileEntity {
     private String fileDesc;
 
     @ManyToOne
-//    @JoinColumn(name = "free_board_idx")
     @JsonIgnore
     private FreeBoard freeBoard;
 

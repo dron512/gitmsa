@@ -153,9 +153,15 @@ public class FreeBoardController {
 
 
     @DeleteMapping("delete/{idx}")
+    @Transactional
     public ResponseEntity<String> deleteById(@PathVariable(name = "idx") long idx) {
-        freeBoardRepository.findById(idx).orElseThrow(() -> new BizException(ErrorCode.NOT_FOUND));
-        freeBoardRepository.deleteById(idx);
+        System.out.println(idx);
+        FreeBoard freeBoard = freeBoardRepository.findById(idx).orElseThrow(() -> new BizException(ErrorCode.NOT_FOUND));
+        System.out.println(freeBoard);
+        freeBoardRepository.delete(freeBoard);
+//        User user = freeBoard.getUser();
+//        user.setList(new ArrayList<>());
+//        userRepository.save(user);
         return ResponseEntity.ok("삭제되었습니다.");
     }
 

@@ -38,7 +38,7 @@ public class UserController {
 
     // delete * from user where idx = ?
     @DeleteMapping("delete/{idx}")
-    public ResponseEntity<String> delete(@PathVariable long idx){
+    public ResponseEntity<String> delete(@PathVariable(name = "idx") long idx){
         userRepository.deleteById(idx);
         return ResponseEntity.status(200).body("success delete");
     }
