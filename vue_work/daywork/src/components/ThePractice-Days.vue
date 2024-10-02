@@ -1,18 +1,11 @@
 <script setup>
 import dayjs from 'dayjs';
-import { useRoute, useRouter } from 'vue-router';
 
 const doPrint = (day)=>{
   console.log(day.format('YYYY/MM/DD'));
 }
 
-const router = useRouter();
-const route = useRoute();
 let now = dayjs();
-if(route.query.month<0){
-  now = dayjs(now).subtract(Number(route.query.month),'month');
-}
-
 
 const date1 = dayjs('2023-06-30'); // 2023-06-30T00:00:00+09:00
 const date2 = dayjs('2023.06.30', 'YYYY.MM.DD'); // 2023.06,30T00:00:00+09:00
@@ -52,7 +45,6 @@ for(let i=0; i<dayColumns.length; i+=7){
 console.log(weeks);
 
 const beforeMonth = ()=>{
-  router.push({query:{month:-1}})
 }
 
 </script>

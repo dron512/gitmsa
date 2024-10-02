@@ -7,9 +7,9 @@ import TheFreeBoardList from '@/views/freeboard/TheFreeBoardList.vue';
 import TheFreeBoardView from '@/views/freeboard/TheFreeBoardView.vue';
 import TheFreeBoardUpdate from '@/views/freeboard/TheFreeBoardUpdate.vue';
 
-import TheFileUpload from '@/views/TheFileUpload.vue';
-import TheFileUploads from '@/views/TheFileUploads.vue';
-import TheFileDownload from '@/views/TheFileDownload.vue';
+import TheFileUpload from '@/views/file/TheFileUpload.vue';
+import TheFileUploads from '@/views/file/TheFileUploads.vue';
+import TheFileDownload from '@/views/file/TheFileDownload.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

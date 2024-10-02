@@ -19,9 +19,7 @@ public class UserController {
 
     @GetMapping("select")
     public ResponseEntity<List<User>> select(){
-
         List<User> list = userRepository.findAll();
-
         return ResponseEntity.status(200).body(list);
 
     }
