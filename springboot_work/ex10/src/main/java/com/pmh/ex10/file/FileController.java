@@ -87,7 +87,7 @@ public class FileController {
 
     }
     @GetMapping("/download/{fileName}")
-    public ResponseEntity<Resource> downloadFile(@PathVariable String fileName) throws IOException {
+    public ResponseEntity<Resource> downloadFile(@PathVariable(name = "fileName") String fileName) throws IOException {
         // 파일이 저장된 경로
         Path filePath = imagePath.resolve(fileName);
         Resource resource = new UrlResource(filePath.toUri());

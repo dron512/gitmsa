@@ -25,6 +25,7 @@ import java.io.File;
 import java.nio.file.Paths;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -109,23 +110,19 @@ public class FreeBoardController {
             @Valid @RequestPart(name = "data") FreeBoardReqDto freeBoardReqDto,
             @RequestPart(name = "file", required = false) MultipartFile file) {
 
-        FreeBoard freeBoard = modelMapper.map(freeBoardReqDto, FreeBoard.class);
-        freeBoardRepository.save(freeBoard);
-        /*
-            1.@Transactional
-                메서드에 @Transactional 애노테이션을 추가하여 트랜잭션을 관리하도록 합니다.
-                이러면 세션이 열려 있는 동안 모든 작업이 수행되어, detached 상태 문제를 피할 수 있습니다.
-                Freeboard에 ToString함수를 직접 만들어야함..
+        FreeBoard freeBoard = new ModelMapper().map(freeBoardReqDto, FreeBoard.class);
+        
+        if(freeBoardReqDto.getIdx()==null) {
+            freeBoardRepository.save(freeBoard);
+        }
+        else{
+            FreeBoard dbFreeBoard = freeBoardRepository.findById(freeBoard.getIdx()).orElseThrow();
+            dbFreeBoard = new ModelMapper().map(freeBoardReqDto, FreeBoard.class);
+            freeBoardRepository.save(dbFreeBoard);
+        }
 
-            2. freeboard객체를 영속성으로 하고
-                user연결을 나중에 하는 방법
-         */
-        // Todo...
-        // 1번 사용자가 무조건 작성 한걸로..
-        // jwt 로그인 하면 ... 로그인한 사용자를 넣을꺼예요
-        User user = userRepository.findById(1l).orElse(new User());
+        User user = userRepository.findById(1L).orElse(null);
         freeBoard.setUser(user);
-        freeBoardRepository.save(freeBoard);
 
         if (file != null) {
             String myFilePath = Paths.get("images/file/").toAbsolutePath() + File.separator + file.getOriginalFilename();
@@ -141,22 +138,16 @@ public class FreeBoardController {
             fileEntity.setPath(Paths.get("images/file/").toAbsolutePath().toString());
             fileEntity.setFreeBoard(freeBoard);
             fileRepository.save(fileEntity);
-        }else{
-//            System.out.println("일로오나");
-            freeBoard.setList(null);
+            freeBoard.setList(Arrays.asList(fileEntity));
             freeBoardRepository.save(freeBoard);
-
-//           database 에서 삭제....
-//            List<FileEntity> list = fileRepository.findByFreeBoardIdx(freeBoard.getIdx());
-//
-//            System.out.println(list);
-//            list.forEach(fileEntity -> {
-//                // delete * from free_board_file where idx = ?
-//                System.out.println("delete 실행전");
-//                fileRepository.deleteById(fileEntity.getIdx());
-//                System.out.println("delete 실행후");
-//            });
+        }else{
+            List<FileEntity> list = fileRepository.findByFreeBoardIdx(freeBoard.getIdx());
+            list.forEach(fileEntity -> {
+                fileRepository.deleteById(fileEntity.getIdx());
+            });
+            freeBoardRepository.save(freeBoard);
         }
+
         return ResponseEntity.status(200).body(freeBoard);
     }
 

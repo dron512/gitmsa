@@ -49,7 +49,7 @@ public class FreeBoard {
     @Column(columnDefinition = "int default 0")
     private int viewCount;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "freeBoard", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "freeBoard", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<FileEntity> list = new ArrayList<>();
 
     @ManyToOne(cascade = CascadeType.ALL)
