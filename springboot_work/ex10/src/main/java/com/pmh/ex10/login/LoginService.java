@@ -4,12 +4,15 @@ import com.pmh.ex10.user.User;
 import com.pmh.ex10.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class LoginService {
+public class LoginService implements UserDetailsService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
@@ -31,5 +34,15 @@ public class LoginService {
 
     }
 
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        System.out.println("일로오냐");
+        return org.springframework.security.core.userdetails.User
+                .builder()
+                .username("asdf")
+                .password(passwordEncoder.encode("1234"))
+                .roles("ADMIN")
+                .build();
+    }
 }
 

@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -24,7 +25,11 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
 
-        return super.attemptAuthentication(request, response);
+        String username = obtainUsername(request);
+        String password = obtainPassword(request);
+        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken
+                = new UsernamePasswordAuthenticationToken(username, password);
+        return authenticationManager.authenticate(usernamePasswordAuthenticationToken);
     }
 
     // login success -> JWT 토큰발행
@@ -33,7 +38,8 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
                                             HttpServletResponse response,
                                             FilterChain chain,
                                             Authentication authResult) throws IOException, ServletException {
-        super.successfulAuthentication(request, response, chain, authResult);
+//        super.successfulAuthentication(request, response, chain, authResult);
+        System.out.println("성공");
     }
 
     // login fail -> username password 를 확인하세요..
@@ -41,6 +47,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     protected void unsuccessfulAuthentication(HttpServletRequest request,
                                               HttpServletResponse response,
                                               AuthenticationException failed) throws IOException, ServletException {
-        super.unsuccessfulAuthentication(request, response, failed);
+//        super.unsuccessfulAuthentication(request, response, failed);
+        System.out.println("실패");
     }
 }
