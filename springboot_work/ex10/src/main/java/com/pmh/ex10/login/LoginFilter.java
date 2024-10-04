@@ -18,6 +18,8 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     private final AuthenticationManager authenticationManager;
 
     public LoginFilter(AuthenticationManager authenticationManager) {
+        // get 방식 추가
+        this.setFilterProcessesUrl("/login");
         this.authenticationManager = authenticationManager;
     }
 
@@ -25,8 +27,12 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
 
-        String username = obtainUsername(request);
-        String password = obtainPassword(request);
+        String username = this.obtainUsername(request);
+        String password = this.obtainPassword(request);
+
+        System.out.println(username);
+        System.out.println(password);
+        
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken
                 = new UsernamePasswordAuthenticationToken(username, password);
         return authenticationManager.authenticate(usernamePasswordAuthenticationToken);

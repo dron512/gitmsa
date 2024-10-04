@@ -42,11 +42,14 @@ public class SecurityConfig {
         http.authorizeRequests( auth -> auth
                 // 일반 사용자도 접근 가능하다
                 .requestMatchers( "/login", "/join", "/", "/freeboard/**","/user/**" ).permitAll()
+                // swagger 문서와 h2-console 접속 가능하게..
+                .requestMatchers( "/swagger-ui/**", "/v3/api-docs/**", "/h2-console/**" ).permitAll()
                 // AMDIN 으로 role 을 가지고 있을때 접근 가능 하다.
                 .requestMatchers("/admin").hasRole("ADMIN")
                 .anyRequest().authenticated() );
 
-        http.addFilterAt(new LoginFilter(authenticationManager(authenticationConfiguration)), UsernamePasswordAuthenticationFilter.class);
+        http.addFilterAt(new LoginFilter(authenticationManager(authenticationConfiguration)),
+                                UsernamePasswordAuthenticationFilter.class);
 
         http.sessionManagement( session -> session.sessionCreationPolicy( SessionCreationPolicy.STATELESS ));
 
