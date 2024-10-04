@@ -57,6 +57,11 @@ class FreeBoardRepositoryTest {
     }
 
     @Test
+    void deleteJOQLTest(){
+        freeBoardRepository.cusDeleteByIdx(4l);
+    }
+
+    @Test
     void updateTest(){
 //        User user = User.builder()
 //                .idx(1l)

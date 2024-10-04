@@ -45,14 +45,16 @@ public class UserController {
 
         // 유저 삭제시 작성한글을 삭제 하기 싫으면...
         User dbUser = userRepository.findById(idx).orElseThrow();
-
-        dbUser.getList().stream().forEach(freeBoard -> {
-            freeBoard.setUser(null);
-            freeBoardRepository.save(freeBoard);
-        });
-
+        dbUser
+                .getList()
+                .stream()
+                .forEach(freeBoard -> {
+                    freeBoard.setUser(null);
+                    freeBoardRepository.save(freeBoard);
+                });
         dbUser.setList(new ArrayList<>());
         userRepository.delete(dbUser);
+
         return ResponseEntity.status(200).body("success delete");
     }
 }

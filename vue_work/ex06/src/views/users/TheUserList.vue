@@ -46,7 +46,7 @@
         <h1>작성한글 = {{ item.list.length }}</h1>
         <button 
         class="mt-3 mr-3 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
-        @click.stop="modalUser(item.idx)">수정</button>
+        @click.stop="modalUser(item)">수정</button>
         <button 
         class="mt-3 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
         @click.stop="doDelete(item.idx)">삭제</button>
@@ -71,8 +71,10 @@ const doDelete = async (idx) => {
   const retValue = await getUsers();
   arr.value = retValue.data;
 };
+
 const modalUser = async (item) => {
   isModal.value = !isModal.value;
+  
   if (item == 'save') {
    await saveUser({
       idx: idx.value,
@@ -96,6 +98,7 @@ watchEffect(async () => {
   const retValue = await getUsers();
   arr.value = retValue.data;
 });
+
 </script>
 <style scoped>
 .h1-blue {

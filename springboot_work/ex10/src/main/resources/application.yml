@@ -29,5 +29,6 @@ spring:
       max-request-size: 100MB
       file-size-threshold: 0
       enabled: true
+
 my:
   value: "welcome to my value"
