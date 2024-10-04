@@ -34,7 +34,7 @@ public class LoginService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        System.out.println("일로오냐");
+        System.out.println(username);
         return org.springframework.security.core.userdetails.User
                 .builder()
                 .username("asdf")
