@@ -15,7 +15,6 @@ public class LoginController {
 
     @PostMapping("/join")
     public String join(@RequestBody JoinDto joinDto){
-        System.out.println(joinDto);
         loginService.join(joinDto);
         return "success";
     }

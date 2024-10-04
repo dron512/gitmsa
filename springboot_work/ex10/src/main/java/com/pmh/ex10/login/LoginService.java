@@ -20,8 +20,6 @@ public class LoginService implements UserDetailsService {
 
     public void join(JoinDto joinDto) {
         User user = modelMapper.map(joinDto, User.class);
-        // username -> name
-        user.setName(joinDto.getUsername());
         // 암호화...
         user.setPassword(
                 passwordEncoder.encode(joinDto.getPassword())
