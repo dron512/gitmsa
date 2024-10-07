@@ -38,6 +38,9 @@ import { RouterLink, RouterView } from 'vue-router'
         <div>
           <RouterLink to="/filedownload">filedownload</RouterLink>
         </div>
+        <div>
+          <RouterLink to="/kakaologin">kakaologin</RouterLink>
+        </div>
       </nav>
     </div>
   </header>

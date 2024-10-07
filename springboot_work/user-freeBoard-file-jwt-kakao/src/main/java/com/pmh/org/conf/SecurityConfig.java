@@ -43,6 +43,7 @@ public class SecurityConfig {
                 .requestMatchers( "/","/login", "/join",  "/freeboard/**","/user/**" ,"/file/**").permitAll()
                 // swagger 문서...
                 .requestMatchers( "/swagger-ui/**", "/v3/api-docs/**" ).permitAll()
+                .requestMatchers( "/kakao/**").permitAll()
                 .requestMatchers("/test/**").permitAll()
                 // AMDIN 으로 role 을 가지고 있을때 접근 가능 하다.
                 .requestMatchers("/admin").hasRole("ADMIN")

@@ -6,7 +6,7 @@ import App from './App.vue'
 // import TheHome from './views/TheHome.vue'
 import router from './router/index.js'
 
-// aa();
+window.Kakao.init("b91b014916c33c174c11ee8c6de62b0c");
 
 const app = createApp(App)
 

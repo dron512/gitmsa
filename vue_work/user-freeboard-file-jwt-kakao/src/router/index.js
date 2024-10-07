@@ -10,6 +10,7 @@ import TheFreeBoardUpdate from '@/views/freeboard/TheFreeBoardUpdate.vue';
 import TheFileUpload from '@/views/file/TheFileUpload.vue';
 import TheFileUploads from '@/views/file/TheFileUploads.vue';
 import TheFileDownload from '@/views/file/TheFileDownload.vue';
+import TheKakaoLogin from '@/views/kakao/TheKakaoLogin.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -58,6 +59,11 @@ const router = createRouter({
       path: '/filedownload',
       name: 'filedownload',
       component: TheFileDownload
+    }    ,
+    {
+      path: '/kakaologin',
+      name: 'kakaologin',
+      component: TheKakaoLogin
     }
   ]
 });

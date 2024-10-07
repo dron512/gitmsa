@@ -6,9 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
 
 @SpringBootApplication
 @EnableJpaAuditing
+@EnableFeignClients
 public class MainApplication {
 
 	public static void main(String[] args) {
