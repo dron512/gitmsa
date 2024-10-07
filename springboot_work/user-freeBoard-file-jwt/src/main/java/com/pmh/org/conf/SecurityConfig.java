@@ -1,5 +1,6 @@
 package com.pmh.org.conf;
 
+import com.pmh.org.jwt.JWTFilter;
 import com.pmh.org.login.LoginFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -47,6 +48,7 @@ public class SecurityConfig {
                 .requestMatchers("/admin").hasRole("ADMIN")
                 .anyRequest().authenticated() );
 
+        http.addFilterBefore(new JWTFilter(),LoginFilter.class);
         http.addFilterAt( new LoginFilter(
                                     authenticationManager(authenticationConfiguration)
                                 ),

@@ -33,10 +33,7 @@ public class TestController {
     @GetMapping("validtoken")
     public String validtoken(@RequestHeader(HttpHeaders.AUTHORIZATION) String authorization){
         // jwt 토큰을 검증
-        System.out.println("authorization "+ authorization);
-
-        jwtManager.validJWT(authorization);
-
-        return "validtoken";
+        String result = jwtManager.validJWT(authorization.split(" ")[1], secretKey);
+        return "validtoken "+ result;
     }
 }

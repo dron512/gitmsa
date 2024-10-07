@@ -1,6 +1,7 @@
 package com.pmh.org.jwt;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.stereotype.Component;
@@ -20,6 +21,7 @@ public class JWTManager {
                 .claim("email","aaa@naver.com")
                 .claim("role","ADMIN")
                 .issuedAt(new Date(System.currentTimeMillis())) // 현재 시간 넣기
+//                .expiration(new Date(System.currentTimeMillis() + 1000)) // 1초 지나면 유효시간 없음...
                 .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24)) // 1초*60*60*24 1일 유효함
                 .signWith(SignatureAlgorithm.HS256,
                                 Base64.getEncoder().encodeToString(secrekey.getBytes()))
@@ -28,18 +30,21 @@ public class JWTManager {
     }
 
     // JWT 유효한지 검사 .... 우리가 설정한 비밀번호까지...
-    public String validJWT(String jwt){
+    public String validJWT(String jwt,String secrekey){
         try {
             SecretKey secretKey
-                    = new SecretKeySpec("틀린 비밀번호".getBytes(),
+                    = new SecretKeySpec(secrekey.getBytes(),
                     Jwts.SIG.HS256.key().build().getAlgorithm());
-            Jwts.parser()
+            Jws<Claims> cliams = Jwts.parser()
                     .verifyWith(secretKey)
                     .build()
                     .parseSignedClaims(jwt);
+            // 만약에 유효시간이 지났으면... JWT 사용 못하게 하기 위한 구문...
+            cliams.getPayload().getExpiration().before(new Date());
         }catch (Exception e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+            return "fail";
         }
-        return "test";
+        return "success";
     }
 }
