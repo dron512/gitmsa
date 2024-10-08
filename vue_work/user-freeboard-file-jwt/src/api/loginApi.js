@@ -16,7 +16,7 @@ export const doJoin = async (data) => {
 
 export const doLogin = async (data) => {
     try {
-        const res = await axios.post(login, data);
+        const res = await axios.get(`${login}?email=${data.email}&password=${data.password}`);
         return res;
     } catch (e) {
         console.log(e);
