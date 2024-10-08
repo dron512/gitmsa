@@ -33,6 +33,7 @@ public class CorsFilter implements Filter {
         response.setHeader("Access-Control-Allow-Credentials", "true"); // 쿠키 전달 허용
         response.setHeader("Access-Control-Max-Age", "3600"); // Preflight 요청 캐시 시간 설정
 
+        // 지나가라..
         filterChain.doFilter(servletRequest, servletResponse);
     }
 

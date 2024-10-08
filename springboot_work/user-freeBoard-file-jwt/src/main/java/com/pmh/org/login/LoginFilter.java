@@ -37,9 +37,6 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-        System.out.println("email: " + email);
-        System.out.println("password: " + password);
-
         UsernamePasswordAuthenticationToken token =
                 new UsernamePasswordAuthenticationToken(email, password);
         return authenticationManager.authenticate(token);
@@ -51,26 +48,18 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
                                             FilterChain chain,
                                             Authentication authResult) throws IOException, ServletException {
         UserDetails userDetails = (UserDetails) authResult.getPrincipal();
-        System.out.println(userDetails);
-
-//        String role = userDetails.getAuthorities().stream()
-//                .map( grantedAuthority -> grantedAuthority.toString() ).toString();
-
         String role = "";
         for (var auth : userDetails.getAuthorities()) {
             role = auth.getAuthority();
         }
-
         String jwt = jwtManager.createJWT(userDetails.getUsername(), role);
-        response.getWriter().write("success " + jwt);
-        response.addHeader("Authorization", "Bearer " + jwt);
+        response.getWriter().write(jwt);
     }
 
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request,
                                               HttpServletResponse response,
                                               AuthenticationException failed) throws IOException, ServletException {
-        System.out.println("실패실패");
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         response.getWriter()
                 .write("check email and password");
