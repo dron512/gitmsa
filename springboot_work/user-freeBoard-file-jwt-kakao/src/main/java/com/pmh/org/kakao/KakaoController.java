@@ -21,8 +21,8 @@ public class KakaoController {
         String contentType = "application/x-www-form-urlencoded;charset=utf-8";
         KakaoTokenDto.Request kakaoTokenRequestDto = KakaoTokenDto.Request.builder()
                 // Todo 재발급 받아야함..
-//                .client_id("ㅁㄴㅇㄹ")
-//                .client_secret("ㅁㄴㅇㄹ")
+//                .client_id("asdfasdf")
+//                .client_secret("qwerqwer")
                 .grant_type("authorization_code")
                 .code(code)
                 .redirect_uri("http://localhost:5173/kakaologin")

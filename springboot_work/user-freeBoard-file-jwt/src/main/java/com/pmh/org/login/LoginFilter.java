@@ -1,10 +1,12 @@
 package com.pmh.org.login;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.pmh.org.jwt.JWTManager;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.core.env.Environment;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -15,26 +17,19 @@ import java.io.IOException;
 
 public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     private final AuthenticationManager authenticationManager;
-    public LoginFilter(AuthenticationManager authenticationManager) {
+    private final JWTManager jwtManager;
+
+    public LoginFilter(AuthenticationManager authenticationManager,
+                       JWTManager jwtManager) {
         this.setFilterProcessesUrl("/login");
         this.authenticationManager = authenticationManager;
+        this.jwtManager = jwtManager;
     }
     // 로그인 시도
     @Override
     public Authentication attemptAuthentication(
                 HttpServletRequest request,
                 HttpServletResponse response) throws AuthenticationException {
-//        System.out.println("로그인시도");
-
-//        String username = this.obtainPassword(request);
-//        System.out.println("username = " + username);
-
-//        try{
-//            JoinDto joinDto = new ObjectMapper().read(request.getInputStream(),JoinDto.class);
-//            System.out.println("joinDto = " + joinDto);
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
 
         String email = request.getParameter("email");
         String password = request.getParameter("password");
@@ -50,7 +45,15 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
                                             HttpServletResponse response,
                                             FilterChain chain,
                                             Authentication authResult) throws IOException, ServletException {
-        System.out.println("성공");
+        System.out.println("======================");
+        System.out.println(authResult);
+
+        System.out.println(authResult.getPrincipal().toString());
+        System.out.println(authResult.getCredentials().toString());
+        System.out.println(authResult.getAuthorities().toString());
+        System.out.println("======================");
+
+        jwtManager.createJWT();
         response.getWriter().write("success");
     }
 

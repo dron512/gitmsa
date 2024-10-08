@@ -1,6 +1,7 @@
 package com.pmh.org.conf;
 
 import com.pmh.org.jwt.JWTFilter;
+import com.pmh.org.jwt.JWTManager;
 import com.pmh.org.login.LoginFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +21,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
 
     private final AuthenticationConfiguration authenticationConfiguration;
+    private final JWTManager jwtManager;
 
+    // 인증 -> UserDetailsService
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
@@ -31,26 +34,24 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-
         http.csrf( csrf -> csrf.disable() );
         http.formLogin( form -> form.disable());
         http.httpBasic( basic -> basic.disable());
 
         http.authorizeRequests( auth -> auth
-                // 일반 사용자도 접근 가능하다
                 .requestMatchers( "/","/login", "/join",  "/freeboard/**","/user/**" ,"/file/**").permitAll()
-                // swagger 문서...
                 .requestMatchers( "/swagger-ui/**", "/v3/api-docs/**" ).permitAll()
                 .requestMatchers("/test/**").permitAll()
-                // AMDIN 으로 role 을 가지고 있을때 접근 가능 하다.
                 .requestMatchers("/admin").hasRole("ADMIN")
                 .anyRequest().authenticated() );
 
-        http.addFilterBefore(new JWTFilter(),LoginFilter.class);
+        http.addFilterBefore(new JWTFilter(), LoginFilter.class);
         http.addFilterAt( new LoginFilter(
-                                    authenticationManager(authenticationConfiguration)
+                                    authenticationManager(authenticationConfiguration),
+                                    jwtManager
                                 ),
                                 UsernamePasswordAuthenticationFilter.class);
 
