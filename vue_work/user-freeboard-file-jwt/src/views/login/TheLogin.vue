@@ -38,7 +38,7 @@ const password = ref('');
 const submitLogin = async () => {
     const data = { "email": email.value, "password": password.value };
     const res = await doLogin(data);
-    console.log(res);
+    localStorage.setItem('token', res.data);
 }
 </script>
 

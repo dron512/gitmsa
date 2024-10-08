@@ -63,6 +63,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
 
         String jwt = jwtManager.createJWT(userDetails.getUsername(), role);
         response.getWriter().write("success " + jwt);
+        response.addHeader("Authorization", "Bearer " + jwt);
     }
 
     @Override
