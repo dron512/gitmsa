@@ -50,10 +50,7 @@ public class SecurityConfig {
 
         http.addFilterBefore(new JWTFilter(), LoginFilter.class);
         http.addFilterAt( new LoginFilter(
-                                    authenticationManager(authenticationConfiguration),
-                                    jwtManager
-                                ),
-                                UsernamePasswordAuthenticationFilter.class);
+                        authenticationManager(authenticationConfiguration), jwtManager),UsernamePasswordAuthenticationFilter.class);
 
         http.sessionManagement( session -> session.sessionCreationPolicy( SessionCreationPolicy.STATELESS ));
 

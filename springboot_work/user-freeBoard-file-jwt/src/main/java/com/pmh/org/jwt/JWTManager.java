@@ -20,11 +20,11 @@ public class JWTManager {
     private final Environment environment;
 
     // JWT 생성
-    public String createJWT(){
+    public String createJWT(String email,String role){
         String secrekey = environment.getProperty("spring.jwt.secret");
         String jwt = Jwts.builder()
-                .claim("email","aaa@naver.com")
-                .claim("role","ADMIN")
+                .claim("email",email)
+                .claim("role",role)
                 .issuedAt(new Date(System.currentTimeMillis())) // 현재 시간 넣기
 //                .expiration(new Date(System.currentTimeMillis() + 1000)) // 1초 지나면 유효시간 없음...
                 .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24)) // 1초*60*60*24 1일 유효함

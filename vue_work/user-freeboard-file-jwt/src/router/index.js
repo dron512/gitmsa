@@ -11,6 +11,9 @@ import TheFileUpload from '@/views/file/TheFileUpload.vue';
 import TheFileUploads from '@/views/file/TheFileUploads.vue';
 import TheFileDownload from '@/views/file/TheFileDownload.vue';
 
+import TheJoin from '@/views/login/TheJoin.vue';
+import TheLogin from '@/views/login/TheLogin.vue';
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -23,6 +26,16 @@ const router = createRouter({
       path: '/user',
       name: 'user',
       component: TheUserList
+    },
+    {
+      path: '/join',
+      name: 'join',
+      component: TheJoin
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: TheLogin
     },
     {
       path: '/freeboardinput',
