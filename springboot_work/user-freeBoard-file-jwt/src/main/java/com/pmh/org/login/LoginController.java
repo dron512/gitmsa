@@ -8,6 +8,7 @@ import java.io.IOException;
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin
 public class LoginController {
 
     private final LoginService loginService;
