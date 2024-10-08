@@ -7,6 +7,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 
@@ -51,18 +52,6 @@ public class ErrorController {
                 .map(constraintViolation -> constraintViolation.getMessage())
                 .reduce("",(s, s2) -> s+s2);
 
-        // 향상된 for구문
-        /*
-        Set<ConstraintViolation<?>> set = e.getConstraintViolations();
-        String test = "";
-        for( ConstraintViolation<?> item : set){
-            System.out.println(item);
-            System.out.println(item.getMessage());
-            test = item.getMessage();
-        }
-        System.out.println(test);
-        */
-
         ErrorResponse errorResponse = ErrorResponse.builder()
                 .httpStatus(HttpStatus.BAD_REQUEST)
                 .message( msg )
@@ -74,6 +63,17 @@ public class ErrorController {
                 .body(errorResponse);
     }
 
+//    @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
+//    public ResponseEntity<ErrorResponse> sqlException(SQLIntegrityConstraintViolationException e){
+//        ErrorResponse errorResponse = ErrorResponse.builder()
+//                .message(e.getMessage())
+//                .httpStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+//                .localDateTime(LocalDateTime.now())
+//                .build();
+//        return ResponseEntity
+//                .status(errorResponse.getHttpStatus())
+//                .body(errorResponse);
+//    }
 
 }
 

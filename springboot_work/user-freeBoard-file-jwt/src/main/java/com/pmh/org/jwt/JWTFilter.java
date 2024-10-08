@@ -27,7 +27,8 @@ public class JWTFilter extends OncePerRequestFilter {
         System.out.println("auth = "+auth);
 
         // JWT 토큰이 유효한지 확인 해보는 함수
-        jwtManager.validJWT(auth);
+//        jwtManager.validJWT(auth);
+
         // 게시판 유저정보
 
         // 여기서 무조건 지나가는
