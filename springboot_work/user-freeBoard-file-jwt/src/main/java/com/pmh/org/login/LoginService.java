@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Slf4j
 public class LoginService implements UserDetailsService {
+
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final ModelMapper modelMapper;
@@ -37,13 +38,17 @@ public class LoginService implements UserDetailsService {
                 () -> new UsernameNotFoundException(username)
         );
 
-        return org.springframework.security.core.userdetails
-                .User
-                .builder()
-                .username(user.getEmail())
-                .password(user.getPassword())
-                .roles("ADMIN")
-                .build();
+//        return org.springframework.security.core.userdetails
+//                .User
+//                .builder()
+//                .username(user.getEmail())
+//                .password(user.getPassword())
+//                .roles("ADMIN")
+//                .build();
+
+        return new LoginUserDetails(user.getEmail(),
+                                    user.getPassword(),
+                                    user.getRole());
     }
 }
 

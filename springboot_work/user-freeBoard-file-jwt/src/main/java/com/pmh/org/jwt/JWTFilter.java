@@ -41,6 +41,10 @@ public class JWTFilter extends OncePerRequestFilter {
             return;
         }
 
+        // Todo...
+        // front에서 freeboard 요청할떄 JWT 검사 해야함
+        // front에서 join 할떄 jwt 요청하면 문제가 생김
+        
         String token = auth.split(" ")[1];
 
         Jws<Claims> claims = jwtManager.getClaims(token);
