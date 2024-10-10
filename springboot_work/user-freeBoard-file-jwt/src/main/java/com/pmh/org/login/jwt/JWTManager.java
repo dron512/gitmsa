@@ -1,4 +1,4 @@
-package com.pmh.org.jwt;
+package com.pmh.org.login.jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;

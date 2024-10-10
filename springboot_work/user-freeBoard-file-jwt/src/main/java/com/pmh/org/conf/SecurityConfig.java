@@ -1,7 +1,7 @@
 package com.pmh.org.conf;
 
-import com.pmh.org.jwt.JWTFilter;
-import com.pmh.org.jwt.JWTManager;
+import com.pmh.org.login.jwt.JWTFilter;
+import com.pmh.org.login.jwt.JWTManager;
 import com.pmh.org.login.LoginFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

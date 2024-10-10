@@ -49,14 +49,13 @@ public class FreeBoardController {
         return welcome;
     }
 
+    // 할일Controller
     @GetMapping
     public ResponseEntity<FreeBoardResponsePageDto> findALl(
             @RequestParam(name = "pageNum", defaultValue = "0") int pageNum
             , @RequestParam(name = "size", defaultValue = "5") int size) {
 
-
         String email = SecurityContextHolder.getContext().getAuthentication().getName();
-        System.out.println("email = "+email);
 
         if((email == null && email.equals("")) || email.equals("anonymousUser")){
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
