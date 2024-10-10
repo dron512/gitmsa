@@ -53,4 +53,24 @@ public class JWTManager {
         }
         return "success";
     }
+
+    public String getEmail(String jwt){
+        String secrekey = environment.getProperty("spring.jwt.secret");
+        try {
+            // 비밀번호 설정
+            SecretKey secretKey
+                    = new SecretKeySpec(secrekey.getBytes(),
+                    Jwts.SIG.HS256.key().build().getAlgorithm());
+            // 해당비밀번호로 jwt 토큰 복호화 해서 claims 가져오기
+            Jws<Claims> cliams = Jwts.parser()
+                    .verifyWith(secretKey)
+                    .build()
+                    .parseSignedClaims(jwt);
+            // claims 안에서 email 값 가져오기
+            return cliams.getPayload().get("email").toString();
+        }catch (Exception e){
+            e.printStackTrace();
+            return "";
+        }
+    }
 }

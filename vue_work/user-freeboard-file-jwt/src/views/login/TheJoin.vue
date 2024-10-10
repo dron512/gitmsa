@@ -83,7 +83,6 @@ const doSubmit = async (event) => {
     router.push({name: 'login'});
   }
   else{
-    console.log(res);
     alert('회원가입 실패'+res.response.data.message);
   }
 };
