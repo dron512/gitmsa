@@ -53,14 +53,17 @@ public class JWTFilter extends OncePerRequestFilter {
             LoginUserDetails loginUserDetails = new LoginUserDetails(email,
                                                                     null,
                                                                     role);
-            Authentication authentication = new UsernamePasswordAuthenticationToken(
-                    loginUserDetails, null, loginUserDetails.getAuthorities()
+            Authentication authentication
+                    = new UsernamePasswordAuthenticationToken(
+                    loginUserDetails, null,
+                    loginUserDetails.getAuthorities()
             );
             // 로그인설정
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }catch (Exception e) {
             e.printStackTrace();
         }
+
         filterChain.doFilter(request,response);
     }
 }

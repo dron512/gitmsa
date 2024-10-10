@@ -6,7 +6,11 @@ const join = `${GLOBAL_URL}/join`;
 
 export const doJoin = async (data) => {
     try {
-        const res = await axios.post(join, data);
+        const res = await axios.post(join, data,{
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
         return res;
     } catch (e) {
         console.log(e);

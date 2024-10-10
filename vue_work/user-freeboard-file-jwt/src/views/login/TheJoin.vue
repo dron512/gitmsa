@@ -76,7 +76,7 @@ const doSubmit = async (event) => {
     name: '홍길동',
     password: '1234',
     age: '11',
-    email: 'bbb@naver.com'
+    email: 'aaa@naver.com'
   });
   if(res.status=='200'){
     alert('회원가입 성공 로그인페이지로 이동합니다.');
