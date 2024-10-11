@@ -1,19 +1,13 @@
 package com.pmh.org.conf;
 
-import com.pmh.org.login.jwt.JWTFilter;
-import com.pmh.org.login.jwt.JWTManager;
-import com.pmh.org.login.LoginFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -34,21 +28,19 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-
-    // jsp... form login -> spring security
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf( csrf -> csrf.disable() );
         http.formLogin( form -> form.disable());
         http.httpBasic( basic -> basic.disable());
 
-        http.authorizeRequests( auth -> auth
-                .requestMatchers( "/","/login", "/join",  "/freeboard/**","/user/**" ,"/file/**").permitAll()
-                .requestMatchers( "/swagger-ui/**", "/v3/api-docs/**" ).permitAll()
-                .requestMatchers("/test/**").permitAll()
-                .requestMatchers("/admin").hasRole("ADMIN")
-                .anyRequest().authenticated() );
+        http.authorizeRequests( auth -> auth.requestMatchers("/**").permitAll() );
+
+//                .requestMatchers( "/","/login", "/join",  "/freeboard/**","/user/**" ,"/file/**").permitAll()
+//                .requestMatchers( "/swagger-ui/**", "/v3/api-docs/**" ).permitAll()
+//                .requestMatchers("/test/**").permitAll()
+//                .requestMatchers("/admin").hasRole("ADMIN")
+//                .anyRequest().authenticated() );
 
         // JWTFilter JWT 토큰 검사...
 //        http.addFilterBefore(new JWTFilter(jwtManager), LoginFilter.class);
