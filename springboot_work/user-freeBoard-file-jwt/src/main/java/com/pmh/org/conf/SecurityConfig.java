@@ -20,20 +20,22 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final AuthenticationConfiguration authenticationConfiguration;
-    private final JWTManager jwtManager;
+//    private final AuthenticationConfiguration authenticationConfiguration;
+//    private final JWTManager jwtManager;
 
     // 인증 -> UserDetailsService
-    @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
-        return configuration.getAuthenticationManager();
-    }
+//    @Bean
+//    public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
+//        return configuration.getAuthenticationManager();
+//    }
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+
+    // jsp... form login -> spring security
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -48,10 +50,14 @@ public class SecurityConfig {
                 .requestMatchers("/admin").hasRole("ADMIN")
                 .anyRequest().authenticated() );
 
-        http.addFilterBefore(new JWTFilter(jwtManager), LoginFilter.class);
-        http.addFilterAt( new LoginFilter(
-                                authenticationManager(authenticationConfiguration), jwtManager),
-                                UsernamePasswordAuthenticationFilter.class );
+        // JWTFilter JWT 토큰 검사...
+//        http.addFilterBefore(new JWTFilter(jwtManager), LoginFilter.class);
+        // 로그인을 하는...
+        // UsernamePasswordAuthenticationFilter -> LoginFilter
+        // login 주소 요청이 들어오면... email password 비교 jwt-> 틀렸다...
+//        http.addFilterAt( new LoginFilter(
+//                                authenticationManager(authenticationConfiguration), jwtManager),
+//                                UsernamePasswordAuthenticationFilter.class );
 
         http.sessionManagement( session -> session.sessionCreationPolicy( SessionCreationPolicy.STATELESS ));
 

@@ -11,10 +11,12 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+@Component
 public class JWTFilter extends OncePerRequestFilter {
 
     private final JWTManager jwtManager;
@@ -29,21 +31,13 @@ public class JWTFilter extends OncePerRequestFilter {
                                     FilterChain filterChain)
             throws ServletException, IOException {
 
+        System.out.println("지나간다...");
         String auth = request.getHeader(HttpHeaders.AUTHORIZATION);
 
-        // 인증 토큰인 JWT 가 null 이거나 Bearer 로 시작하는 토큰이 아니면...
         if(auth == null || !auth.startsWith("Bearer ")) {
-            // 그냥 지나가라...
             filterChain.doFilter(request, response);
             return;
         }
-
-//      회원가입이나 로그인으로 들어왔을때는 로그인 설정 하지 말고 지나가라...
-//        if( request.getRequestURI().contains("join")
-//                || request.getRequestURI().contains("login") ) {
-//            filterChain.doFilter(request, response);
-//            return;
-//        }
 
         try {
             String token = auth.split(" ")[1];
