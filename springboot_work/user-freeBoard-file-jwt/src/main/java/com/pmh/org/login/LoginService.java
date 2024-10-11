@@ -34,6 +34,7 @@ public class LoginService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username)
             throws UsernameNotFoundException {
 
+        // email 체크...
         User user = userRepository.findByEmail(username).orElseThrow(
                 () -> new UsernameNotFoundException(username)
         );
@@ -46,6 +47,7 @@ public class LoginService implements UserDetailsService {
 //                .roles("ADMIN")
 //                .build();
 
+        // password 체크...
         return new LoginUserDetails(user.getEmail(),
                                     user.getPassword(),
                                     user.getRole());

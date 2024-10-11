@@ -1,5 +1,6 @@
 package com.pmh.org.login;
 
+import com.pmh.org.login.jwt.JWTManager;
 import com.pmh.org.user.User;
 import com.pmh.org.user.UserRepository;
 import jakarta.servlet.http.HttpServletResponse;
@@ -21,6 +22,7 @@ public class LoginController {
     private final LoginService loginService;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final JWTManager jwtManager;
 
     @PostMapping("/join")
     public ResponseEntity<String> join(@RequestBody JoinDto joinDto){
@@ -29,7 +31,7 @@ public class LoginController {
     }
 
     @GetMapping("/login")
-    public String redirectWithPost(
+    public ResponseEntity<String> redirectWithPost(
             @RequestParam("email") String email,
             @RequestParam("password") String password,
             HttpServletResponse response) throws IOException {
@@ -38,13 +40,13 @@ public class LoginController {
                 () -> new UsernameNotFoundException(email)
         );
 
-        System.out.println("암호화한 패스워드 = ");
-        String encodedPassword = passwordEncoder.encode(password);
-        String dbPassword = user.getPassword();
-
-        boolean isMatch = passwordEncoder.matches(dbPassword, encodedPassword);
-        System.out.println("isMatch = "+ isMatch);
-
-        return "토큰 만들계획";
+        boolean isMatch = passwordEncoder.matches(password, user.getPassword());
+        if(isMatch){
+            String jwt = jwtManager.createJWT(user.getEmail(), user.getRole());
+            return ResponseEntity.ok(jwt);
+        }else{
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body("이메일과 패스워드를 확인하세요");
+        }
     }
 }

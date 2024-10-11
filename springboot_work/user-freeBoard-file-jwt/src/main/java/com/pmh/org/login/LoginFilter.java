@@ -20,8 +20,11 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
 
     public LoginFilter(AuthenticationManager authenticationManager,
                        JWTManager jwtManager) {
+        // post login 들어오면..
         this.setFilterProcessesUrl("/login");
+        // UserDetailsSerivce loadByUsername(String username);
         this.authenticationManager = authenticationManager;
+        // jwt 토큰 만들고 jwt 유효성검사하고..
         this.jwtManager = jwtManager;
     }
 
@@ -36,6 +39,8 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
 
         UsernamePasswordAuthenticationToken token =
                 new UsernamePasswordAuthenticationToken(email, password);
+
+        // UserDetilasSerivce loadUserByUsername함수를 호출..
         return authenticationManager.authenticate(token);
     }
 
