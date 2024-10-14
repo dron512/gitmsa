@@ -40,7 +40,7 @@
           </div>
         </div>
         <template v-if="loginPinia.loginCheck">
-          <div>
+          <div class="flex space-x-5"> 
             <h1>{{ loginPinia.name }} 님</h1>
             <button @click="logout">
               로그아웃
@@ -80,11 +80,9 @@ watchEffect(async () => {
   if (result == false) {
     loginPinia.logout();
   } else {
-    console.log(result);
     if (result.status == 200) {
-      loginPinia.login();
+      loginPinia.login(result.data);
     } else if (result.status == 401) {
-      // token 삭제하고 loginCheck.value 로그인안했다..
       localStorage.removeItem('token');
       loginPinia.logout();
     }
