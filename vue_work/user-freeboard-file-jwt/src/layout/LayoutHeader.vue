@@ -54,6 +54,7 @@
         </template>
       </nav>
     </div>
+    <button @click="loginChange">값바꾸기</button>
   </header>
 </template>
 
@@ -63,15 +64,25 @@ import { ref, watchEffect } from 'vue';
 import { RouterLink } from 'vue-router';
 
 const loginCheck = ref(false);
+const loginChange = () => {
+  loginCheck.value = !loginCheck.value;
+};
 
-watchEffect(() => {
-    const result = doLoginCheck();
-    if(result==false){
-        loginCheck.value = false;
-    }else{
-        console.log(result);
-        loginCheck.value = true;
+watchEffect(async () => {
+  const result = await doLoginCheck();
+  if (result == false) {
+    loginCheck.value = false;
+  } else {
+    console.log(result);
+    if (result.status == 200) {
+      loginCheck.value = true;
+    } else if (result.status == 401) {
+      // token 삭제하고 loginCheck.value 로그인안했다..
+      localStorage.removeItem('token');
+      loginCheck.value = false;
     }
+  }
+  loginCheck.value = false;
 });
 </script>
 
