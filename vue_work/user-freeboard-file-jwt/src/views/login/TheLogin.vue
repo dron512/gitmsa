@@ -31,21 +31,26 @@
 
 <script setup>
 import { doLogin } from '@/api/loginApi';
+import { useLoginStore } from '@/store/loginPinia';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-
 
 const email = ref('aaa@naver.com');
 const password = ref('1234');
 const router = useRouter();
+
+const loginPinia = useLoginStore();
 
 const submitLogin = async () => {
     const data = { "email": email.value, "password": password.value };
     const res = await doLogin(data);
     localStorage.setItem('token', res.data);
     if(res.status==200){
-        alert('로그인 성공');
+        alert('로그인 성공'+res.data);
+        loginPinia.login(res.data); // 로그인 성공시 loginPinia.login() 호출
         router.push({name:"freeboardlist"});
+    }else{
+        loginPinia.logout();
     }
 }
 </script>

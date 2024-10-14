@@ -39,8 +39,13 @@
             </div>
           </div>
         </div>
-        <template v-if="loginCheck">
-          <div>로그인하셨네요...</div>
+        <template v-if="loginPinia.loginCheck">
+          <div>
+            <h1>{{ loginPinia.name }} 님</h1>
+            <button @click="logout">
+              로그아웃
+            </button>
+          </div>
         </template>
         <template v-else>
           <div class="flex space-x-5">
@@ -54,36 +59,38 @@
         </template>
       </nav>
     </div>
-    <button @click="loginChange">값바꾸기</button>
+    <!-- {{ loginPinia.loginCheck }} -->
   </header>
 </template>
 
 <script setup>
 import { doLoginCheck } from '@/api/loginApi';
-import { ref, watchEffect } from 'vue';
+import { useLoginStore } from '@/store/loginPinia';
+import { watchEffect } from 'vue';
 import { RouterLink } from 'vue-router';
 
-const loginCheck = ref(false);
-const loginChange = () => {
-  loginCheck.value = !loginCheck.value;
-};
+const loginPinia = useLoginStore();
+const logout = () => {
+  localStorage.removeItem("token");
+  loginPinia.logout();
+}
 
 watchEffect(async () => {
   const result = await doLoginCheck();
   if (result == false) {
-    loginCheck.value = false;
+    loginPinia.logout();
   } else {
     console.log(result);
     if (result.status == 200) {
-      loginCheck.value = true;
+      loginPinia.login();
     } else if (result.status == 401) {
       // token 삭제하고 loginCheck.value 로그인안했다..
       localStorage.removeItem('token');
-      loginCheck.value = false;
+      loginPinia.logout();
     }
   }
-  loginCheck.value = false;
 });
 </script>
 
 <style lang="scss" scoped></style>
+
