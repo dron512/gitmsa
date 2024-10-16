@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   # MariaDB 데이터베이스 서비스
   mariadb:
@@ -31,6 +30,7 @@ services:
       SPRING_DATASOURCE_USERNAME: pmh                       # MariaDB 사용자
       SPRING_DATASOURCE_PASSWORD: p@ssword              # MariaDB 사용자 비밀번호
       SERVER_PORT: 8080
+      # SRPING_SQL_INIT_MODE: never
     ports:
       - 8080:8080  # Spring Boot 포트를 호스트로 노출
     depends_on:
@@ -41,7 +41,7 @@ services:
     
 
   # Vue 서비스
-  freebaordvue:
+  freeboardvue:
     image: parkmyounghoi/freeboardvue
     container_name: freebaordvue
     ports:
@@ -51,8 +51,9 @@ services:
     networks:
       - my_network
     environment:
-    - CHOKIDAR_USEPOLLING=true
-    - VITE_API_URL=http://112.222.157.156:10000  # 여기서 환경 변수를 설정합니다.
+    # - CHOKIDAR_USEPOLLING=true # vue 소스 바뀌면 자동으로 적용시켜라 docker copy 
+    # 웹브라우저 axios 통신할때 사용하는 port 입니다. 외부 IP 집에서도 호출 가능합니다..
+    - VITE_API_URL=http://112.222.157.156:3000  # 여기서 환경 변수를 설정합니다.
 
 
 # 네트워크 설정

@@ -1,10 +1,10 @@
-# ci/cd -> 명령어 모아놓고 한꺼번에 
+#컨테이너 중지
+docker stop freeboardvue
 
 # 컨테이너 삭제해라
-docker rm freeboardvue
+docker rm -f freeboardvue
 # 이미지 삭제해라
 docker rmi parkmyounghoi/freeboardvue
-
 
 # 이미지 생성해라
 docker build -t parkmyounghoi/freeboardvue .
