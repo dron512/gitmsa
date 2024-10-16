@@ -1,20 +1,16 @@
-# Dockerfile
+# 이미지 node 16버전 
 FROM node:16
 
-# Set the working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
 RUN npm install
 
-# Copy the rest of the application code
 COPY . .
 
-# Expose the port that the app runs on
+# port 5173 다른 PC 에서 접속 할 수 있도록 해라
 EXPOSE 5173
 
-# Start the app in development mode
+# 마지막 명령어는 npm run dev 실행해라...
 CMD ["npm", "run", "dev"]
