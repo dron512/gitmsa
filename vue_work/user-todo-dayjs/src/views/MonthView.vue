@@ -69,12 +69,12 @@ watch(now, (newValue, _) => {
       <div class="border border-gray-400 text-center p-2"> 수 </div>
       <div class="border border-gray-400 text-center p-2"> 목 </div>
       <div class="border border-gray-400 text-center p-2"> 금 </div>
-      <div class="border border-gray-400 text-center p-2"> 토 </div>
+      <div class="border border-gray-400 text-center p-2 text-blue-500"> 토 </div>
     </div>
     <div class="grid grid-cols-7 gap-2" v-for="group in groupColumns" :key="group.length">
       <div v-for="(column,index) in group" :key="column.format('YYYY-MM-DD')" 
-          class="border border-gray-400 text-center p-2 opacity-20"
-          :class="{'text-red-600': index%7==0, 'text-blue-500': index%7==6,'opacity-100':column.isSame(now,'month')}">
+          class="border border-gray-400 text-center p-2"
+          :class="{'text-red-600': index%7==0, 'text-blue-500': index%7==6,'opacity-20':!column.isSame(now,'month')}">
         {{ column.get('date') }}
       </div>
     </div>
