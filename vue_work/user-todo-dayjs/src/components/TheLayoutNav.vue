@@ -23,6 +23,7 @@
 					<RouterLink to="/" class="hover:text-blue-500">HOME</RouterLink>
 					<RouterLink to="/about" class="hover:text-blue-500">ABOUT</RouterLink>
 					<RouterLink to="/month" class="hover:text-blue-500">MONTH</RouterLink>
+					<RouterLink to="/login" class="hover:text-blue-500">LOGIN</RouterLink>
 				</div>
 			</div>
 			<!-- Mobile Menu (hidden by default) -->
@@ -31,6 +32,7 @@
 					<RouterLink to="/" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">HOME</RouterLink>
 					<RouterLink to="/about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">ABOUT</RouterLink>
 					<RouterLink to="/month" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">MONTH</RouterLink>
+					<RouterLink to="/login" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">LOGIN</RouterLink>
 				</div>
 			</template>
 		</div>
