@@ -78,9 +78,9 @@ watch(
 		<main class="flex justify-center">
 			<div class="max-w-lg w-full bg-white shadow-md rounded-lg p-4">
 				<h1 class="text-xl font-bold text-center mb-4">
-					<button @click="subMonth()">&lt;&lt;</button>
+					<button @click="subMonth()" class="mr-2"><i class="fas fa-arrow-left"></i></button>
 					{{ now.format('YYYY년 MM월') }}
-					<button @click="addMonth()">&gt;&gt;</button>
+					<button @click="addMonth()" class="ml-2"><i class="fas fa-arrow-right"></i></button>
 				</h1>
 				<div class="grid grid-cols-7 gap-2 text-center text-gray-600">
 					<div class="p-2 px-4 text-red-600">일</div>
