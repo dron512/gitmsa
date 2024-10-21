@@ -60,7 +60,7 @@ public class KakaoController {
             headers2.add("Authorization", "Bearer " + kakaoTokenDto.getAccess_token());
 
             MultiValueMap<String, String> body2 = new LinkedMultiValueMap<>();
-            body2.add("template_object", templateString());
+            body2.add("template_object", messageString());
 
             HttpEntity<MultiValueMap<String, String>> requestEntity2 = new HttpEntity<>(body2, headers2);
 
@@ -80,6 +80,17 @@ public class KakaoController {
         return "kakao code";
     }
 
+    public String messageString(){
+        return "{\n" +
+                "        \"object_type\": \"text\",\n" +
+                "        \"text\": \"곧 쉬는 시간입니다. 사람 불러야되요.\",\n" +
+                "        \"link\": {\n" +
+                "            \"web_url\": \"http://first.hellomh.site/first/test\",\n" +
+                "            \"mobile_web_url\": \"http://first.hellomh.site/first/test\"\n" +
+                "        },\n" +
+                "        \"button_title\": \"바로 확인\"\n" +
+                "    }";
+    }
 
     public String templateString (){
         return "{\n" +
@@ -139,8 +150,8 @@ public class KakaoController {
                 "            {\n" +
                 "                \"title\": \"웹으로 이동\",\n" +
                 "                \"link\": {\n" +
-                "                    \"web_url\": \"http://www.daum.net\",\n" +
-                "                    \"mobile_web_url\": \"http://m.daum.net\"\n" +
+                "                    \"web_url\": \"http://www.naver.com\",\n" +
+                "                    \"mobile_web_url\": \"http://m.naver.com\"\n" +
                 "                }\n" +
                 "            },\n" +
                 "            {\n" +
