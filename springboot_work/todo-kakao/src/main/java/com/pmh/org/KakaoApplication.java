@@ -1,4 +1,4 @@
-package com.pmh.kakao;
+package com.pmh.org;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

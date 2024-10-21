@@ -1,4 +1,4 @@
-package com.pmh.kakao;
+package com.pmh.org;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
