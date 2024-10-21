@@ -68,28 +68,7 @@ public class KakaoController {
                     HttpMethod.POST,
                     requestEntity2 ,
                     String.class);
-
             log.info("msg 카카옥 메시지 전송 성공....."+result2.toString());
-
-//            restTemplate.exchange();
-//            {
-    //            "access_token":"SHsjJCFLY65xOmoR-AGAIiIFhRAJkEPAAAAAAQo8JFkAAAGSrYxAeqQkDeVh20ZZ",
-    //            "token_type":"bearer",
-    //            "refresh_token":"K7Lf_iRcMterKs5qpCH7MEwrEXXEvc-qAAAAAgo8JFkAAAGSrYxAeKQkDeVh20ZZ",
-    //            "expires_in":21599,
-    //            "scope":"account_email talk_calendar profile_image talk_message talk_calendar_task profile_nickname friends",
-    //            "refresh_token_expires_in":5183999
-//            },
-//            [Date:"Mon, 21 Oct 2024 05:28:22 GMT",
-//            Content-Type:"application/json;charset=utf-8",
-//            Transfer-Encoding:"chunked",
-//            Connection:"keep-alive",
-//            Cache-Control:"no-cache,
-//            no-store, max-age=0,
-//            must-revalidate",
-//            Pragma:"no-cache",
-//            Expires:"0", X-XSS-Protection:"1; mode=block", X-Frame-Options:"DENY",
-//            X-Content-Type-Options:"nosniff", Kakao:"Talk", Access-Control-Allow-Origin:"*", Access-Control-Allow-Methods:"GET, POST, OPTIONS", Access-Control-Allow-Headers:"Authorization, KA, Origin, X-Requested-With, Content-Type, Accept"]
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -107,7 +86,7 @@ public class KakaoController {
                 "        \"object_type\": \"feed\",\n" +
                 "        \"content\": {\n" +
                 "            \"title\": \"오늘의 MSA\",\n" +
-                "            \"description\": \"가라\",\n" +
+                "            \"description\": \"내용 바꾸기... 내일 더 해볼꼐요... \",\n" +
                 "            \"image_url\": \"https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg\",\n" +
                 "            \"image_width\": 640,\n" +
                 "            \"image_height\": 640,\n" +
