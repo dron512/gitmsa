@@ -8,10 +8,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.client.RequestCallback;
 import org.springframework.web.client.ResponseExtractor;
@@ -20,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequestMapping("kakao")
 @Slf4j
+@CrossOrigin
 public class KakaoController {
 
     @GetMapping("login")
@@ -28,31 +26,31 @@ public class KakaoController {
 
         // 1. restTemplate
         try {
-            // token 확인 주소..
+            // ------------토큰 가져오기 시작...------------
             String url = "https://kauth.kakao.com/oauth/token";
             RestTemplate restTemplate = new RestTemplate();
-
+            // header 내용을..
             MultiValueMap headers = new LinkedMultiValueMap();
             headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
-
+            // body 내용들...
             MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
             body.add("grant_type", "authorization_code");
             body.add("client_id", "477ea0788a39a67ac40fa6b1bc49e7d8");
             body.add("redirect_uri", "http://localhost:5173/oauth");
             body.add("code", code);
-            body.add("client_secret", "TbN9J7UNCPyH9mpkDVFJTyNiY5frkU3y");
+            body.add("client_secret", "IvQLaOlEc3V48BjHjA7JBTsZto5ZDwc2");
 
             HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(body, headers);
 
-            ResponseEntity<KakaoTokenDto> result = restTemplate.exchange(url,
-                                                    HttpMethod.POST,
-                                                    requestEntity ,
-                                                    KakaoTokenDto.class);
+            ResponseEntity<KakaoTokenDto> result = restTemplate.exchange(url, HttpMethod.POST, requestEntity ,KakaoTokenDto.class);
             log.info("result {}", result);
 
             KakaoTokenDto kakaoTokenDto = result.getBody();
+            // DB 에 저장...
 
-            // 메시지 보내는 주소...
+            // ------------토큰 가져오기 끝.....----------------
+
+            // 메시지 보내는 시작 --------------------
             url = "https://kapi.kakao.com/v2/api/talk/memo/default/send";
 
             MultiValueMap headers2 = new LinkedMultiValueMap();
@@ -64,12 +62,10 @@ public class KakaoController {
 
             HttpEntity<MultiValueMap<String, String>> requestEntity2 = new HttpEntity<>(body2, headers2);
 
-            ResponseEntity<String> result2 = restTemplate.exchange(url,
-                    HttpMethod.POST,
-                    requestEntity2 ,
-                    String.class);
+            ResponseEntity<String> result2 = restTemplate.exchange(url, HttpMethod.POST, requestEntity2 , String.class);
             log.info("msg 카카옥 메시지 전송 성공....."+result2.toString());
 
+            // 메시지 보내는 끝....
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -84,7 +80,7 @@ public class KakaoController {
     public String messageString(){
         return "{\n" +
                 "        \"object_type\": \"text\",\n" +
-                "        \"text\": \"곧 쉬는 시간입니다. 사람 불러야되요.\",\n" +
+                "        \"text\": \"안녕하세요 우리페이지 가입해 주셔서 감사합니다.\",\n" +
                 "        \"link\": {\n" +
                 "            \"web_url\": \"http://first.hellomh.site/first/test\",\n" +
                 "            \"mobile_web_url\": \"http://first.hellomh.site/first/test\"\n" +
