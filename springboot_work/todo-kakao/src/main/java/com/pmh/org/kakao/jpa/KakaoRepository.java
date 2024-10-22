@@ -1,4 +1,4 @@
-package com.pmh.org.kakao;
+package com.pmh.org.kakao.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

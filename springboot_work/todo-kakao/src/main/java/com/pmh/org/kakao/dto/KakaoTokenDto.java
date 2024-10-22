@@ -1,4 +1,4 @@
-package com.pmh.org.kakao;
+package com.pmh.org.kakao.dto;
 
 import lombok.Data;
 

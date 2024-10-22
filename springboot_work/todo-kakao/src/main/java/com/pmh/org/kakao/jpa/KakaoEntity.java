@@ -1,11 +1,13 @@
-package com.pmh.org.kakao;
+package com.pmh.org.kakao.jpa;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Data;
 
 @Entity
+@Data
 public class KakaoEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -14,6 +16,7 @@ public class KakaoEntity {
     private String userId;
     private String nickname;
     private String profile_image;
+    private String thumbnail_image;
     private String email;
 
     private String access_token;
