@@ -77,6 +77,9 @@ public class KakaoController {
 
         // 2. openfeign
 
+        // 소스 추가...
+        int a = 10;
+
         return "kakao code";
     }
 
