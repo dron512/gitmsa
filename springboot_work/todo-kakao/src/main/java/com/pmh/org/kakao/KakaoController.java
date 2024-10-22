@@ -1,5 +1,6 @@
 package com.pmh.org.kakao;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -10,84 +11,39 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.client.RequestCallback;
-import org.springframework.web.client.ResponseExtractor;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("kakao")
 @Slf4j
 @CrossOrigin
+@RequiredArgsConstructor
 public class KakaoController {
+
+    private final KakaoService kakaoService;
 
     @GetMapping("login")
     public String kakaoCode(@RequestParam(value = "code") String code) {
         log.info("code {}", code);
-
         // 1. restTemplate
-        try {
-            // ------------토큰 가져오기 시작...------------
-            String url = "https://kauth.kakao.com/oauth/token";
-            RestTemplate restTemplate = new RestTemplate();
-            // header 내용을..
-            MultiValueMap headers = new LinkedMultiValueMap();
-            headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
-            // body 내용들...
-            MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
-            body.add("grant_type", "authorization_code");
-            body.add("client_id", "477ea0788a39a67ac40fa6b1bc49e7d8");
-            body.add("redirect_uri", "http://localhost:5173/oauth");
-            body.add("code", code);
-            body.add("client_secret", "IvQLaOlEc3V48BjHjA7JBTsZto5ZDwc2");
-
-            HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(body, headers);
-
-            ResponseEntity<KakaoTokenDto> result = restTemplate.exchange(url, HttpMethod.POST, requestEntity ,KakaoTokenDto.class);
-            log.info("result {}", result);
-
-            KakaoTokenDto kakaoTokenDto = result.getBody();
-            // DB 에 저장...
-
-            // ------------토큰 가져오기 끝.....----------------
-
-            // 메시지 보내는 시작 --------------------
-            url = "https://kapi.kakao.com/v2/api/talk/memo/default/send";
-
-            MultiValueMap headers2 = new LinkedMultiValueMap();
-            headers2.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
-            headers2.add("Authorization", "Bearer " + kakaoTokenDto.getAccess_token());
-
-            MultiValueMap<String, String> body2 = new LinkedMultiValueMap<>();
-            body2.add("template_object", messageString());
-
-            HttpEntity<MultiValueMap<String, String>> requestEntity2 = new HttpEntity<>(body2, headers2);
-
-            ResponseEntity<String> result2 = restTemplate.exchange(url, HttpMethod.POST, requestEntity2 , String.class);
-            log.info("msg 카카옥 메시지 전송 성공....."+result2.toString());
-
-            // 메시지 보내는 끝....
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
+        kakaoService.getToken(code);
+//        kakaoService.messageSend();
         // 2. openfeign
         // 새로운 메인 길....
-
-        return "kakao code";
+        return "kakao join success";
     }
 
-    public String messageString(){
-        return "{\n" +
-                "        \"object_type\": \"text\",\n" +
-                "        \"text\": \"안녕하세요 우리페이지 가입해 주셔서 감사합니다.\",\n" +
-                "        \"link\": {\n" +
-                "            \"web_url\": \"http://first.hellomh.site/first/test\",\n" +
-                "            \"mobile_web_url\": \"http://first.hellomh.site/first/test\"\n" +
-                "        },\n" +
-                "        \"button_title\": \"바로 확인\"\n" +
-                "    }";
+    @PostMapping("messagesend")
+    public String messageSend(@RequestBody KakaoMessageDto kakaoMessageDto){
+        kakaoService.messageSend(
+                kakaoMessageDto.getEmail(),
+                kakaoMessageDto.getMessage());
+        return "message send success";
     }
+
+
+
+
 
     public String templateString (){
         return "{\n" +
