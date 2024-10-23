@@ -29,7 +29,13 @@ public class KakaoService {
     private final Environment environment;
     private final JWTUtils jwtUtils;
 
-    public void getToken(String code) {
+    /*
+     1. 카카오 https://kauth.kakao.com/oauth/token -> accessToken 발급
+     2. 카카오 https://kapi.kakao.com/v2/user/me -> 유저정보 가져오기
+     3. KakaoEntity -> 테이블 행삽입 -> 해당하는 이메일 검사...
+     4. JWT(JSON Web Token) -> JWTUtils.createJWT(email) 해서 반환...
+     */
+    public String getToken(String code) {
         try {
             String url = "https://kauth.kakao.com/oauth/token";
             RestTemplate restTemplate = new RestTemplate();
@@ -74,12 +80,13 @@ public class KakaoService {
             kakaoRepository.save(kakaoEntity);
 
             // 우리꺼 JWT 만들어주기..
-            jwtUtils.createJwt(kakaoEntity.getEmail());
-
+            String jwt = jwtUtils.createJwt(kakaoEntity.getEmail());
+            return jwt;
             // db 저장
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return "fail";
     }
 
     public void messageSend(String email, String message) {

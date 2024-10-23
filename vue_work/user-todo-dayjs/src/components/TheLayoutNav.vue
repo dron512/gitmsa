@@ -7,13 +7,7 @@
 				<!-- Hamburger Menu (for mobile) -->
 				<div class="sm:hidden">
 					<button @click="menuDisply" id="menu-btn" class="text-gray-800 focus:outline-none">
-						<svg
-							class="w-6 h-6"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"
-						>
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
 						</svg>
 					</button>
@@ -23,6 +17,7 @@
 					<RouterLink to="/" class="hover:text-blue-500">HOME</RouterLink>
 					<RouterLink to="/about" class="hover:text-blue-500">ABOUT</RouterLink>
 					<RouterLink to="/month" class="hover:text-blue-500">MONTH</RouterLink>
+					<RouterLink to="/message" class="hover:text-blue-500">MESSAGE</RouterLink>
 					<RouterLink to="/login" class="hover:text-blue-500">LOGIN</RouterLink>
 				</div>
 			</div>
@@ -32,6 +27,7 @@
 					<RouterLink to="/" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">HOME</RouterLink>
 					<RouterLink to="/about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">ABOUT</RouterLink>
 					<RouterLink to="/month" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">MONTH</RouterLink>
+					<RouterLink to="/message" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">MESSAGE</RouterLink>
 					<RouterLink to="/login" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">LOGIN</RouterLink>
 				</div>
 			</template>
