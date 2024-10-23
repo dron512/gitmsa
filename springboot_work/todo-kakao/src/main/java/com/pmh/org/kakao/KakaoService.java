@@ -1,5 +1,6 @@
 package com.pmh.org.kakao;
 
+import com.pmh.org.filter.JWTUtils;
 import com.pmh.org.kakao.dto.KakaoTokenDto;
 import com.pmh.org.kakao.dto.KakaoUserInfoDto;
 import com.pmh.org.kakao.jpa.KakaoEntity;
@@ -7,6 +8,7 @@ import com.pmh.org.kakao.jpa.KakaoRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -24,6 +26,8 @@ import java.util.UUID;
 public class KakaoService {
 
     private final KakaoRepository kakaoRepository;
+    private final Environment environment;
+    private final JWTUtils jwtUtils;
 
     public void getToken(String code) {
         try {
@@ -35,10 +39,10 @@ public class KakaoService {
 
             MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
             body.add("grant_type", "authorization_code");
-            body.add("client_id", "477ea0788a39a67ac40fa6b1bc49e7d8");
+            body.add("client_id", environment.getProperty("oauth.kakao.client_id"));
             body.add("redirect_uri", "http://localhost:5173/oauth");
             body.add("code", code);
-            body.add("client_secret", "IvQLaOlEc3V48BjHjA7JBTsZto5ZDwc2");
+            body.add("client_secret", environment.getProperty("oauth.kakao.client_secret"));
 
             HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(body, headers);
 
@@ -68,6 +72,10 @@ public class KakaoService {
             kakaoEntity.setUserId(UUID.randomUUID().toString());
 
             kakaoRepository.save(kakaoEntity);
+
+            // 우리꺼 JWT 만들어주기..
+            jwtUtils.createJwt(kakaoEntity.getEmail());
+
             // db 저장
         } catch (Exception e) {
             e.printStackTrace();
