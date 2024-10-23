@@ -1,5 +1,7 @@
 package com.pmh.org.filter;
 
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
@@ -7,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 import java.util.Base64;
 import java.util.Date;
 
@@ -31,5 +35,16 @@ public class JWTUtils {
         return jwt;
     }
 
+    public String getEmailFromJwt(String jwt){
+        SecretKey secretKey
+                = new SecretKeySpec(SECRET_KEY.getBytes(),
+                Jwts.SIG.HS256.key().build().getAlgorithm());
+        Jws<Claims> cliams = Jwts.parser()
+                .verifyWith(secretKey)
+                .build()
+                .parseSignedClaims(jwt);
+
+        return cliams.getPayload().get("email").toString();
+    }
 
 }
