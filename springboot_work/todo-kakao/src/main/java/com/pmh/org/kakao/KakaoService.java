@@ -89,6 +89,13 @@ public class KakaoService {
         return "fail";
     }
 
+    // 메시지 보내기 함수..
+    // 1. jwt 내용 확인...(email 있는지..., 유효한토큰..) Email 가져오기..
+    // 2. https://kapi.kakao.com/v2/api/talk/memo/default/send
+    // headers = contectType accessToken
+    // body template_object {   }
+    // 우리가 발급한 JWT login..., AccessToken(유효시간)-> message X , RefreshToken(유효시간)
+
     public void messageSend(String jwt, String message) {
         String email = jwtUtils.getEmailFromJwt(jwt);
 
@@ -97,32 +104,21 @@ public class KakaoService {
         String url = "https://kapi.kakao.com/v2/api/talk/memo/default/send";
 
         // headers content-type accessToken
-        MultiValueMap headers2 = new LinkedMultiValueMap();
-        headers2.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
-
+        MultiValueMap headers = new LinkedMultiValueMap();
+        headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
         KakaoEntity kakaoEntity = kakaoRepository.findByEmail(email);
-        headers2.add("Authorization", "Bearer " + kakaoEntity.getAccess_token());
+        headers.add("Authorization", "Bearer " + kakaoEntity.getAccess_token());
 
         // body message
-        MultiValueMap<String, String> body2 = new LinkedMultiValueMap<>();
-        body2.add("template_object", String.format(messageString(), email, message));
+        MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
+        body.add("template_object", String.format(KakaoUtils.messageString(), email, message));
 
-        HttpEntity<MultiValueMap<String, String>> requestEntity2 = new HttpEntity<>(body2, headers2);
+        HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(body, headers);
 
-        ResponseEntity<String> result2 = restTemplate.exchange(url, HttpMethod.POST, requestEntity2, String.class);
+        ResponseEntity<String> result2 = restTemplate.exchange(url, HttpMethod.POST, requestEntity, String.class);
         log.info("msg 카카옥 메시지 전송 성공....." + result2.toString());
         // 메시지 보내는 끝....
     }
 
-    public String messageString() {
-        return "{\n" +
-                "        \"object_type\": \"text\",\n" +
-                "        \"text\": \"%s %s\",\n" +
-                "        \"link\": {\n" +
-                "            \"web_url\": \"http://first.hellomh.site/first/test\",\n" +
-                "            \"mobile_web_url\": \"http://first.hellomh.site/first/test\"\n" +
-                "        },\n" +
-                "        \"button_title\": \"바로 확인\"\n" +
-                "    }";
-    }
+
 }

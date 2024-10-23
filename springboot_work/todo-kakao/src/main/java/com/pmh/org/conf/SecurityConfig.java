@@ -22,9 +22,7 @@ public class SecurityConfig {
         httpSecurity.httpBasic(http -> http.disable());
 
         // 스프링 스큐리티... -> PasswordEncoder...
-        httpSecurity.authorizeHttpRequests( auth ->
-                auth.requestMatchers("/**").permitAll()
-        );
+        httpSecurity.authorizeHttpRequests( auth -> auth.requestMatchers("/**").permitAll());
 
         // 세션 유지 기능 사용 안함..
         httpSecurity.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));

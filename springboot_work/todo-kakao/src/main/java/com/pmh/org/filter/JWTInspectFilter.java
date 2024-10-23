@@ -11,7 +11,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
-@Component
+//@Component
 @Slf4j
 public class JWTInspectFilter extends OncePerRequestFilter {
 
