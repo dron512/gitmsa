@@ -1,5 +1,8 @@
 package com.pmh.org.user;
 
+import com.pmh.org.kakao.jpa.KakaoEntity;
+import com.pmh.org.kakao.jpa.KakaoRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -12,13 +15,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("user")
 @Slf4j
+@RequiredArgsConstructor
 public class UserController {
 
-//    @GetMapping("info")
-//    public ResponseEntity<UserDto> getUserInfo(
-////            @RequestHeader("Authorization") String token,
-//            @AuthenticationPrincipal UserDetails userDetails){
-//
-//    }
+    private final KakaoRepository kakaoRepository;
+
+    @GetMapping("info")
+    public ResponseEntity<KakaoEntity> getUserInfo(
+            @AuthenticationPrincipal UserDetails userDetails){
+        KakaoEntity kakaoEntity = kakaoRepository.findByEmail(userDetails.getUsername());
+        return ResponseEntity.ok(kakaoEntity);
+    }
 
 }

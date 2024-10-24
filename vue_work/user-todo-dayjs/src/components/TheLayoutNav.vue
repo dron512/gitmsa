@@ -18,7 +18,15 @@
 					<RouterLink to="/about" class="hover:text-blue-500">ABOUT</RouterLink>
 					<RouterLink to="/month" class="hover:text-blue-500">MONTH</RouterLink>
 					<RouterLink to="/message" class="hover:text-blue-500">MESSAGE</RouterLink>
-					<RouterLink to="/login" class="hover:text-blue-500">LOGIN</RouterLink>
+					<template v-if="useStore.loginCheck">
+						로그인했음.
+						<img src="" />
+					</template>
+					<template v-else>
+						<div>
+							<RouterLink to="/login" class="hover:text-blue-500">LOGIN</RouterLink>
+						</div>
+					</template>
 				</div>
 			</div>
 			<!-- Mobile Menu (hidden by default) -->
@@ -36,6 +44,7 @@
 </template>
 
 <script setup>
+import { loginCheck } from '@/api/loginApi';
 import { useUserStore } from '@/stores/user';
 import { ref, watchEffect } from 'vue';
 const mobileMenu = ref(false);
@@ -47,7 +56,14 @@ const useStore = useUserStore();
 console.log('useStore.loginCheck = ' + useStore.loginCheck);
 console.log('useStore.user = ' + useStore.user);
 
-watchEffect(() => {});
+watchEffect(async () => {
+	if (!localStorage.getItem('token')) return;
+	const res = await loginCheck();
+	if (res.status.toString().startWith('2')) {
+		console.log(res.data);
+		// useStore.login(res.data);
+	}
+});
 </script>
 
 <style lang="scss" scoped></style>

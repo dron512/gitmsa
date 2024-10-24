@@ -1,6 +1,8 @@
 package com.pmh.org.conf;
 
+import com.pmh.org.filter.JWTUtils;
 import com.pmh.org.filter.SecurityFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -12,7 +14,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
@@ -27,8 +28,9 @@ public class SecurityConfig {
         // 스프링 스큐리티... -> PasswordEncoder...
         httpSecurity.authorizeHttpRequests( auth -> auth.requestMatchers("/**").permitAll());
 
-        httpSecurity.addFilterAt(new SecurityFilter(),
-                        UsernamePasswordAuthenticationFilter.class);
+        httpSecurity.addFilterAt(
+                    new SecurityFilter(new JWTUtils()),
+                    UsernamePasswordAuthenticationFilter.class);
 
         // 세션 유지 기능 사용 안함..
         httpSecurity.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));

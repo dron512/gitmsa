@@ -18,10 +18,7 @@ import java.util.Date;
 @RequiredArgsConstructor
 @Slf4j
 public class JWTUtils {
-
-    // Environment @Value
-    @Value("${msa.jwt.secret}")
-    private String SECRET_KEY;
+    private String SECRET_KEY = "abcdefghijklmnopqrstuvwxyz01234567890";
 
     public String createJwt(String email){
         String jwt = Jwts.builder()
