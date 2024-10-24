@@ -23,11 +23,15 @@ public class KakaoController {
     public ResponseEntity<String> kakaoCode(@RequestParam(value = "code") String code) {
         // 1. restTemplate
         String jwt = kakaoService.getToken(code);
+        if(jwt.equals("fail"))
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("fail to get jwt");
+        else
+            return ResponseEntity.ok(jwt);
 //        kakaoService.messageSend();
         // 2. openfeign
 
         // 새로운 메인 길....
-        return ResponseEntity.ok(jwt);
+
     }
 
 

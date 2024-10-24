@@ -22,9 +22,9 @@ const route = useRoute();
 watchEffect(async () => {
 	// console.log('code = ', route.query.code);
 	if (route.query.code) {
-		const data = await login(route.query.code);
-		localStorage.setItem('token', data);
-		const res = await loginCheck();
+		let res = await login(route.query.code);
+		if (!res.status.toString().startsWith('2')) return;
+		res = await loginCheck();
 		if (res.status.toString().startsWith('2')) {
 			console.log(res.data);
 			useStore.login(res.data);
