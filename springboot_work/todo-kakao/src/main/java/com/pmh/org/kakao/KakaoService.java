@@ -1,5 +1,6 @@
 package com.pmh.org.kakao;
 
+import com.pmh.org.error.UserException;
 import com.pmh.org.filter.JWTUtils;
 import com.pmh.org.kakao.dto.KakaoTokenDto;
 import com.pmh.org.kakao.dto.KakaoUserInfoDto;
@@ -13,6 +14,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -106,7 +108,13 @@ public class KakaoService {
         // headers content-type accessToken
         MultiValueMap headers = new LinkedMultiValueMap();
         headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
+
+        // database 해당되는 email 없다...
         KakaoEntity kakaoEntity = kakaoRepository.findByEmail(email);
+        if (kakaoEntity == null) {
+            throw new UserException("Could not find Email");
+        }
+
         headers.add("Authorization", "Bearer " + kakaoEntity.getAccess_token());
 
         // body message

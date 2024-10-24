@@ -20,7 +20,7 @@ export const msgSend = async (message) => {
 				Authorization: `Bearer ${localStorage.getItem('token')}`,
 			},
 		});
-		return res.data;
+		return res;
 	} catch (err) {
 		console.error(err);
 		return err;

@@ -36,11 +36,18 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { useUserStore } from '@/stores/user';
+import { ref, watchEffect } from 'vue';
 const mobileMenu = ref(false);
 const menuDisply = () => {
 	mobileMenu.value = !mobileMenu.value;
 };
+
+const useStore = useUserStore();
+console.log('useStore.loginCheck = ' + useStore.loginCheck);
+console.log('useStore.user = ' + useStore.user);
+
+watchEffect(() => {});
 </script>
 
 <style lang="scss" scoped></style>
