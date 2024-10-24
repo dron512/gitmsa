@@ -14,18 +14,17 @@
 				</div>
 				<!-- Navigation Links (hidden on small screens) -->
 				<div class="hidden sm:flex space-x-8 text-gray-800">
-					<RouterLink to="/" class="hover:text-blue-500">HOME</RouterLink>
-					<RouterLink to="/about" class="hover:text-blue-500">ABOUT</RouterLink>
-					<RouterLink to="/month" class="hover:text-blue-500">MONTH</RouterLink>
-					<RouterLink to="/message" class="hover:text-blue-500">MESSAGE</RouterLink>
+					<RouterLink to="/" class="hover:text-blue-500 pt-3">HOME</RouterLink>
+					<RouterLink to="/about" class="hover:text-blue-500 pt-3">ABOUT</RouterLink>
+					<RouterLink to="/month" class="hover:text-blue-500 pt-3">MONTH</RouterLink>
+					<RouterLink to="/message" class="hover:text-blue-500 pt-3">MESSAGE</RouterLink>
 					<template v-if="useStore.loginCheck">
-						로그인했음.
-						<img src="" />
+						<div class="w-12">
+							<router-link to="/myPage"><img :src="useStore.thumbnail" class="rounded-full cursor-pointer" /></router-link>
+						</div>
 					</template>
 					<template v-else>
-						<div>
-							<RouterLink to="/login" class="hover:text-blue-500">LOGIN</RouterLink>
-						</div>
+						<RouterLink to="/login" class="hover:text-blue-500 pt-3">LOGIN</RouterLink>
 					</template>
 				</div>
 			</div>
@@ -36,7 +35,14 @@
 					<RouterLink to="/about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">ABOUT</RouterLink>
 					<RouterLink to="/month" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">MONTH</RouterLink>
 					<RouterLink to="/message" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">MESSAGE</RouterLink>
-					<RouterLink to="/login" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">LOGIN</RouterLink>
+					<template v-if="useStore.loginCheck">
+						<div class="w-12">
+							<router-link to="/myPage"><img :src="useStore.thumbnail" class="rounded-full cursor-pointer" /></router-link>
+						</div>
+					</template>
+					<template v-else>
+						<RouterLink to="/login" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">LOGIN</RouterLink>
+					</template>
 				</div>
 			</template>
 		</div>
@@ -53,15 +59,13 @@ const menuDisply = () => {
 };
 
 const useStore = useUserStore();
-console.log('useStore.loginCheck = ' + useStore.loginCheck);
-console.log('useStore.user = ' + useStore.user);
 
 watchEffect(async () => {
 	if (!localStorage.getItem('token')) return;
 	const res = await loginCheck();
-	if (res.status.toString().startWith('2')) {
+	if (res.status.toString().startsWith('2')) {
 		console.log(res.data);
-		// useStore.login(res.data);
+		useStore.login(res.data);
 	}
 });
 </script>

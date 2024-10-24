@@ -7,14 +7,24 @@ export const useUserStore = defineStore('user', {
 		thumbnail: '',
 		profileImage: '',
 		email: '',
+		userId: '',
 	}),
 	actions: {
-		login: (data) => {
+		login(data) {
 			this.loginCheck = true;
-			this.nickName = data.nickName;
-			this.thumbnail = data.thumbnail;
-			this.profileImage = data.profileImage;
+			this.userId = data.userId;
+			this.nickName = data.nickname;
+			this.thumbnail = data.thumbnail_image;
+			this.profileImage = data.profile_image;
 			this.email = data.email;
+		},
+		logout() {
+			this.loginCheck = false;
+			this.nickName = '';
+			this.thumbnail = '';
+			this.profileImage = '';
+			this.email = '';
+			this.userId = '';
 		},
 	},
 });
