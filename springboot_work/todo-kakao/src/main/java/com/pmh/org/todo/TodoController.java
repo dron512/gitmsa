@@ -34,6 +34,16 @@ public class TodoController {
         return ResponseEntity.ok(todoRepository.save(todo));
     }
 
-//    @GetMapping
+    @GetMapping("findall")
+    public ResponseEntity<Iterable<TodoEntity>> findAllTodo(
+            @AuthenticationPrincipal UserDetails userDetails
+    ) {
+        if(userDetails == null){
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
+        KakaoEntity kakaoEntity = kakaoRepository.findByEmail(userDetails.getUsername());
+        return ResponseEntity.ok(todoRepository.findAllByKakaoEntity(kakaoEntity));
+    }
 
 }
