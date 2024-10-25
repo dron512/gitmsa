@@ -14,12 +14,14 @@ export default function HomeScreen() {
 
   const onPress = async() => {
     try {
+      Alert.alert('통신시작');
       const res = await axios.get(`${url}/user/info`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bmdzdW5zYW5nQGtha2FvLmNvbSIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzI5NzU1ODE3LCJleHAiOjE3Mjk4NDIyMTd9.1JzPIPIsKMKoywcsnxey7noRuDs2GWWwp1vBb-KEkyE`,
         },
       });
+      Alert.alert('통신끝');
       console.log(res);
       Alert.alert(res.status+' '+res.data.thumbnail_image);
       setThumbnail(res.data.thumbnail_image);

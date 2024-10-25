@@ -1,11 +1,13 @@
 <script setup>
 import { ref, watch } from 'vue';
 import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
-import timezone from 'dayjs/plugin/timezone';
+import { saveTodo } from '@/api/monthApi.js';
 
-dayjs.extend(utc);
-dayjs.extend(timezone);
+// import utc from 'dayjs/plugin/utc';
+// import timezone from 'dayjs/plugin/timezone';
+
+// dayjs.extend(utc);
+// dayjs.extend(timezone);
 
 const now = ref(dayjs());
 const columns = ref([]);
@@ -19,6 +21,7 @@ const content = ref('');
 const doSave = () => {
 	// 백엔드에 넘겨줘야함...
 	console.log('save', title.value, content.value, selectDate.value);
+	saveTodo(title.value, content.value, selectDate.value);
 };
 
 const subMonth = () => {
@@ -114,21 +117,44 @@ watch(
 				<form @submit.prevent="doSave">
 					<div class="mb-4">
 						<label for="task" class="block text-gray-700 text-sm font-bold mb-2">할일 제목</label>
-						<input v-model="title" type="text" id="task" placeholder="할일 제목을 입력하세요" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
+						<input
+							v-model="title"
+							type="text"
+							id="task"
+							placeholder="할일 제목을 입력하세요"
+							class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+							required
+						/>
 					</div>
 
 					<div class="mb-4">
 						<label for="description" class="block text-gray-700 text-sm font-bold mb-2">상세 설명</label>
-						<textarea v-model="content" id="description" rows="4" placeholder="상세 설명을 입력하세요" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+						<textarea
+							v-model="content"
+							id="description"
+							rows="4"
+							placeholder="상세 설명을 입력하세요"
+							class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						></textarea>
 					</div>
 
 					<div class="mb-6">
 						<label for="due-date" class="block text-gray-700 text-sm font-bold mb-2">마감일</label>
-						<input v-model="selectDate" type="date" id="due-date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+						<input
+							v-model="selectDate"
+							type="date"
+							id="due-date"
+							class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						/>
 					</div>
 
 					<div class="flex items-center justify-center">
-						<button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">등록하기</button>
+						<button
+							type="submit"
+							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+						>
+							등록하기
+						</button>
 					</div>
 				</form>
 			</div>

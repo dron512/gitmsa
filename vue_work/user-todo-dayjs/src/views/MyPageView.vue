@@ -5,7 +5,7 @@
 			<h1>EMAIL = {{ userStore.email }}</h1>
 			<h1>nickName = {{ userStore.nickName }}</h1>
 			<h1>userId = {{ userStore.userId }}</h1>
-			<img class="my-10 rounded-full" :src="userStore.profileImage" />
+			<img class="w-64 my-10 rounded-full" :src="userStore.profileImage" />
 		</div>
 		<div @click="kakaoLogout()" class="px-4 py-2 text-sm text-white bg-red-500 rounded-full cursor-pointer hover:bg-red-600 transition-all">
 			로그아웃

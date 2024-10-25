@@ -37,7 +37,7 @@ export default function TabLayout() {
         options={{
           title: 'About',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'person' : 'person-outline'} color={color} />  // 아이콘 변경
+            <TabBarIcon name={focused ? 'person' : 'person-outline'} color={color} />  
           ),
         }}
       />
