@@ -14,7 +14,7 @@ export const saveTodo = async (title, content, selectDate) => {
 		Authorization: `Bearer ${localStorage.getItem('token')}`,
 	};
 	try {
-		const res = await axios.post(`${url}/todo/save`, data, headers);
+		const res = await axios.post(`${url}/todo/save`, data, { headers });
 		return res;
 	} catch (err) {
 		console.error(err);

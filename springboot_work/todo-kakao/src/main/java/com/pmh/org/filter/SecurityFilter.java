@@ -29,24 +29,23 @@ public class SecurityFilter extends OncePerRequestFilter {
                                     HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
         try {
-            String authorization =request.getHeader("Authorization");
+            String authorization = request.getHeader("Authorization");
             log.info("Security Filter"+authorization);
-
             String jwt = authorization.split("Bearer ")[1];
             String email = jwtUtils.getEmailFromJwt(jwt);
             Authentication authentication =
                     new UsernamePasswordAuthenticationToken(
                             User.builder()
-                                    .username(email)
-                                    .password("temp")
-                                    .roles("ADMIN")
-                                    .build()
+                                .username(email)
+                                .password("temp")
+                                .roles("ADMIN")
+                                .build()
                             , null
                     );
 
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }catch (Exception e) {
-
+            e.printStackTrace();
         }
         filterChain.doFilter(request, response);
     }

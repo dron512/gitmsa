@@ -15,6 +15,7 @@ import java.time.LocalDate;
 public class TodoEntity {
     @Id
     @Schema(hidden = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Schema(example = "할일제목")
@@ -27,7 +28,8 @@ public class TodoEntity {
     private LocalDate selectDate;
 
     @Schema(hidden = true)
-    @ManyToOne(targetEntity = TodoEntity.class)
+    @ManyToOne
+    @JoinColumn(name = "kakao_id")
     private KakaoEntity kakaoEntity;
 
 }
