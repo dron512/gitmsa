@@ -20,9 +20,13 @@ const content = ref('');
 
 const todos = ref([]);
 
-const doSave = () => {
+const doSave = async () => {
 	console.log('save', title.value, content.value, selectDate.value);
-	saveTodo(title.value, content.value, selectDate.value);
+	await saveTodo(title.value, content.value, selectDate.value);
+	const res = await getTodos();
+	if (res.status == 200) {
+		todos.value = res.data;
+	}
 };
 
 const subMonth = () => {
@@ -117,7 +121,7 @@ watchEffect(async () => {
 						<span>{{ column.get('date') }}</span>
 						<template v-for="todo in todos" :key="todo">
 							<div v-if="todo.selectDate == column.format('YYYY-MM-DD')">
-								<div class="mt-2 text-red-300">
+								<div class="mt-2 text-red">
 									<span>{{ todo.title }}</span>
 								</div>
 							</div>
