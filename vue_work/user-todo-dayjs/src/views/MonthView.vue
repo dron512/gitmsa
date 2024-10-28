@@ -48,9 +48,6 @@ const doGet = async () => {
 	const res = await getTodos();
 	if (res.status == '200') {
 		const newData = res.data;
-		// console.log('todos.value', JSON.stringify(todos.value));
-		// console.log('newData', JSON.stringify(newData));
-		// 새로운 할일들 가지고 와서 원래 할일들과 비교해서 다르면 해라
 		if (JSON.stringify(todos.value) !== JSON.stringify(newData)) todos.value = res.data;
 	}
 };
