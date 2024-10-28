@@ -121,7 +121,7 @@ watchEffect(async () => {
 						<span>{{ column.get('date') }}</span>
 						<template v-for="todo in todos" :key="todo">
 							<div v-if="todo.selectDate == column.format('YYYY-MM-DD')">
-								<div class="mt-2 text-red">
+								<div class="mt-2 text-green-600">
 									<span>{{ todo.title }}</span>
 								</div>
 							</div>
