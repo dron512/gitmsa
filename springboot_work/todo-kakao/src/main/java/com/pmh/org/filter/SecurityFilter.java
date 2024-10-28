@@ -33,19 +33,21 @@ public class SecurityFilter extends OncePerRequestFilter {
             log.info("Security Filter"+authorization);
             String jwt = authorization.split("Bearer ")[1];
             String email = jwtUtils.getEmailFromJwt(jwt);
+            String role = jwtUtils.getRoleFromJwt(jwt);
+
             Authentication authentication =
                     new UsernamePasswordAuthenticationToken(
                             User.builder()
                                 .username(email)
                                 .password("temp")
-                                .roles("ADMIN")
+                                .roles(role)
                                 .build()
                             , null
                     );
 
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
         filterChain.doFilter(request, response);
     }

@@ -18,7 +18,7 @@ const viewStyle: ViewStyle = {
 };
 
 export default function AboutScreen() {
-  const url = "http://backend.hellomh.site";
+  const url = "https://backend.hellomh.site";
 
   const [data, setData] = useState("about");
   const onPress = () => {

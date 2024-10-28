@@ -25,7 +25,7 @@ public class JWTUtils {
     public String createJwt(String email){
         String jwt = Jwts.builder()
                 .claim("email",email)
-                .claim("role","ROLE_ADMIN")
+                .claim("role","USER")
                 .issuedAt(new Date(System.currentTimeMillis()))
                 .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24)) // 1초*60*60*24 1일 유효함
                 .signWith(secretKey)
@@ -38,6 +38,14 @@ public class JWTUtils {
                 .build()
                 .parseSignedClaims(jwt);
         return cliams.getPayload().get("email").toString();
+    }
+
+    public String getRoleFromJwt(String jwt){
+        Jws<Claims> cliams = Jwts.parser()
+                .verifyWith(secretKey)
+                .build()
+                .parseSignedClaims(jwt);
+        return cliams.getPayload().get("role").toString();
     }
 
 }
