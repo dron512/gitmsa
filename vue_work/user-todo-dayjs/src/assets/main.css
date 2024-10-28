@@ -16,3 +16,14 @@
 	@apply min-h-screen;
 	min-height: calc(100vh - 80px);
 }
+
+.toast {
+	color: chocolate;
+	position: fixed;
+	top: 7rem;
+	right: 2rem;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	background-color: aqua;
+	transition: opacity 0.5;
+}

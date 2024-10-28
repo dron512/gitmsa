@@ -9,6 +9,8 @@ import { getTodos, saveTodo } from '@/api/monthApi.js';
 // dayjs.extend(utc);
 // dayjs.extend(timezone);
 
+const button = ref();
+
 const now = ref(dayjs());
 const columns = ref([]);
 const groupColumns = ref([]);
@@ -20,15 +22,37 @@ const content = ref('');
 
 const todos = ref([]);
 
+const toast = ref(false);
+
+const setDate = (e) => {
+	selectDate.value = e.target.value;
+};
+
 const doSave = async () => {
+	console.log(button.value);
+
 	// 백엔드에 넘겨줘야함...
 	// console.log('save', title.value, content.value, selectDate.value);
-	saveTodo(title.value, content.value, selectDate.value);
+	await saveTodo(title.value, content.value, selectDate.value);
+	await doGet();
+
+	title.value = '';
+	content.value = '';
+	toast.value = true;
+
+	setTimeout(() => {
+		toast.value = false;
+	}, 1000);
 };
+
 const doGet = async () => {
 	const res = await getTodos();
 	if (res.status == '200') {
-		todos.value = res.data;
+		const newData = res.data;
+		// console.log('todos.value', JSON.stringify(todos.value));
+		// console.log('newData', JSON.stringify(newData));
+		// 새로운 할일들 가지고 와서 원래 할일들과 비교해서 다르면 해라
+		if (JSON.stringify(todos.value) !== JSON.stringify(newData)) todos.value = res.data;
 	}
 };
 
@@ -45,10 +69,9 @@ const selectDateFn = (date) => {
 
 watch(
 	[now, todos],
-	async ([newValue, _], [todos_new_value, todos_old_vlue]) => {
+	async () => {
+		console.log('test');
 		await doGet();
-		console.log('todos_new_value', todos_new_value);
-		console.log('todos_old_vlue', todos_old_vlue);
 
 		columns.value = []; // 원래 있던 값 제거
 		groupColumns.value = []; // 원래 있던 값 제거
@@ -170,6 +193,7 @@ watch(
 					<div class="mb-6">
 						<label for="due-date" class="block text-gray-700 text-sm font-bold mb-2">마감일</label>
 						<input
+							@change="setDate"
 							v-model="selectDate"
 							type="date"
 							id="due-date"
@@ -179,6 +203,7 @@ watch(
 
 					<div class="flex items-center justify-center">
 						<button
+							ref="button"
 							type="submit"
 							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
 						>
@@ -189,4 +214,7 @@ watch(
 			</div>
 		</div>
 	</div>
+	<template v-if="toast">
+		<div class="toast">등록하였습니다.</div>
+	</template>
 </template>
