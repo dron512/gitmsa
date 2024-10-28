@@ -31,8 +31,6 @@ const setDate = (e) => {
 const doSave = async () => {
 	isDisabled.value = true;
 
-	// 백엔드에 넘겨줘야함...
-	// console.log('save', title.value, content.value, selectDate.value);
 	await saveTodo(title.value, content.value, selectDate.value);
 	await doGet();
 
