@@ -21,3 +21,17 @@ export const saveTodo = async (title, content, selectDate) => {
 		return err;
 	}
 };
+
+export const getTodos = async () => {
+	const headers = {
+		'Content-Type': 'application/json',
+		Authorization: `Bearer ${localStorage.getItem('token')}`,
+	};
+	try {
+		const res = await axios.get(`${url}/todo/findall`, { headers });
+		return res;
+	} catch (err) {
+		console.error(err);
+		return err;
+	}
+};

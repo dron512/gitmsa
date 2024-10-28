@@ -1,7 +1,7 @@
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, watch, watchEffect } from 'vue';
 import dayjs from 'dayjs';
-import { saveTodo } from '@/api/monthApi.js';
+import { getTodos, saveTodo } from '@/api/monthApi.js';
 
 // import utc from 'dayjs/plugin/utc';
 // import timezone from 'dayjs/plugin/timezone';
@@ -18,10 +18,18 @@ const selectDate = ref(null);
 const title = ref('');
 const content = ref('');
 
-const doSave = () => {
+const todos = ref([]);
+
+const doSave = async () => {
 	// 백엔드에 넘겨줘야함...
-	console.log('save', title.value, content.value, selectDate.value);
+	// console.log('save', title.value, content.value, selectDate.value);
 	saveTodo(title.value, content.value, selectDate.value);
+};
+const doGet = async () => {
+	const res = await getTodos();
+	if (res.status == '200') {
+		todos.value = res.data;
+	}
 };
 
 const subMonth = () => {
@@ -36,8 +44,12 @@ const selectDateFn = (date) => {
 };
 
 watch(
-	now,
-	(newValue, _) => {
+	[now, todos],
+	async ([newValue, _], [todos_new_value, todos_old_vlue]) => {
+		await doGet();
+		console.log('todos_new_value', todos_new_value);
+		console.log('todos_old_vlue', todos_old_vlue);
+
 		columns.value = []; // 원래 있던 값 제거
 		groupColumns.value = []; // 원래 있던 값 제거
 		// 제일 처음 로딩 할때는 now는 현재 달력...
@@ -58,9 +70,6 @@ watch(
 		for (let i = 1; i <= 6 - lastdayOfWeek; i++) {
 			columns.value.push(dayjs(lastday).add(i, 'day'));
 		}
-		// groupColumns
-		//   7                 7                   7                     7                      7
-		// ([29,30,1,2,3,4,5],[6,7,8,9,10,11,12],[13,14,15,16,17,18,19],[20,21,22,23,24,25,26],[27,28,29,30,31,1,2]))
 
 		groupColumns.value.push(columns.value.slice(0, 7));
 		groupColumns.value.push(columns.value.slice(7, 14));
@@ -73,6 +82,12 @@ watch(
 		deep: true, // 안에 값이 객체이면 객체 안에 변수도 변경 될때 watch안에 있는 함수 실행
 	},
 );
+// watchEffect(async () => {
+// 	const res = await getTodos();
+// 	if (res.status == '200') {
+// 		todos.value = res.data;
+// 	}
+// });
 </script>
 
 <template>
@@ -106,7 +121,21 @@ watch(
 							'opacity-20': !column.isSame(now, 'month'),
 						}"
 					>
-						<span>{{ column.get('date') }}</span>
+						<span>
+							{{ column.get('date') }}
+							<template v-for="todo in todos" :key="todo">
+								<div
+									class="rounded"
+									:class="{
+										'bg-red-500': todo.completed == '0',
+										'bg-blue-500': todo.completed == '1',
+									}"
+									v-if="todo.selectDate === column.format('YYYY-MM-DD')"
+								>
+									{{ todo.title }}
+								</div>
+							</template>
+						</span>
 					</div>
 				</div>
 			</div>

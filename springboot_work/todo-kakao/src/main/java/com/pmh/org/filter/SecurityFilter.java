@@ -44,10 +44,9 @@ public class SecurityFilter extends OncePerRequestFilter {
                                 .build()
                             , null
                     );
-
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }catch (Exception e) {
-            log.error(e.getMessage());
+            log.error(e.getMessage()+"로그인 안한 유저");
         }
         filterChain.doFilter(request, response);
     }

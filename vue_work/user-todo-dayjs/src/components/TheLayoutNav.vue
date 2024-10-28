@@ -64,7 +64,7 @@ watchEffect(async () => {
 	if (!localStorage.getItem('token')) return;
 	const res = await loginCheck();
 	if (res.status.toString().startsWith('2')) {
-		console.log(res.data);
+		// console.log(res.data);
 		useStore.login(res.data);
 	}
 });
