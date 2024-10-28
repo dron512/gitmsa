@@ -9,7 +9,7 @@ import { getTodos, saveTodo } from '@/api/monthApi.js';
 // dayjs.extend(utc);
 // dayjs.extend(timezone);
 
-const button = ref();
+const isDisabled = ref(false);
 
 const now = ref(dayjs());
 const columns = ref([]);
@@ -29,7 +29,7 @@ const setDate = (e) => {
 };
 
 const doSave = async () => {
-	console.log(button.value);
+	isDisabled.value = true;
 
 	// 백엔드에 넘겨줘야함...
 	// console.log('save', title.value, content.value, selectDate.value);
@@ -42,7 +42,8 @@ const doSave = async () => {
 
 	setTimeout(() => {
 		toast.value = false;
-	}, 1000);
+		isDisabled.value = false;
+	}, 3000);
 };
 
 const doGet = async () => {
@@ -70,7 +71,6 @@ const selectDateFn = (date) => {
 watch(
 	[now, todos],
 	async () => {
-		console.log('test');
 		await doGet();
 
 		columns.value = []; // 원래 있던 값 제거
@@ -114,7 +114,7 @@ watch(
 </script>
 
 <template>
-	<div>
+	<div class="pt-32">
 		<h1>MonthView</h1>
 		<main class="flex justify-center">
 			<div class="max-w-lg w-full bg-white shadow-md rounded-lg p-4">
@@ -200,12 +200,11 @@ watch(
 							class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 						/>
 					</div>
-
 					<div class="flex items-center justify-center">
 						<button
-							ref="button"
+							:disabled="isDisabled"
 							type="submit"
-							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:opacity-50 disabled:cursor-not-allowed"
 						>
 							등록하기
 						</button>
