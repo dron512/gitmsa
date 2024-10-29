@@ -8,7 +8,7 @@ import axios from 'axios';
 import { useState } from 'react';
 
 export default function HomeScreen() {
-  const url = 'http://backend.hellomh.site';
+  const url = 'http://back.hellomh.site';
 
   const [thumbnail,setThumbnail] = useState('');
 
@@ -18,7 +18,7 @@ export default function HomeScreen() {
       const res = await axios.get(`${url}/user/info`, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bmdzdW5zYW5nQGtha2FvLmNvbSIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzI5NzU1ODE3LCJleHAiOjE3Mjk4NDIyMTd9.1JzPIPIsKMKoywcsnxey7noRuDs2GWWwp1vBb-KEkyE`,
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bmdzdW5zYW5nQGtha2FvLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzMwMDc3NzEwLCJleHAiOjE3MzAxNjQxMTB9.HSTRf01aTXvDldzxXZJc0TJ64ecZ20qygLeZAlBzxCk`,
         },
       });
       Alert.alert('통신끝');

@@ -19,7 +19,7 @@
 					<RouterLink to="/month" class="hover:text-blue-500 pt-3">MONTH</RouterLink>
 					<RouterLink to="/message" class="hover:text-blue-500 pt-3">MESSAGE</RouterLink>
 					<template v-if="useStore.loginCheck">
-						<div class="w-12">
+						<div class="w-12" @click="showNotification">
 							<router-link to="/myPage"><img :src="useStore.thumbnail" class="rounded-full cursor-pointer" /></router-link>
 						</div>
 					</template>
@@ -36,7 +36,7 @@
 					<RouterLink to="/month" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">MONTH</RouterLink>
 					<RouterLink to="/message" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">MESSAGE</RouterLink>
 					<template v-if="useStore.loginCheck">
-						<div class="w-12">
+						<div class="w-12" @click="showNotification">
 							<router-link to="/myPage"><img :src="useStore.thumbnail" class="rounded-full cursor-pointer" /></router-link>
 						</div>
 					</template>
@@ -45,6 +45,11 @@
 					</template>
 				</div>
 			</template>
+		</div>
+		<div v-if="mVisible" class="toast">
+			<div v-for="(message, index) in messages" :key="index" class="message">
+				{{ message }}
+			</div>
 		</div>
 	</nav>
 </template>
@@ -59,6 +64,8 @@ const menuDisply = () => {
 };
 
 const useStore = useUserStore();
+const messages = ref([]);
+const mVisible = ref(false);
 
 watchEffect(async () => {
 	if (!localStorage.getItem('token')) return;
@@ -68,6 +75,20 @@ watchEffect(async () => {
 		useStore.login(res.data);
 	}
 });
+
+const eventSource = new EventSource('http://localhost:20000/sse');
+
+eventSource.onmessage = function (event) {
+	messages.value = [];
+	messages.value.push(event.data);
+	mVisible.value = true;
+	console.log(messages.value);
+};
+
+eventSource.onerror = function (event) {
+	console.error('EventSource failed:', event);
+	eventSource.close();
+};
 </script>
 
 <style lang="scss" scoped></style>
