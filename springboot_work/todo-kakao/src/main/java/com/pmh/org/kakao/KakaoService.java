@@ -48,7 +48,7 @@ public class KakaoService {
             MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
             body.add("grant_type", "authorization_code");
             body.add("client_id", environment.getProperty("oauth.kakao.client_id"));
-            body.add("redirect_uri", "http://localhost:5173/oauth");
+            body.add("redirect_uri", "http://back.hellomh.site/oauth/kakao/callback");
             body.add("code", code);
             body.add("client_secret", environment.getProperty("oauth.kakao.client_secret"));
 

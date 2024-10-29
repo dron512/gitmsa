@@ -11,13 +11,25 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("kakao")
+@RequestMapping("oauth")
 @Slf4j
 @CrossOrigin
 @RequiredArgsConstructor
 public class KakaoController {
 
     private final KakaoService kakaoService;
+
+    @GetMapping("kakao/callback")
+    public ResponseEntity<String> kakaoCallback(@RequestParam(value = "code") String code) {
+        System.out.println(code);
+//         1. restTemplate
+        String jwt = kakaoService.getToken(code);
+        if(jwt.equals("fail"))
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("fail to get jwt");
+        else
+            return ResponseEntity.ok(jwt);
+//        return ResponseEntity.ok("ok");
+    }
 
     @GetMapping("login")
     public ResponseEntity<String> kakaoCode(@RequestParam(value = "code") String code) {

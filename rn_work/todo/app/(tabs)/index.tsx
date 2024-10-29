@@ -6,19 +6,23 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import axios from 'axios';
 import { useState } from 'react';
+import { Link } from 'expo-router';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function HomeScreen() {
   const url = 'http://back.hellomh.site';
 
-  const [thumbnail,setThumbnail] = useState('');
+  const [thumbnail,setThumbnail] = useState('https://k.kakaocdn.net/14/dn/btsKa5998C8/Vg52HlHN7h9eCsFIoV7jy1/o.jpg');
 
   const onPress = async() => {
+    const token = await AsyncStorage.getItem('token');
+    console.log(token);
     try {
-      Alert.alert('통신시작');
+      Alert.alert('통신시작'+token);
       const res = await axios.get(`${url}/user/info`, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im11bmdzdW5zYW5nQGtha2FvLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzMwMDc3NzEwLCJleHAiOjE3MzAxNjQxMTB9.HSTRf01aTXvDldzxXZJc0TJ64ecZ20qygLeZAlBzxCk`,
+          Authorization: `Bearer `+token,
         },
       });
       Alert.alert('통신끝');
@@ -33,6 +37,7 @@ export default function HomeScreen() {
   };
   return (
     <View>
+      <Link href="/home">home</Link>
       <TouchableOpacity onPress={onPress}>
         <HelloWave />
         <Image

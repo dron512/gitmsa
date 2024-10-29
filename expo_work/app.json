@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "08a40292-3ded-4f67-bc03-3612bf259bb4"
+      }
+    },
+    "android": {
+      "package": "com.parkmyounghoi.expo_work"
+    }
+  }
+}

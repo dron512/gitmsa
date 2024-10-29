@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "17555251393",
+    "project_id": "react-disney-plus-app",
+    "storage_bucket": "react-disney-plus-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17555251393:android:88ac352903dd568cb9f440",
+        "android_client_info": {
+          "package_name": "com.awesomeprojecthahehohe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17555251393-emeqbda00ni5dpu39j8nhkkhka899m3p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_tuJBudmb4iQNiiynDrxR_dITQZRbbNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "17555251393-emeqbda00ni5dpu39j8nhkkhka899m3p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

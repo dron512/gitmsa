@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View , Pressable, TouchableOpacity, Alert} from 'react-native';
+import { StyleSheet, Text, View , Pressable, TouchableOpacity, Alert, Linking} from 'react-native';
 
 export default function App() {
 
@@ -12,6 +12,10 @@ export default function App() {
     console.log("test22");
   };
 
+  const doKakao = () => {
+    Linking.openURL("https://kauth.kakao.com/oauth/authorize?client_id=477ea0788a39a67ac40fa6b1bc49e7d8&redirect_uri=http://back.hellomh.site/oauth/kakao/callback&response_type=code")
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Open up App.js to start working on your app!</Text>
@@ -19,6 +23,9 @@ export default function App() {
       <Text style={styles.text}>To run this app, follow these steps:</Text>
       <TouchableOpacity style={styles.button} onPress={doPerss1}>
         <Text style={styles.text}>누르는버튼</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={doKakao}>
+        <Text style={styles.text}>카카오로그인</Text>
       </TouchableOpacity>
       <Pressable style={styles.button} onPress={doPerss2}>
         <Text style={styles.text}>누르는버튼</Text>
