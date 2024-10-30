@@ -7,7 +7,7 @@ export default function MyMain() {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.teamName}>명희팀</Text>
+        <Text style={styles.teamName}>명회팀</Text>
         <FontAwesome name="user-circle" size={28} color="white" style={styles.userIcon} />
       </View>
 
@@ -80,12 +80,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 16,
-    paddingBottom: 12,
+    paddingVertical: 12,
     backgroundColor: '#2C2F33',
   },
   teamName: {
-    color: 'white',
-    fontSize: 20,
+    color: '#ccc',
+    fontSize: 25,
     fontWeight: 'bold',
   },
   userIcon: {
@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 12,
+    marginVertical:5,
     marginHorizontal: 16,
     borderRadius: 8,
     backgroundColor: '#33363B',

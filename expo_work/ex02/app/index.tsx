@@ -1,14 +1,17 @@
 // export default function Home(){
 // }
 
+import AA from "@/mcomponents/aa";
 import { useRouter } from "expo-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 // useState useEffect redux -> component
 // ref, reactive, watch, watchEffect, pinia -> component
+
 const Index = () => {
   const router = useRouter();
+
   const onPress = () => {
     router.push("/(tabs)");
   };
@@ -41,6 +44,7 @@ const Index = () => {
       <TouchableOpacity onPress={onMyMain}>
         <Text style={styles.text}>이거 누르면 MyMain으로 간다</Text>
       </TouchableOpacity>
+      <AA />
     </View>
   );
 };

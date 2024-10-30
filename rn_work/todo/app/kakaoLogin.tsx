@@ -18,10 +18,8 @@ const KakaoLogin = () => {
       const authCode = url.substring(startIndex + exp.length);
       console.log('access code :: ' + authCode);
 
-<<<<<<< HEAD
     // setBodyContent(data); // 상태 업데이트
     // router.push('/(tabs)');
-=======
       await axios
         .post('본인 url', {
           params: {
@@ -39,7 +37,6 @@ const KakaoLogin = () => {
 
       // navigate('Home', {screen: 'Home'});
     }
->>>>>>> 9f75cb1297d14a23fc6373fdef897f4645bfe12e
   };
 
   return (
