@@ -21,19 +21,20 @@ const KakaoLogin = () => {
     // setBodyContent(data); // 상태 업데이트
     // router.push('/(tabs)');
       await axios
-        .post('본인 url', {
+        .get('http://back.hellomh.site/oauth/login', {
           params: {
             code: authCode,
           },
         })
         .then(res =>{
             AsyncStorage.setItem(
-              'userNumber',
-              JSON.stringify(res['data']['userId']),
+              'token',
+              res.data,
             );
-            router.push('/(tabs)');
+            console.log("jwt = "+JSON.stringify(res));
           }
         );
+        router.push('/(tabs)');
 
       // navigate('Home', {screen: 'Home'});
     }
@@ -41,20 +42,19 @@ const KakaoLogin = () => {
 
   return (
     <View style={{flex: 1}}>
-      <Text>로그인 화면</Text>
       <WebView
         originWhitelist={['*']}
-        scalesPageToFit={false}
-        style={{marginTop: 30}}
+        setSupportZoom={true}
+        useWideViewPort={true}
+        // style={{marginTop: 30}}
         source={{
-          uri: 'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=본인 rest api key&redirect_uri=본인 url',
+          uri: 'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=477ea0788a39a67ac40fa6b1bc49e7d8&redirect_uri=http://back.hellomh.site/test/aa',
         }}
         injectedJavaScript={runFirst}
         javaScriptEnabled={true}
         onMessage={event => {
           parseAuthCode(event.nativeEvent['url']);
         }}
-
         // onMessage ... :: webview에서 온 데이터를 event handler로 잡아서 logInProgress로 전달
       />
     </View>

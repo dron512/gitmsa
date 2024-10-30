@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 const AA = () => {
   const [data, setData] = useState("초기값");
   const changeData = async() => {
-    const res = await axios.get('http://localhost:20000/test/aa');
+    const res = await axios.get('http://112.222.157.156:30000/test/aa');
     setData("변경된 값"+res.data);
   };
   return (

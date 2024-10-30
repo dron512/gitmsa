@@ -12,9 +12,6 @@ const YourComponent = () => {
         <TouchableOpacity style={styles.button} onPress={() => router.push('/(tabs)')}>
           <Text style={styles.buttonText}>메인</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => router.push('/kakaoLogin')}>
-          <Text style={styles.buttonText}>카카오 로그인</Text>
-        </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => router.push('/login')}>
           <Text style={styles.buttonText}>로그인</Text>
         </TouchableOpacity>
@@ -31,9 +28,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   title: {
-    fontSize: 24,
-    fontWeight: "bold",
+    fontSize: 40,
+    // fontWeight: "bold",
     marginBottom: 20,
+    fontFamily:"JUA"
   },
   buttonContainer: {
     width: "80%",
