@@ -1,73 +1,67 @@
-import { useRouter } from "expo-router";
-import React, { useState } from "react";
-import { View, StyleSheet, Text } from "react-native";
-import { WebView } from "react-native-webview";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import axios from 'axios';
+import { useRouter } from 'expo-router';
+import React from 'react';
+import {View, LogBox, Text} from 'react-native';
+import {WebView} from 'react-native-webview';
 
-const REST_API_KEY = "477ea0788a39a67ac40fa6b1bc49e7d8";
-const REDIRECT_URI = "http://back.hellomh.site/oauth/kakao/callback";
-const INJECTED_JAVASCRIPT = `
-  (function() {
-    const bodyContent = document.body.innerHTML;
-    window.ReactNativeWebView.postMessage(bodyContent);
-  })();
-  true; // Required for Android
-`;
+LogBox.ignoreLogs(['Remote debugger']);
+const runFirst = `window.ReactNativeWebView.postMessage("this is message from web");`;
 
-const KaKaoLogin = () => {
-  const [bodyContent, setBodyContent] = useState("");
+const KakaoLogin = () => {
   const router = useRouter();
 
-  const handleWebViewMessage = async (event: any) => {
-    const data = event.nativeEvent.data; // WebView에서 보낸 데이터
-    console.log("Body content received:", data); // 가져온 내용 로그 출력
-    await AsyncStorage.setItem("token", data);
+  const parseAuthCode = async (url:any) => {
+    const exp = 'code='; //url에 붙어 날라오는 인가코드는 code=뒤부터 parse하여 get
+    const startIndex = url.indexOf(exp); //url에서 "code="으로 시작하는 index를 찾지 못하면 -1반환
+    if (startIndex !== -1) {
+      const authCode = url.substring(startIndex + exp.length);
+      console.log('access code :: ' + authCode);
 
+<<<<<<< HEAD
     // setBodyContent(data); // 상태 업데이트
     // router.push('/(tabs)');
+=======
+      await axios
+        .post('본인 url', {
+          params: {
+            code: authCode,
+          },
+        })
+        .then(res =>{
+            AsyncStorage.setItem(
+              'userNumber',
+              JSON.stringify(res['data']['userId']),
+            );
+            router.push('/(tabs)');
+          }
+        );
+
+      // navigate('Home', {screen: 'Home'});
+    }
+>>>>>>> 9f75cb1297d14a23fc6373fdef897f4645bfe12e
   };
 
-  //   const handleWebViewMessage = async (event: any) => {
-
-  //     console.log(event.nativeEvent.data);
-  //     const data = event.nativeEvent.data;
-  //     try {
-  //         await AsyncStorage.setItem('token', data);
-
-  //         // 저장값 확인을 위한 console.log
-  //         console.log(`setItem... : ${data}`);
-  //     } catch (error) {
-  //       console.error("Failed to save data", error);
-  //     }
-  //     const token: any = await AsyncStorage.getItem("token");
-  //     setBodyContent(token); // 가져온 내용을 상태로 업데이트
-  //     //   router.push('/(tabs)');
-  //   };
-
   return (
-    <View style={Styles.container}>
-      <Text>{bodyContent}</Text>
+    <View style={{flex: 1}}>
+      <Text>로그인 화면</Text>
       <WebView
-        style={{ flex: 1 }}
-        originWhitelist={["*"]}
+        originWhitelist={['*']}
         scalesPageToFit={false}
+        style={{marginTop: 30}}
         source={{
-          uri: `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}`,
+          uri: 'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=본인 rest api key&redirect_uri=본인 url',
         }}
-        injectedJavaScript={INJECTED_JAVASCRIPT}
-        javaScriptEnabled
-        onMessage={handleWebViewMessage}
+        injectedJavaScript={runFirst}
+        javaScriptEnabled={true}
+        onMessage={event => {
+          parseAuthCode(event.nativeEvent['url']);
+        }}
+
+        // onMessage ... :: webview에서 온 데이터를 event handler로 잡아서 logInProgress로 전달
       />
     </View>
   );
 };
 
-export default KaKaoLogin;
-
-const Styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: 24,
-    backgroundColor: "#fff",
-  },
-});
+export default KakaoLogin;
