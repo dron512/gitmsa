@@ -32,8 +32,7 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      {/* 상태 표시 없애기 screenOptions={{ headerShown: false }} */}
-      <Stack screenOptions={{ headerShown: false }}>
+      <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />

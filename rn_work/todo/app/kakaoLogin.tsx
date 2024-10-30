@@ -24,7 +24,7 @@ const KaKaoLogin = () => {
     await AsyncStorage.setItem("token", data);
 
     // setBodyContent(data); // 상태 업데이트
-    router.push('/(tabs)');
+    // router.push('/(tabs)');
   };
 
   //   const handleWebViewMessage = async (event: any) => {
