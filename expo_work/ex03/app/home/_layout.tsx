@@ -8,11 +8,19 @@ function Header() {
     </View>
   );
 }
+function Footer() {
+  return (
+    <View>
+      <Text>Footer</Text>
+    </View>
+  );
+}
 export default function Home(){
   return (
     <View>
       <Header></Header>
       <Slot></Slot>
+      <Footer></Footer>
     </View>
   )
 };
