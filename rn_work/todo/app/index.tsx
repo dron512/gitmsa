@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text as DefaultText, StyleSheet, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
 
 const YourComponent = () => {
@@ -20,7 +20,14 @@ const YourComponent = () => {
   );
 };
 
+const Text = (props :any) => {
+  return <DefaultText {...props} style={[styles.text, props.style]} />;
+};
+
 const styles = StyleSheet.create({
+  text: {
+		fontFamily: 'NotoSansBold', // 폰트 이름을 여기에 설정합니다.
+	},
   container: {
     flex: 1,
     alignItems: "center",
@@ -31,7 +38,6 @@ const styles = StyleSheet.create({
     fontSize: 40,
     // fontWeight: "bold",
     marginBottom: 20,
-    fontFamily:"JUA"
   },
   buttonContainer: {
     width: "80%",
@@ -48,8 +54,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "#fff", // 텍스트 색상
-    fontSize: 16, // 텍스트 크기
-    fontWeight: "600", // 텍스트 두께
+    fontSize: 20, // 텍스트 크기
   },
 });
 

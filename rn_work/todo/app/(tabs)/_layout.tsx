@@ -42,6 +42,18 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="calc"
+        options={{
+          title: "Calculate",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? "calculator":"calculator-outline"}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="month"
         options={{
           title: "month",

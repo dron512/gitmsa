@@ -18,6 +18,12 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     JUA: require("../assets/fonts/BMJUA_ttf.ttf"),
+    NotoSansBlack: require("../assets/fonts/NotoSansKR-Black.ttf"),
+    NotoSansBold: require("../assets/fonts/NotoSansKR-Bold.ttf"),
+    NotoSansLight: require("../assets/fonts/NotoSansKR-Light.ttf"),
+    NotoSansMedium: require("../assets/fonts/NotoSansKR-Medium.ttf"),
+    NotoSansRegular: require("../assets/fonts/NotoSansKR-Regular.ttf"),
+    NotoSansThin: require("../assets/fonts/NotoSansKR-Thin.ttf"),
   });
 
   useEffect(() => {

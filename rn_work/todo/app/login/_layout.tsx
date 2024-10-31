@@ -1,19 +1,11 @@
-import { Slot } from "expo-router";
 import React from "react";
-import { Text,View } from "react-native";
-// import LoginScreen from ".";
-
-function Header(){
-  // Your login logic goes here
-  return <Text>Header</Text>;
-}
+import LoginScreen from ".";
+import { Stack } from "expo-router";
 
 export default function TabLayout() {
-
   return (
-    <View>
-      <Header/>
-      <Slot/>
-    </View>
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+    </Stack>
   );
 }
