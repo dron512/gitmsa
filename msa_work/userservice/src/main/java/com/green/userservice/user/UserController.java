@@ -18,7 +18,7 @@ public class UserController {
     public ResponseEntity<UserResponse> joinUser(@RequestBody UserRequest userRequest) {
 
         UserResponse userResponse = userService.join(userRequest);
-
+        System.out.println(userResponse);
         return ResponseEntity.ok(userResponse);
     }
 
