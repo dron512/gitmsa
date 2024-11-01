@@ -2,7 +2,7 @@ import React from "react";
 import LoginScreen from ".";
 import { Stack } from "expo-router";
 
-export default function TabLayout() {
+export default function StackLayout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="index" options={{ headerShown: false }} />

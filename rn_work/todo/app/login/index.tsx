@@ -51,23 +51,35 @@ const LoginScreen = () => {
       <TouchableOpacity>
         <Text style={styles.link}>비밀번호를 잊으셨나요?</Text>
       </TouchableOpacity>
-      <TouchableOpacity
-        style={{ flexDirection: "row", marginTop: 10 }}
-        onPress={() => router.push("/login/kakaoLogin")}
-      >
-        <Image
-          style={{ margin: 5 }}
-          source={require("../../assets/images/naver.png")} // 파일 경로에 맞게 수정
-        />
-        <Image
-          style={{ margin: 5 }}
-          source={require("../../assets/images/kakao.png")} // 파일 경로에 맞게 수정
-        />
-        <Image
-          style={{ margin: 5 }}
-          source={require("../../assets/images/google.png")} // 파일 경로에 맞게 수정
-        />
-      </TouchableOpacity>
+      <View style={{flexDirection:'row'}}>
+        <TouchableOpacity
+          style={{ flexDirection: "row", marginTop: 10 }}
+          onPress={() => router.push("/login/kakaoLogin")}
+        >
+          <Image
+            style={{ margin: 5 }}
+            source={require("../../assets/images/naver.png")} // 파일 경로에 맞게 수정
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{ flexDirection: "row", marginTop: 10 }}
+          onPress={() => router.push("/login/kakaoLogin")}
+        >
+          <Image
+            style={{ margin: 5 }}
+            source={require("../../assets/images/kakao.png")} // 파일 경로에 맞게 수정
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{ flexDirection: "row", marginTop: 10 }}
+          onPress={() => router.push("/login/kakaoLogin")}
+        >
+          <Image
+            style={{ margin: 5 }}
+            source={require("../../assets/images/google.png")} // 파일 경로에 맞게 수정
+          />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
