@@ -1,21 +1,25 @@
 package com.green.userservice.user;
 
+import com.green.userservice.user.service.UserService;
+import com.green.userservice.user.vo.UserRequest;
 import com.green.userservice.user.vo.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("users")
 @RequiredArgsConstructor
 public class UserController {
 
+    private final UserService userService;
+
     @PostMapping("join")
-    public ResponseEntity<UserResponse> joinUser() {
-        return ResponseEntity.ok(null);
+    public ResponseEntity<UserResponse> joinUser(@RequestBody UserRequest userRequest) {
+
+        UserResponse userResponse = userService.join(userRequest);
+
+        return ResponseEntity.ok(userResponse);
     }
 
     @GetMapping("login")

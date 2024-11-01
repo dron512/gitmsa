@@ -25,4 +25,6 @@ public class UserEntity {
     @Column(nullable = false, length = 100)
     private String password;
 
+    private String thumb;
+
 }
