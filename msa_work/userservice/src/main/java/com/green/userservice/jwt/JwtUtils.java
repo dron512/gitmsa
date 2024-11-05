@@ -4,6 +4,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
@@ -19,18 +20,22 @@ public class JwtUtils {
 
     private String SECRET_KEY;
     private SecretKey secretKey = null;
-    private String accessTokenExpirationTime;
-    private String refreshTokenExpirationTime;
+    private int accessTokenExpirationTime;
+    private int refreshTokenExpirationTime;
 
+    @Autowired
     public JwtUtils(Environment environment) {
         this.environment = environment;;
         this.SECRET_KEY = this.environment.getProperty("token.secret");
-        this.accessTokenExpirationTime = this.environment.getProperty("token.access_token_expiration_time");
-        this.refreshTokenExpirationTime = this.environment.getProperty("token.refresh_token_expiration_time");
-        this.secretKey = new SecretKeySpec(
-                                            Base64.getEncoder().encode( SECRET_KEY.getBytes() ),
-                                            SignatureAlgorithm.HS256.getJcaName()
-                                        );
+        this.accessTokenExpirationTime =
+                Integer.parseInt(this.environment.getProperty("token.access_token_expiration_time"));
+        this.refreshTokenExpirationTime =
+                Integer.parseInt(this.environment.getProperty("token.refresh_token_expiration_time"));
+        this.secretKey =
+                new SecretKeySpec(
+                    Base64.getEncoder().encode( SECRET_KEY.getBytes() ),
+                    SignatureAlgorithm.HS256.getJcaName()
+                );
     }
 
     public String createAccessToken(String email,String userId){

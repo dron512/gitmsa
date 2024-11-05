@@ -10,15 +10,14 @@ export default function LoginScreen() {
 
   const doLogin = async()=>{
     try {
-      const res = await axios.post("http://m.hellomh.site/users/login", {
-        email: "ddd@naver.com",
-        password: "abcd1234",
-      });
+      const res = await axios.get("http://112.222.157.156:30000/users/login?email=ddd@naver.com&password=abcd1234");
 
       if (res.status == 200) {
-        Alert.alert("Sign Up", "로그인에 성공하였습니다..");
+        console.log("User logged in"+JSON.stringify(res.data));
+        Alert.alert("Sign Up", "로그인에 성공하였습니다.."+JSON.stringify(res.data));
         return;
       }
+
       // console.log(JSON.stringify(res));
     } catch (err) {
       // console.error(JSON.stringify(err));

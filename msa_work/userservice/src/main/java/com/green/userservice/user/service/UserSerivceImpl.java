@@ -55,6 +55,7 @@ public class UserSerivceImpl implements UserService{
         loginResponse.setUserId(userEntity.getUserId());
         loginResponse.setAccessToken(jwtUtils.createAccessToken(userEntity.getEmail(), userEntity.getUserId()));
         loginResponse.setRefreshToken(jwtUtils.createRefreshToken(userEntity.getEmail()));
+        loginResponse.setEmail(userEntity.getEmail());
 
         return loginResponse;
     }
