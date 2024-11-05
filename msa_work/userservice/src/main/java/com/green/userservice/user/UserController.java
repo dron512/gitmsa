@@ -1,6 +1,7 @@
 package com.green.userservice.user;
 
 import com.green.userservice.user.service.UserService;
+import com.green.userservice.user.vo.LoginResponse;
 import com.green.userservice.user.vo.UserRequest;
 import com.green.userservice.user.vo.UserResponse;
 import lombok.RequiredArgsConstructor;
@@ -23,13 +24,13 @@ public class UserController {
     }
 
     @GetMapping("login")
-    public ResponseEntity<String> getUser(@RequestBody UserRequest userRequest) {
+    public ResponseEntity<LoginResponse> getUser(
+            @RequestParam(value = "email") String email,
+            @RequestParam(value = "password") String password) {
 
+        LoginResponse loginResponse = userService.login(email,password);
 
-
-
-
-        return ResponseEntity.ok(null);
+        return ResponseEntity.ok(loginResponse);
     }
 
     @GetMapping("kakaologin")

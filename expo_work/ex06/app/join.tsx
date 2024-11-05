@@ -12,7 +12,7 @@ import {
 export default function App() {
   const doSignUp = async () => {
     try {
-      const res = await axios.post("http://m.hellomh.site/users/join", {
+      const res = await axios.post("http://112.222.157.156:30000/users/join", {
         email: "ddd@naver.com",
         name: "홍길동",
         password: "abcd1234",
