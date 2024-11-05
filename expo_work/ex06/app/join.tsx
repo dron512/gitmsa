@@ -46,14 +46,17 @@ export default function App() {
           marginTop: 1,
           fontSize: 36,
           color: "#FF3300",
+          fontFamily: "NotoSansBlack",
         }}
       >
-        WelcomeToMyAPP
+        회원가입
       </Text>
       {/* Additional components goes here */}
-      <View style={{ marginTop: 10, marginHorizontal: 10 }}>
+      <View style={{ marginTop: 10, marginHorizontal: 10, width: "70%" }}>
         <View>
-          <Text style={{ color: "#2c2c2c" }}>EMAIL:</Text>
+          <Text style={{ color: "#2c2c2c", fontFamily: "NotoSansBlack" }}>
+            EMAIL:
+          </Text>
           <TextInput
             placeholder="Enter Email..."
             style={{
@@ -63,40 +66,47 @@ export default function App() {
               borderStyle: "dotted",
               padding: 10,
               color: "#2c2c2c",
+              fontFamily: "NotoSansBlack",
             }}
           />
         </View>
         <View style={{ marginTop: 10 }}>
-          <Text className="text-gray-400">PASSWORD:</Text>
+          <Text style={{ color: "#2c2c2c", fontFamily: "NotoSansBlack" }}>
+            PASSWORD:
+          </Text>
           <TextInput
             secureTextEntry
             placeholder="Enter Password..."
-            className="border text-gray-500 border-dotted p-2 border-amber-400 mt-1"
+            style={{
+              borderWidth: 1,
+              borderColor: "White",
+              marginTop: 10,
+              borderStyle: "dotted",
+              padding: 10,
+              color: "#2c2c2c",
+              fontFamily: "NotoSansBlack",
+            }}
           />
         </View>
 
-        <View className="bg-slate-500 p-3 my-5">
+        <View
+          style={{
+            backgroundColor: "2c2c2c",
+            padding: 10,
+            marginVertical: 10,
+            borderWidth: 3,
+          }}
+        >
           <TouchableOpacity onPress={doSignUp}>
-            <Text className="text-center font-normal text-white text-base">
+            <Text
+              style={{
+                textAlign: "center",
+                color: "#2c2c2c",
+                fontFamily: "NotoSansBlack",
+              }}
+            >
               SingUp
             </Text>
-          </TouchableOpacity>
-        </View>
-
-        <Text className="text-center font-normal text-gray-500 text-base mt-3">
-          OR
-        </Text>
-        <View className="bg-slate-500 p-3 my-5">
-          <TouchableOpacity>
-            <Text className="text-center font-normal text-white text-base">
-              Sign in with Google
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View className="mt-6 flex-row justify-center">
-          <Text className="">New to FreeCodeCamp? </Text>
-          <TouchableOpacity>
-            <Text className="text-amber-500">Create an Account</Text>
           </TouchableOpacity>
         </View>
       </View>

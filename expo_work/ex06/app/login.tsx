@@ -1,11 +1,31 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, 
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, Alert, 
   // CheckBox
  } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import axios from 'axios';
 
 export default function LoginScreen() {
   const [isRemembered, setIsRemembered] = useState(false);
+
+  const doLogin = async()=>{
+    try {
+      const res = await axios.post("http://m.hellomh.site/users/login", {
+        email: "ddd@naver.com",
+        password: "abcd1234",
+      });
+
+      if (res.status == 200) {
+        Alert.alert("Sign Up", "로그인에 성공하였습니다..");
+        return;
+      }
+      // console.log(JSON.stringify(res));
+    } catch (err) {
+      // console.error(JSON.stringify(err));
+      Alert.alert("Sign Up", "로그인에 실패하였습니다." + err.response.data);
+      return;
+    }
+  }
 
   return (
     <View style={styles.container}>
@@ -31,7 +51,7 @@ export default function LoginScreen() {
       </View>
 
       {/* Sign In Button */}
-      <TouchableOpacity style={styles.signInButton}>
+      <TouchableOpacity style={styles.signInButton} onPress={doLogin}>
         <Text style={styles.signInButtonText}>Sign In</Text>
       </TouchableOpacity>
 
@@ -77,6 +97,7 @@ const styles = StyleSheet.create({
     flex: 1,
     color: '#fff',
     fontSize: 16,
+    fontFamily: "NotoSansBlack"
   },
   signInButton: {
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -85,11 +106,13 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     marginTop: 20,
+    fontFamily: "NotoSansBlack"
   },
   signInButtonText: {
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
+    fontFamily: "NotoSansBlack"
   },
   footerContainer: {
     flexDirection: 'row',
@@ -105,5 +128,6 @@ const styles = StyleSheet.create({
   footerText: {
     color: '#aaa',
     fontSize: 14,
+    fontFamily: "NotoSansBlack"
   },
 });

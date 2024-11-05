@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
     color: 'pink',
     fontWeight: 'bold',
     marginBottom: 30,
+    fontFamily: "NotoSansBlack"
   },
   descriptionContainer: {
     marginBottom: 20,
@@ -85,6 +86,7 @@ const styles = StyleSheet.create({
   descriptionText: {
     color: '#fff',
     fontSize: 16,
+    fontFamily: "NotoSansBlack"
   },
   kakaoButton: {
     flexDirection: 'row',
@@ -95,11 +97,13 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 10,
     marginBottom: 10,
+    fontFamily: "NotoSansBlack"
   },
   kakaoButtonText: {
     color: '#000',
     fontSize: 16,
     marginLeft: 10,
+    fontFamily: "NotoSansBlack"
   },
   appleButton: {
     flexDirection: 'row',
@@ -115,6 +119,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     marginLeft: 10,
+    fontFamily: "NotoSansBlack"
   },
   optionsContainer: {
     flexDirection: 'row',
@@ -132,6 +137,7 @@ const styles = StyleSheet.create({
   footerText: {
     color: '#fff',
     fontSize: 14,
+    fontFamily: "NotoSansBlack"
   },
   languageOption: {
     color: '#666',
