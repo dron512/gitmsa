@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "create-expo-app": "^3.0.0",
-    "create-react-app": "^5.0.1",
-    "test": "^3.3.0",
-    "yarn": "^1.22.22"
-  },
-  "packageManager": "yarn@3.6.4"
-}
