@@ -14,12 +14,11 @@ public class OrderController {
 
     private final OrderService userService;
 
-    @PostMapping("join")
-    public ResponseEntity<UserResponse> joinUser(@RequestBody OrderRequest orderRequest) {
-
-        UserResponse userResponse = userService.join(orderRequest);
-        System.out.println(userResponse);
-        return ResponseEntity.ok(userResponse);
+    @PostMapping("create-order-id")
+    public ResponseEntity<OrderResponse> joinUser(@RequestBody OrderRequest orderRequest) {
+        OrderResponse orderResponse = userService.join(orderRequest);
+        System.out.println(orderResponse);
+        return ResponseEntity.ok(orderResponse);
     }
 
     @GetMapping("login")
