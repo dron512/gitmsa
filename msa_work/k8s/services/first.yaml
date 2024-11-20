@@ -3,7 +3,7 @@ kind: Deployment # pod 여러개
 metadata:
   name: first-service-deployment
 spec: # 어떻게 만들지 대한 내용
-  replicas: 3 # 몇개의 pod 만들래?
+  replicas: 1 # 몇개의 pod 만들래?
   selector:
     matchLabels:
       app: first-service # 쿠버네티스 안에서 변수명

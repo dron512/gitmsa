@@ -15,7 +15,7 @@ public class SecondController {
     @GetMapping("test")
     public String test(){
         System.out.println(" 여기 서버가 동작...."+environment.getProperty("local.server.port"));
-        return "FirstService";
+        return "SecondService";
     }
 
 }
