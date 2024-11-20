@@ -14,9 +14,13 @@ spec: # 어떻게 만들지 대한 내용
     spec: # pod 하나하나에 대한 내용
       containers:
         - name: first-service
-          image: parkmyounghoi/first-service:msa.k8.01  # dockerhub 에 있는 image
+          image: parkmyounghoi/first-service:msa.k8.04  # dockerhub 에 있는 image
           ports:
             - containerPort: 40001 #default one
+          env:
+            - name: SECOND_SERVICE_URL
+              value: http://second-service:40002
+
 ---
 apiVersion: v1
 kind: Service

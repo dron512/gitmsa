@@ -6,6 +6,16 @@ spring:
   application:
     name: first-service
 
+#second-service-url: second-service.default.svc.cluster.local
+second-service-url: 192.168.0.40:40002
+
+logging:
+  level:
+    com.green.firstservice: DEBUG
+  pattern:
+    correlation: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"  # 파일 로그 패턴
+
 #eureka:
 #  client:
 #    register-with-eureka: true
