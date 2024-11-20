@@ -17,7 +17,6 @@ public class UserController {
 
     @PostMapping("join")
     public ResponseEntity<UserResponse> joinUser(@RequestBody UserRequest userRequest) {
-
         UserResponse userResponse = userService.join(userRequest);
         System.out.println(userResponse);
         return ResponseEntity.ok(userResponse);
@@ -27,9 +26,7 @@ public class UserController {
     public ResponseEntity<LoginResponse> getUser(
             @RequestParam(value = "email") String email,
             @RequestParam(value = "password") String password) {
-
         LoginResponse loginResponse = userService.login(email,password);
-
         return ResponseEntity.ok(loginResponse);
     }
 
