@@ -19,7 +19,8 @@ spec: # 어떻게 만들지 대한 내용
             - containerPort: 40001 #default one
           env:
             - name: SECOND_SERVICE_URL
-              value: http://second-service:40002
+#              value: http://second-service:40002
+              value: http://10.103.75.12:40002
 
 ---
 apiVersion: v1
