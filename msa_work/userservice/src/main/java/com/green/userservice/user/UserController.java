@@ -8,8 +8,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("users")
+@RequestMapping("user-service")
 @RequiredArgsConstructor
 public class UserController {
 
@@ -17,19 +19,21 @@ public class UserController {
 
     @PostMapping("join")
     public ResponseEntity<UserResponse> joinUser(@RequestBody UserRequest userRequest) {
-
         UserResponse userResponse = userService.join(userRequest);
         System.out.println(userResponse);
         return ResponseEntity.ok(userResponse);
+    }
+
+    @GetMapping("list")
+    public ResponseEntity<List<UserResponse>> listUser(){
+        return ResponseEntity.ok(userService.list());
     }
 
     @GetMapping("login")
     public ResponseEntity<LoginResponse> getUser(
             @RequestParam(value = "email") String email,
             @RequestParam(value = "password") String password) {
-
         LoginResponse loginResponse = userService.login(email,password);
-
         return ResponseEntity.ok(loginResponse);
     }
 
