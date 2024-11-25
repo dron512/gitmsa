@@ -20,4 +20,11 @@ spec:
                 name: second-service
                 port:
                   number: 40002
+          - path: /user-service
+            pathType: Prefix
+            backend:
+              service:
+                name: user-service
+                port:
+                  number: 40003
   ingressClassName: nginx
