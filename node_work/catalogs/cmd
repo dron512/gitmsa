@@ -1,0 +1,2 @@
+docker build -t parkmyounghoi/catalog-service:k8.0.1 .
+docker push parkmyounghoi/catalog-service:k8.0.1

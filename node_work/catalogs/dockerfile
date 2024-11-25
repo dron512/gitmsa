@@ -1,0 +1,17 @@
+# 1. Node.js 이미지를 사용합니다.
+FROM node:16
+
+# 2. 작업 디렉터리 생성
+WORKDIR /usr/src/app
+
+# 3. 프로젝트 파일을 컨테이너로 복사
+COPY . .
+
+# 4. 필요한 의존성 설치
+RUN npm install
+
+# 5. 애플리케이션 포트를 설정 (예: 3000번 포트)
+EXPOSE 5000
+
+# 6. Node.js 애플리케이션 실행
+CMD ["node", "bin/www"]
