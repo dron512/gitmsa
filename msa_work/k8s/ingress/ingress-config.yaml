@@ -27,4 +27,11 @@ spec:
                 name: user-service
                 port:
                   number: 40003
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: node-service
+                port:
+                  number: 3000
   ingressClassName: nginx
