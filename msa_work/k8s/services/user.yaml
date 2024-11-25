@@ -33,6 +33,8 @@ spec: # 어떻게 만들지 대한 내용
                 configMapKeyRef:
                   name: msa-k8s-configmap
                   key: user-service-port
+            - name: FIRST_SERVICE_URL
+              value: first-service.default.svc.cluster.local
 
 ---
 apiVersion: v1

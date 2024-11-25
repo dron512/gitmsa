@@ -75,3 +75,5 @@ token:
 
 gateway:
   ip: 127.0.0.1
+
+first-service-url: http://localhost:40001
