@@ -14,7 +14,7 @@ spec: # 어떻게 만들지 대한 내용
     spec: # pod 하나하나에 대한 내용
       containers:
         - name: user-service
-          image: parkmyounghoi/user-service:msa.k8.01  # dockerhub 에 있는 image
+          image: parkmyounghoi/user-service:msa.k8.02  # dockerhub 에 있는 image
           ports:
             - containerPort: 40003 #default one
           env:
@@ -34,7 +34,7 @@ spec: # 어떻게 만들지 대한 내용
                   name: msa-k8s-configmap
                   key: user-service-port
             - name: FIRST_SERVICE_URL
-              value: first-service.default.svc.cluster.local
+              value: first-service:40001
 
 ---
 apiVersion: v1
