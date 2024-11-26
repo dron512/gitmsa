@@ -7,33 +7,29 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("users")
+@RequestMapping("order-service")
 @RequiredArgsConstructor
 public class OrderController {
 
-    private final OrderService userService;
+    private final OrderService orderService;
 
-    @PostMapping("create-order-id")
-    public ResponseEntity<OrderResponse> joinUser(@RequestBody OrderRequest orderRequest) {
-        OrderResponse orderResponse = userService.join(orderRequest);
-        System.out.println(orderResponse);
+    // 해당하는 사용자 주문하기
+    @PostMapping("/{userId}/order")
+    public ResponseEntity<OrderResponse> userOrder(@PathVariable String userId,
+                                                   @RequestBody OrderRequest orderRequest) {
+        OrderResponse orderResponse = orderService.order(orderRequest, userId);
         return ResponseEntity.ok(orderResponse);
     }
 
-    @GetMapping("login")
-    public ResponseEntity<OrderResponse> getUser(
-            @RequestParam(value = "email") String email,
-            @RequestParam(value = "password") String password) {
-
-        OrderResponse orderResponse = userService.login(email,password);
-
-        return ResponseEntity.ok(orderResponse);
+    // 해당하는 사용자 주문목록보기
+    @GetMapping("/{userId}/order")
+    public ResponseEntity<List<OrderResponse>> userOrders(@PathVariable String userId) {
+        List<OrderResponse> orderResponses = orderService.list(userId);
+        return ResponseEntity.ok(orderResponses);
     }
 
-    @GetMapping("kakaologin")
-    public ResponseEntity<String> kakaoLogin() {
-        return ResponseEntity.ok(null);
-    }
 
 }

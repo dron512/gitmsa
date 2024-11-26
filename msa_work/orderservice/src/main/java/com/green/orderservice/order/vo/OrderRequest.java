@@ -1,22 +1,20 @@
 package com.green.orderservice.order.vo;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.constraints.*;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 
-import java.util.List;
+import java.util.Date;
 
 @Data
 public class OrderRequest {
 
-    private String userId;
-
-    @NotNull
-    @Min(0)
-    private Long totalPrice;
-
-    @NotNull
-    @Min(1)
-    private Integer quantity;
-    
+    private String productId;
+    private Integer qty;
+    private Integer unitPrice;
+//    private Integer totalPrice;
 }
