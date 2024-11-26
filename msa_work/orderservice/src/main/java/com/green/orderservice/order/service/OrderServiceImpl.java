@@ -22,7 +22,10 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderResponse order(OrderRequest orderRequest, String userId) {
 
-        OrderEntity orderEntity = new ModelMapper().map(orderRequest, OrderEntity.class);
+        OrderEntity orderEntity = new OrderEntity();
+        orderEntity.setProductId(orderRequest.getProductId());
+        orderEntity.setQty(orderRequest.getQty());
+        orderEntity.setUnitPrice(orderRequest.getUnitPrice());
         orderEntity.setOrderId(UUID.randomUUID().toString());
         orderEntity.setUserId(userId);
         orderEntity.setTotalPrice(orderRequest.getUnitPrice() * orderRequest.getQty());

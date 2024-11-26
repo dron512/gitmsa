@@ -16,5 +16,5 @@ public class OrderRequest {
     private String productId;
     private Integer qty;
     private Integer unitPrice;
-    private Integer totalPrice;
+//    private Integer totalPrice;
 }
