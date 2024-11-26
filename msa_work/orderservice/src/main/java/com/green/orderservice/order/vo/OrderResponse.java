@@ -2,12 +2,17 @@ package com.green.orderservice.order.vo;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class OrderResponse {
 
-    private String accessToken;
-    private String refreshToken;
+    private String productId;
+    private Integer qty;
+    private Integer unitPrice;
+    private Integer totalPrice;
     private String userId;
-    private String email;
+    private String orderId;
+    private Date createdAt;
 
 }
