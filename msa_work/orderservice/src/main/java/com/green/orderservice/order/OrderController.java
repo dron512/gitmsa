@@ -8,33 +8,21 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("users")
+@RequestMapping("order-service")
 @RequiredArgsConstructor
 public class OrderController {
 
-    private final OrderService userService;
+    private final OrderService orderService;
 
-    @PostMapping("join")
-    public ResponseEntity<UserResponse> joinUser(@RequestBody OrderRequest orderRequest) {
-
-        UserResponse userResponse = userService.join(orderRequest);
-        System.out.println(userResponse);
-        return ResponseEntity.ok(userResponse);
-    }
-
-    @GetMapping("login")
-    public ResponseEntity<OrderResponse> getUser(
-            @RequestParam(value = "email") String email,
-            @RequestParam(value = "password") String password) {
-
-        OrderResponse orderResponse = userService.login(email,password);
-
+    // 해당하는 사용자 주문하기
+    @PostMapping("/{userId}/order")
+    public ResponseEntity<OrderResponse> userOrder(@PathVariable Long userId,
+                                                   @RequestBody OrderRequest orderRequest) {
+        OrderResponse orderResponse = orderService.order(userId, orderRequest);
         return ResponseEntity.ok(orderResponse);
     }
 
-    @GetMapping("kakaologin")
-    public ResponseEntity<String> kakaoLogin() {
-        return ResponseEntity.ok(null);
-    }
+    // 해당하는 사용자 주문목록보기
+
 
 }
