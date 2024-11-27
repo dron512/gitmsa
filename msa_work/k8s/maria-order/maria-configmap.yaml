@@ -12,7 +12,7 @@ data:
         qty         integer      not null,
         total_price integer      not null,
         unit_price  integer      not null,
-        created_at  datetime(6) not null,
+        created_at  datetime(6)  not null,
         id          bigint       not null auto_increment,
         product_id  varchar(120) not null,
         order_id    varchar(255) not null,
