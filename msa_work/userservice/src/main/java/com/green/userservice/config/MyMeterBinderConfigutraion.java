@@ -29,8 +29,4 @@ public class MyMeterBinderConfigutraion {
         };
     }
 
-    @Bean
-    public TimedAspect timedAspect(MeterRegistry meterRegistry) {
-        return new TimedAspect(meterRegistry);
-    }
 }

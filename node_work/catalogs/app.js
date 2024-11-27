@@ -8,6 +8,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var catalogsRouter = require('./routes/catalogs');
 
+const kafka = require('./kafka-consumer.js').run;
+console.log(kafka)
+
 
 var app = express();
 

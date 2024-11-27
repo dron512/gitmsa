@@ -20,10 +20,6 @@ const Catalog = sequelize.define('Catalog', {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        unitPrice: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
         createdAt: {
             type: DataTypes.DATE,
             allowNull: false,

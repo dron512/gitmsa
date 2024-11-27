@@ -1,10 +1,12 @@
 package com.green.userservice.user.service;
 
 import com.green.userservice.error.UserException;
+import com.green.userservice.feign.OrderClient;
 import com.green.userservice.jwt.JwtUtils;
 import com.green.userservice.user.jpa.UserEntity;
 import com.green.userservice.user.jpa.UserRepository;
 import com.green.userservice.user.vo.LoginResponse;
+import com.green.userservice.user.vo.OrderResponse;
 import com.green.userservice.user.vo.UserRequest;
 import com.green.userservice.user.vo.UserResponse;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +23,7 @@ import java.util.UUID;
 public class UserSerivceImpl implements UserService{
 
     private final UserRepository userRepository; // UserRepository dependency injection
+    private final OrderClient orderClient;
     private final JwtUtils jwtUtils;
 
     @Override
@@ -70,5 +73,17 @@ public class UserSerivceImpl implements UserService{
             userEntity -> userResponses.add(new ModelMapper().map(userEntity,UserResponse.class))
         );
         return userResponses;
+    }
+
+    @Override
+    public UserResponse getUser(String userId){
+        Optional<UserEntity> userEntity = userRepository.findByUserId(userId);
+        if(userEntity.isPresent()){
+            UserResponse userResponse = new ModelMapper().map(userEntity.get(),UserResponse.class);
+            List<OrderResponse> list = orderClient.getOrder(userId);
+            userResponse.setOrders(list);
+            return userResponse;
+        }
+        throw new UserException("User not found");
     }
 }

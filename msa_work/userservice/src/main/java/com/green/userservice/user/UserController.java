@@ -52,7 +52,6 @@ public class UserController {
     @Timed("my.join")
     @PostMapping("join")
     public ResponseEntity<UserResponse> joinUser(@RequestBody UserRequest userRequest) {
-
         UserResponse userResponse = userService.join(userRequest);
         System.out.println(userResponse);
         return ResponseEntity.ok(userResponse);
@@ -61,6 +60,12 @@ public class UserController {
     @GetMapping("list")
     public ResponseEntity<List<UserResponse>> listUser(){
         return ResponseEntity.ok(userService.list());
+    }
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<UserResponse> getUser(@PathVariable(value = "userId") String userId){
+        UserResponse userResponse = userService.getUser(userId);
+        return ResponseEntity.ok(userResponse);
     }
 
     @Timed(value = "user.service.login",longTask = true)

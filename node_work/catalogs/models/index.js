@@ -42,25 +42,22 @@ const findCatalogs = async ()=>{
         await sequelize.sync({force: true});
 
         const newCatalog1 = await Catalog.create({
-            productId: 'T-01',
-            productName: 'AA티셔츠',
+            productId: 'p-001',
+            productName: '향수',
             stock: 100,
-            unitPrice: 15000,
         });
 
         console.log('Catalog created',newCatalog1.toJSON());
         const newCatalog2 = await Catalog.create({
-            productId: 'T-02',
-            productName: 'BB티셔츠',
+            productId: 'p-002',
+            productName: '엄청난제품',
             stock: 100,
-            unitPrice: 15000,
         })
         console.log('Catalog created',newCatalog2.toJSON());
         const newCatalog3 = await Catalog.create({
-            productId: 'T-03',
-            productName: 'CC티셔츠',
+            productId: 'p-003',
+            productName: '정말좋은제품',
             stock: 100,
-            unitPrice: 15000,
         })
         console.log('Catalog created',newCatalog3.toJSON());
 
