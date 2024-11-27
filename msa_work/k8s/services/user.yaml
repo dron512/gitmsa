@@ -22,7 +22,7 @@ spec: # 어떻게 만들지 대한 내용
               valueFrom:
                 configMapKeyRef:
                   name: msa-k8s-configmap
-                  key: spring-datasource-url
+                  key: spring-datasource-url-user
             - name: SPRING_DATASOURCE_USERNAME
               valueFrom:
                 configMapKeyRef:
@@ -35,6 +35,8 @@ spec: # 어떻게 만들지 대한 내용
                   key: user-service-port
             - name: FIRST_SERVICE_URL
               value: first-service:40001
+            - name: ORDER_SERVICE_URL
+              value: order-service:40004
 
 ---
 apiVersion: v1

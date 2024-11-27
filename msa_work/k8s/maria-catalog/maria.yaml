@@ -30,22 +30,22 @@ spec: # 어떻게 만들지 대한 내용
                   name: mariadb-secret
                   key: password
           volumeMounts:
-            - name: mariadb-initdb-config
+            - name: mariadb-initdb-config-catalog
               mountPath: /docker-entrypoint-initdb.d
       volumes:
-        - name: mariadb-initdb-config
+        - name: mariadb-initdb-config-catalog
           configMap:
-            name: mariadb-initdb-config
+            name: mariadb-initdb-config-catalog
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: mariadb
-#  namespace: maria-name
 spec:
   type: LoadBalancer
   ports:
     - port: 3306
       targetPort: 3306
+      nodePort: 30308
   selector:
     app: mariadb
