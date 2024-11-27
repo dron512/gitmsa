@@ -16,7 +16,7 @@ spec: # 어떻게 만들지 대한 내용
         - name: node-service
           image: parkmyounghoi/node-service  # dockerhub 에 있는 image
           ports:
-            - containerPort: 3000 #default one
+            - containerPort: 4999 #default one
 ---
 apiVersion: v1
 kind: Service
@@ -25,7 +25,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 3000
-      targetPort: 3000
+    - port: 4999
+      targetPort: 4999
   selector:
     app: node-service
