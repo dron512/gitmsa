@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
+@FeignClient(name = "order-sevice", url = "${order-service-url}")
 public interface OrderClient {
     // http://localhost:40004/order-service/anclkerjnalskdcfjnqlwecurhnlkAJCNlaksdjfnrc/order
     //[

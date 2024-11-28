@@ -62,12 +62,6 @@ public class UserController {
         return ResponseEntity.ok(userService.list());
     }
 
-    @GetMapping("/{userId}")
-    public ResponseEntity<UserResponse> getUser(@PathVariable(value = "userId") String userId){
-        UserResponse userResponse = userService.getUser(userId);
-        return ResponseEntity.ok(userResponse);
-    }
-
     @Timed(value = "user.service.login",longTask = true)
     @GetMapping("login")
     public ResponseEntity<LoginResponse> getUser(
