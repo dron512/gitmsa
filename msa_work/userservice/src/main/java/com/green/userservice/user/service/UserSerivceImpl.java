@@ -71,4 +71,10 @@ public class UserSerivceImpl implements UserService{
         );
         return userResponses;
     }
+
+    @Override
+    public UserResponse getUser(String userId) {
+        Optional<UserEntity> userEntity = userRepository.findByUserId(userId);
+        return null;
+    }
 }
