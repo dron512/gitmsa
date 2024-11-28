@@ -18,5 +18,8 @@ data:
         order_id    varchar(255) not null,
         user_id     varchar(255) not null,
         primary key (id)
-    ) engine=InnoDB;
+    )
+    COLLATE='utf8mb4_general_ci'
+    engine=InnoDB
+    AUTO_INCREMENT=1;
     alter table if exists orders add constraint order_id_pk unique (order_id);
