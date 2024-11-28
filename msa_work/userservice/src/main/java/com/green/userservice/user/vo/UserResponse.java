@@ -6,7 +6,6 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -21,5 +20,5 @@ public class UserResponse {
 
     private String password;
 
-    private List<OrderResponse> orders;
+    private List<OrderResponse> orderResponses;
 }

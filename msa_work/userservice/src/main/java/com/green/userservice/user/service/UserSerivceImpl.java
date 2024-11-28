@@ -20,11 +20,11 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class UserSerivceImpl implements UserService{
+public class UserSerivceImpl implements UserService {
 
     private final UserRepository userRepository; // UserRepository dependency injection
-    private final OrderClient orderClient;
     private final JwtUtils jwtUtils;
+    private final OrderClient orderClient;
 
     @Override
     public UserResponse join(UserRequest userRequest) {
@@ -40,7 +40,7 @@ public class UserSerivceImpl implements UserService{
         userEntity.setUserId(UUID.randomUUID().toString());
         userEntity = userRepository.save(userEntity); // UserRepository 에서 UserEntity를 저장
 
-        UserResponse userResponse = mapper.map(userEntity,UserResponse.class);
+        UserResponse userResponse = mapper.map(userEntity, UserResponse.class);
 
         return userResponse;
     }
@@ -53,7 +53,7 @@ public class UserSerivceImpl implements UserService{
                 userRepository.findByEmailAndPassword(email, password)
                         .orElseThrow(
                                 () ->
-                                new UserException("Invalid email or password")
+                                        new UserException("Invalid email or password")
                         );
         // 로그인한 유저가 있으면 loginResponse 객체 생성해서 controller에 반환
         LoginResponse loginResponse = new LoginResponse();
@@ -66,24 +66,23 @@ public class UserSerivceImpl implements UserService{
     }
 
     @Override
-    public List<UserResponse> list(){
+    public List<UserResponse> list() {
         List<UserEntity> list = userRepository.findAll();
         List<UserResponse> userResponses = new ArrayList<>();
         list.forEach(
-            userEntity -> userResponses.add(new ModelMapper().map(userEntity,UserResponse.class))
+                userEntity -> userResponses.add(new ModelMapper().map(userEntity, UserResponse.class))
         );
         return userResponses;
     }
 
     @Override
-    public UserResponse getUser(String userId){
-        Optional<UserEntity> userEntity = userRepository.findByUserId(userId);
-        if(userEntity.isPresent()){
-            UserResponse userResponse = new ModelMapper().map(userEntity.get(),UserResponse.class);
-            List<OrderResponse> list = orderClient.getOrder(userId);
-            userResponse.setOrders(list);
-            return userResponse;
-        }
-        throw new UserException("User not found");
+    public UserResponse getUser(String userId) {
+        UserEntity userEntity = userRepository.findByUserId(userId).orElseThrow(
+                () -> new UserException(String.format("User with id %s not found", userId))
+        );
+        UserResponse userResponse = new ModelMapper().map(userEntity, UserResponse.class);
+        List<OrderResponse> orderResponses = orderClient.getOrders(userId);
+        userResponse.setOrderResponses(orderResponses);
+        return userResponse;
     }
 }
