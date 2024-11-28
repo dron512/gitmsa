@@ -7,7 +7,7 @@ spring:
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/msa?serverTimezone=Asia/Seoul
+    url: jdbc:mariadb://192.168.0.40:30306/msa?serverTimezone=Asia/Seoul
     username: root
     password: 1234
   output:
@@ -77,3 +77,4 @@ gateway:
   ip: 127.0.0.1
 
 first-service-url: http://localhost:40001
+order-service-url: http://localhost:40004
