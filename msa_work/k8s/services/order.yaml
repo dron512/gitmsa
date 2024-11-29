@@ -44,6 +44,11 @@ spec: # 어떻게 만들지 대한 내용
               value: first-service:40001
             - name: ORDER_SERVICE_URL
               value: order-service:40004
+            - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+              valueFrom:
+                configMapKeyRef:
+                  name: msa-k8s-configmap
+                  key: spring-kafka-bootstrap-servers
 
 ---
 apiVersion: v1

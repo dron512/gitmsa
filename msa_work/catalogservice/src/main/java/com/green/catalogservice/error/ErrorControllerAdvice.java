@@ -1,4 +1,4 @@
-package com.green.orderservice.error;
+package com.green.catalogservice.error;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
