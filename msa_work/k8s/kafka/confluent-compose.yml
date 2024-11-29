@@ -1,15 +1,14 @@
----
 version: '2'
 services:
   zookeeper:
-    image: confluentinc/cp-zookeeper:6.1.0
+    image: confluentinc/cp-zookeeper  # 최신 Zookeeper 버전
     container_name: zookeeper
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
 
   broker:
-    image: confluentinc/cp-kafka:6.1.0
+    image: confluentinc/cp-kafka  # 최신 Kafka 버전
     container_name: broker
     depends_on:
       - zookeeper
@@ -26,9 +25,11 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
+      # JVM Encoding 설정 추가
+      KAFKA_OPTS: "-Dfile.encoding=UTF-8"
 
   schema-registry:
-    image: confluentinc/cp-schema-registry:6.1.0
+    image: confluentinc/cp-schema-registry  # 최신 Schema Registry 버전
     container_name: schema-registry
     depends_on:
       - zookeeper
@@ -38,9 +39,11 @@ services:
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
       SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: zookeeper:2181
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://broker:29092
+      KAFKA_OPTS: "-Dfile.encoding=UTF-8"
 
   kafka-connect:
-    image: confluentinc/cp-kafka-connect-base:6.1.0
+    image: confluentinc/cp-kafka-connect-base  # 최신 Kafka Connect 버전
     container_name: kafka-connect
     depends_on:
       - broker
@@ -48,6 +51,7 @@ services:
     ports:
       - 8083:8083
     environment:
+
       CONNECT_BOOTSTRAP_SERVERS: "broker:29092"
       CONNECT_REST_ADVERTISED_HOST_NAME: "kafka-connect"
       CONNECT_REST_PORT: 8083
@@ -65,25 +69,19 @@ services:
       CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: "1"
       CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: "1"
       CONNECT_PLUGIN_PATH: '/usr/share/java,/usr/share/confluent-hub-components/,/connectors/'
+      KAFKA_OPTS: "-Dfile.encoding=UTF-8"
     volumes:
       - $PWD/connectors:/connectors
-    # In the command section, $ are replaced with $$ to avoid the error 'Invalid interpolation format for "command" option'
     command:
       - bash
       - -c
       - |
         echo "Installing connector plugins"
         confluent-hub install --no-prompt mdrogalis/voluble:0.3.1
-        confluent-hub install --no-prompt confluentinc/kafka-connect-jdbc:5.5.3
-        # Sticking to 5.5.3 at the moment because of issue with 10.0.1 https://rmoff.net/2021/03/11/kafka-connect-sqlsyntaxerrorexception-blob/text-column-used-in-key-specification-without-a-key-length/
-        #
+        confluent-hub install --no-prompt confluentinc/kafka-connect-jdbc:10.0.1  # 최신 JDBC 커넥터 버전
         echo "Downloading JDBC driver"
         cd /usr/share/confluent-hub-components/confluentinc-kafka-connect-jdbc
-        # Find the latest version of this https://dev.mysql.com/downloads/connector/j/
-        curl https://cdn.mysql.com/Downloads/Connector-J/mysql-connector-java-8.0.23.tar.gz | tar xz 
-        #
+        curl https://cdn.mysql.com/Downloads/Connector-J/mysql-connector-java-8.0.23.tar.gz | tar xz
         echo "Launching Kafka Connect worker"
         /etc/confluent/docker/run & 
-        #
         sleep infinity
-

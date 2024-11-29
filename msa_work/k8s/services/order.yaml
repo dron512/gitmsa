@@ -16,7 +16,6 @@ spec: # 어떻게 만들지 대한 내용
         - name: order-service
           image: parkmyounghoi/order-service:msa.k8.05  # dockerhub 에 있는 image
 #          imagePullPolicy: Always # 매번 이미지를 가져오도록 설정
-
           ports:
             - containerPort: 40004 #default one
           env:
