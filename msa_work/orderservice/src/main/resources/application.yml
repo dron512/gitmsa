@@ -22,6 +22,10 @@ spring:
     show-sql: true
     open-in-view: false
 
+  kafka:
+    bootstrap-servers: localhost:9092
+    topic-name: ex01
+
 logging:
   level:
     org.springframework.web: DEBUG    # HTTP 요청 관련 로그 (Actuator HTTP 엔드포인트) 이거 해야 다 나옴...
