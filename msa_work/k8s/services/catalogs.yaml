@@ -14,7 +14,7 @@ spec: # 어떻게 만들지 대한 내용
     spec: # pod 하나하나에 대한 내용
       containers:
         - name: ucatalogservice
-          image: parkmyounghoi/catalog-service:msa.k8.0.3  # dockerhub 에 있는 image
+          image: parkmyounghoi/catalog-service:msa.k8.04  # dockerhub 에 있는 image
 #          imagePullPolicy: Always # 매번 이미지를 가져오도록 설정
           ports:
             - containerPort: 40005 #default one

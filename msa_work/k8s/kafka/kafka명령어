@@ -11,6 +11,7 @@ kafka-topics --list --bootstrap-server 192.168.0.29:9092
 
 /d/kafka_2.13-3.8.0/bin/windows
 ./kafka-topics.bat --list --bootstrap-server 192.168.0.40:9092
+kafka-topics --list --bootstrap-server localhost:9092
 
 kafka-topics --create --topic order-topic --bootstrap-server 192.168.0.29:9092
 kafka-topics --create --topic topic --bootstrap-server kafka.hellomh.site:9092
@@ -61,6 +62,8 @@ kafka-console-consumer --topic topic1 --bootstrap-server 192.168.0.29:9092 --fro
 # 프로듀서 실행하기
 kafka-console-producer --topic topic1 --bootstrap-server 192.168.0.29:9092
 
+# consumer 그룹 삭제하기
+kafka-consumer-groups.bat --bootstrap-server localhost:9092 --delete --group <your-consumer-group>
 
 # jdbc 커넥터 설치
 # confluent-hub install confluentinc/kafka-connect-jdbc:latest
