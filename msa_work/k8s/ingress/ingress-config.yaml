@@ -34,11 +34,11 @@ spec:
                 name: order-service
                 port:
                   number: 40004
-          - path: /
-            pathType: ImplementationSpecific
+          - path: /catalog-service
+            pathType: Prefix
             backend:
               service:
-                name: node-service
+                name: catalog-service
                 port:
-                  number: 3000
+                  number: 40005
   ingressClassName: nginx
