@@ -25,8 +25,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public OrderResponse order(OrderRequest orderRequest, String userId) {
-        String myTopic = environment.getProperty("spring.kafka.topic-name");
-
+        // db에 저장
         OrderEntity orderEntity = new OrderEntity();
         orderEntity.setProductId(orderRequest.getProductId());
         orderEntity.setQty(orderRequest.getQty());
@@ -36,6 +35,8 @@ public class OrderServiceImpl implements OrderService {
         orderEntity.setTotalPrice(orderRequest.getUnitPrice() * orderRequest.getQty());
         OrderEntity dbOrderEntity = orderRepository.save(orderEntity);
 
+        // kafka 메시지 저장
+        String myTopic = environment.getProperty("spring.kafka.topic-name");
         kafkaProducer.sendMesaage(myTopic,orderEntity);
 
         return new ModelMapper().map(dbOrderEntity, OrderResponse.class);
