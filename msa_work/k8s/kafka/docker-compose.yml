@@ -57,6 +57,22 @@ services:
       SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://localhost:9092,PLAINTEXT_HOST://192.168.65.3:9092
       KAFKA_OPTS: "-Dfile.encoding=UTF-8"
 
+  kafdrop:
+    image: obsidiandynamics/kafdrop
+    container_name: kafdrop
+    depends_on:
+      - zookeeper
+      - broker
+      - kafka-connect
+      - schema-registry
+    ports:
+      - 9000:9000
+    environment:
+      KAFKA_BROKERCONNECT: broker:29092
+      JVM_OPTS: "-Xms32M -Xmx64M"
+      SERVER_SERVLET_CONTEXTPATH: "/"
+      KAFKA_OPTS: "-Dfile.encoding=UTF-8"
+
   kafka-connect:
     image: confluentinc/cp-kafka-connect-base  # 최신 Kafka Connect 버전
     container_name: kafka-connect

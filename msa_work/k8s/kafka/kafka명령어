@@ -65,6 +65,7 @@ kafka-console-producer --topic topic1 --bootstrap-server 192.168.0.29:9092
 # consumer 그룹 삭제하기
 kafka-consumer-groups.bat --bootstrap-server localhost:9092 --delete --group <your-consumer-group>
 
+<<<<<<< HEAD
 # jdbc 커넥터 설치
 # confluent-hub install confluentinc/kafka-connect-jdbc:latest
 
@@ -84,3 +85,8 @@ docker cp kafka-connect-jdbc-10.8.0.jar kafka-connect:/usr/share/java/kafka/
 # kafka-console-consumer.sh --bootstrap-server localhost:9092
 
 # INSERT INTO `msa`.`user_entity` (`idx`, `email`, `name`, `password`, `user_id`) VALUES (4, 'qwer', 'qwer', 'qwer', 'qwer');
+=======
+docker cp mariadb-java-client-3.5.1.jar kafka-connect:/usr/share/java/kafka/
+docker cp mysql-connector-j-8.3.0.jar kafka-connect:/usr/share/java/kafka/
+docker cp kafka-connect-jdbc-10.8.0.jar kafka-connect:/usr/share/java/kafka/
+>>>>>>> main
