@@ -2,7 +2,8 @@ exports.isLoggedIn = (req, res, next) => {
     if (req.isAuthenticated()) {
         return next();
     } else {
-        res.status(401).send('로그인 필요');
+        return res.redirect('/');
+        // res.status(401).send('로그인 필요');
     }
 };
 

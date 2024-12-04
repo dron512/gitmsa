@@ -5,7 +5,7 @@ const User = require('../models/user');
 exports.join = async (req, res, next) => {
     const {email, nick, password} = req.body;
     try {
-        const exUser = User.findOne({where: {email}});
+        const exUser = await User.findOne({where: {email}});
         if (exUser) {
             return res.redirect('/join?error=exist');
         }
@@ -24,13 +24,15 @@ exports.join = async (req, res, next) => {
 }
 
 exports.login = (req, res, next) => {
+    console.log(req.body);
+
     passport.authenticate('local', (err, user, info) => {
         if (err) {
             console.error(err);
             return next(err);
         }
         if (!user) {
-            return res.redirect(`/error=${info.message}`);
+            return res.redirect(`/?error=${info.message}`);
         }
         return req.login(user, (loginError) => {
             if (loginError) {
@@ -38,8 +40,8 @@ exports.login = (req, res, next) => {
                 return next(err);
             }
             return res.redirect('/');
-        })(req, res, next);
-    })
+        })
+    })(req, res, next);
 }
 
 exports.logout = (req,res) => {

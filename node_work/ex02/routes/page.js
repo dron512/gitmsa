@@ -1,6 +1,8 @@
 const express = require('express');
 const {renderProfile, renderJoin, renderMain} = require('../controllers/page');
 const {isLoggedIn, isNotLoggedIn} = require("../middlewares");
+const passport = require('passport');
+const req = require("express/lib/request");
 
 const router = express.Router();
 

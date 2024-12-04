@@ -9,7 +9,7 @@ class User extends Sequelize.Model {
                 unique: true,
                 allowNull: true,
             },
-            nink: {
+            nick: {
                 type: Sequelize.STRING,
                 allowNull: false,
             },

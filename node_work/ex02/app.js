@@ -7,6 +7,12 @@ const nunjucks = require('nunjucks');
 const dotenv = require('dotenv');
 const passport = require('passport');
 
+const test = require('./middlewares/test');
+test.bb=10;
+test.aa();
+test.aa(()=>{console.log('함수 바꾸기')});
+console.log(test+"test");
+
 dotenv.config();
 const pageRouter = require('./routes/page');
 const authRouter = require('./routes/auth');
