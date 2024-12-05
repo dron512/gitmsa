@@ -29,7 +29,7 @@ const app = express();
 passportConfig();
 
 app.set('port', process.env.PORT || 8001);
-app.set('view engine', 'html');
+app.set('views engine', 'html');
 nunjucks.configure('views', {
     express: app,
     watch: true,

@@ -14,9 +14,9 @@ console.log(kafka)
 
 var app = express();
 
-// view engine setup
+// views engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set('views engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());

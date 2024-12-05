@@ -12,7 +12,7 @@ WORKDIR /app
 
 COPY --from=builder /build/build/libs/*-SNAPSHOT.jar ./app.jar
 
-# 외부 포트 10000 열기...
+# 외부 포트 10000 열기...선언
 EXPOSE 8080
 
 # root 대신 nobody 권한으로 실행
