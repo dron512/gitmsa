@@ -1,15 +1,16 @@
 const express = require('express');
+const { renderMain, renderRoom, createRoom, enterRoom, removeRoom } = require('../controllers');
 
 const router = express.Router();
 
-router.get('/', async (req, res,next) => {
-    console.log("일로오나");
-    try{
-        res.render('index');
-    }catch(err){
-        console.error(err);
-        next(err);
-    }
-});
+router.get('/', renderMain);
+
+router.get('/room', renderRoom);
+
+// router.post('/room', createRoom);
+//
+// router.get('/room/:id', enterRoom);
+//
+// router.delete('/room/:id', removeRoom);
 
 module.exports = router;

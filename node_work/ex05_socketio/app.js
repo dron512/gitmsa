@@ -10,6 +10,7 @@ dotenv.config();
 
 const webSocket = require('./socket');
 const indexRouter = require('./routes');
+const connect = require('./schemas');
 
 const app = express();
 app.set('port', process.env.PORT || 8005);
@@ -18,6 +19,8 @@ nunjucks.configure('views', {
     express: app,
     watch: true
 });
+
+connect();
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -31,6 +34,15 @@ app.use(session({
     secret: process.env.COOKIE_SECRET,
     cookie: {httpOnly: true, secure: false},
 }))
+
+app.use((req, res, next) => {
+    if (!req.session.color) {
+        const colorhash = new ColorHash();
+        req.session.color = colorhash.hex(req.ssesionID);
+        console.log(req.session.color, req.sessionID);
+    }
+    next();
+})
 
 app.use('/', indexRouter);
 app.use((req, res, next) => {
@@ -52,4 +64,4 @@ const server = app.listen(process.env.PORT || 8005, () => {
 
 // console.log(server);
 
-webSocket(server);
+webSocket(server, app);
