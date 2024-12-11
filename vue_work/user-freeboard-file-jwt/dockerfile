@@ -1,5 +1,5 @@
 # 이미지 node 16버전 
-FROM node:16
+FROM node:18
 
 WORKDIR /app
 
@@ -9,7 +9,8 @@ RUN npm install
 
 COPY . .
 
-# port 5173 다른 PC 에서 접속 할 수 있도록 해라
+# port 열기로 선언..
+# docker run -p 5173:5173
 EXPOSE 5173
 
 # 마지막 명령어는 npm run dev 실행해라...
