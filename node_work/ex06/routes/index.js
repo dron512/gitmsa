@@ -17,7 +17,6 @@ router.get('/', async (req, res, next) => {
 })
 
 router.post('/', async (req, res, next) => {
-    console.log("room으로 왔음");
     try {
         const newRoom = await Room.create({
             title: req.body.title,
@@ -41,14 +40,15 @@ router.post('/', async (req, res, next) => {
 })
 
 router.get('/chat/:id', async (req, res, next) => {
+    const room = await Room.findOne({_id: req.params.id});
+    const chats = await Chat.find({room: room._id}).sort('createdAt');
     const {rooms} = req.app.get('io').of('/chat').adapter;
-    console.log(rooms);
-    console.log(rooms, rooms.get(req.params.id), rooms.get(req.params.id));
     res.render('chat',
         {
-            room: req.params.id,
+            room,
+            chats,
             password: req.query.password,
-            user: req.session.user
+            user: req.session.color
         });
 })
 
