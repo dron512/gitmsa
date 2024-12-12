@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>INDEX.HTML</h1>
+<div>
+    <h2>채팅방리스트</h2>
+    <fieldset>
+        <legend>채팅방 생성</legend>
+        <form action="" method="post">
+            <div>
+                <input type="text" name="title" placeholder="방 제목">
+            </div>
+            <div>
+                <input type="number" name="max" placeholder="수용 인원(최소 2명)" min="2" value="10">
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="비밀번호(없으면 공개방)">
+            </div>
+            <div>
+                <button type="button" id="create">생성</button>
+            </div>
+        </form>
+    </fieldset>
+    <ul id="room-list">
+        {% for room in rooms %}
+        <li>
+            방 제목 {{room.title}}
+            {{'비밀방' if room.password else '공개방'}}
+            <button
+                data-password="{{room.password}}"
+                data-id="{{room._id}}"
+                class="join-btn"
+            >입장
+            </button>
+            <button data-id="{{room._id}}" class="delete-btn">삭제</button>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"
+        integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    const socket = io.connect('http://localhost:8005/room', { // 네임스페이스
+        path: '/socket.io',
+    });
+    socket.on('newRoom', function (room) {
+        console.log("서버에서 newROOM 들어왔음");
+        // console.log(room);
+        const roomList = document.querySelector('#room-list');
+        const li = document.createElement('li');
+        const sec = room.password && ' 비밀방';
+        li.innerHTML = '방제목' + room.title + sec +
+            ' <button\n' +
+            '    data-password="'+room.password+'"' +
+            '    data-id="'+room._id+'"' +
+            '    class="join-btn"\n' +
+            '    onclick="moveChat(this)"' +
+            '>입장\n' +
+            '</button>'+
+            '<button data-id="{{room._id}}" class="delete-btn">삭제</button>';
+        roomList.appendChild(li);
+    });
+
+    socket.on('removeRoom', function (room) {
+        console.log('removeRoom');
+    });
+
+    document.querySelector('#create')
+        .addEventListener('click', async ()=> {
+            const res = await axios.post('http://localhost:8005/', {
+                title: document.querySelector('[name=title]').value,
+                max: document.querySelector('[name=max]').value,
+                password: document.querySelector('[name=password]').value,
+            });
+        });
+
+    document.querySelectorAll('.join-btn').forEach(
+        (btn) => btn.addEventListener('click', () => {
+            console.log(btn.dataset.password);
+            console.log(btn.dataset.id);
+            location.href = 'http://localhost:8005/chat/'+btn.dataset.id+"?password=" + btn.dataset.password;
+        })
+    );
+
+    const moveChat = (btn)=>{
+        console.log(btn);
+        console.log(btn.dataset.password);
+        console.log(btn.dataset.id);
+        location.href = 'http://localhost:8005/chat/'+btn.dataset.id+"?password=" + btn.dataset.password;
+    }
+</script>
+<script>
+    window.onload = () => {
+        if (new URL(location.href).searchParams.get('error')) {
+            alert(new URL(location.href).searchParams.get('error'));
+        }
+    };
+</script>
+{% endblock %}

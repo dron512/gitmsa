@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>CHAT.HTML</h1>
+<div id="chat-div" style="border: 1px solid black; height: 400px">
+    <div class="left">왼쪽글자</div>
+    <div class="right">오른쪽글자</div>
+    <div class="left">왼쪽글자</div>
+</div>
+<label for="gif">GIF 올리기</label>
+<div style="border: 1px solid black; margin:1rem; padding: 1rem;">
+    <h1>파일전송</h1>
+    <input type="file" id="gif" name="gif" accept="image/gif">
+    <button type="button" id="file-send">파일전송</button>
+</div>
+<div style="border: 1px solid black; margin:1rem; padding: 1rem;">
+    <h1>메시지전송</h1>
+    <input type="text" id="chat" name="chat">
+    <button type="button" id="msg-send">메시지전송</button>
+    {{user}}
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"
+        integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    const socket = io.connect('http://localhost:8005/chat', { // 네임스페이스
+        path: '/socket.io',
+    });
+    // console.log(new URL(location).pathname.split('/').at(-1));
+    socket.emit('join',new URL(location).pathname.split('/').at(-1));
+    socket.on('join', (data) => {
+        console.log(data);
+        if(data.user==='system'){
+            const div = document.createElement('div');
+            div.classList.add('center');
+            div.innerHTML = `<h2>${data.chat}</h2>`;
+            document.getElementById('chat-div').appendChild(div);
+        }
+    });
+    socket.on('chat', function (data) {
+        console.log(data.user);
+        console.log(`{{user}}`);
+        const div = document.createElement('div');
+        if(data.user==='{{user}}'){
+            console.log('본인');
+        }
+    });
+    document.getElementById('file-send').onclick =  async() =>{
+        const formData = new FormData();
+        const files = document.querySelector('[name=file]').files;
+        for (let i = 0; i < files.length; i++) {
+            formData.append('files', files[i]); // `files`는 서버에서 받을 필드 이름
+        }
+        try {
+            const res = await axios.post('http://localhost:8005/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data', // 필수
+                },
+            });
+            console.log(res.data); // 응답 출력
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    document.getElementById('msg-send').addEventListener('click', async () => {
+        const formData = new FormData();
+        formData.append('msg', document.getElementById('chat').value);
+        try{
+            const res = await axios.post('/chat/{{room}}', formData,{
+                headers: {'Content-Type': 'multipart/form-data'},
+            });
+        }catch (error) {
+            console.error(error);
+        }
+    });
+</script>
+{% endblock %}
+

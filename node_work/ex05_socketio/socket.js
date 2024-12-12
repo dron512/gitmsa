@@ -2,7 +2,7 @@ const SocketIO = require('socket.io');
 const {removeRoom} = require("./controllers");
 
 module.exports = (server, app, sessionMiddleware) => {
-    const io = SocketIO(server, {path: '/socket.io'});
+    const io = SocketIO(server, {path: '/socket.js.io'});
 
     app.set('io', io);
 
@@ -29,7 +29,7 @@ module.exports = (server, app, sessionMiddleware) => {
             socket.join(data);
             socket.to(data).emit('join', {
                 user: 'system',
-                // chat: `${socket.request.session.color}님이 입장하셨습니다.`
+                // chat: `${socket.js.request.session.color}님이 입장하셨습니다.`
                 chat: "test입니다"
             });
         });
