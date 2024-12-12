@@ -5,6 +5,8 @@ const Chat = require('../schemas/chat');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const { promisify } = require('util');
+const sizeOf = promisify(require('image-size'));
 
 router.get('/', async (req, res, next) => {
     try {
@@ -87,10 +89,20 @@ router.post('/chat/:id', upload.none(), async (req, res, next) => {
     }
 })
 
-router.post('/chat', upload.single('gif'), async (req, res, next) => {
+router.post('/upload/:id', upload.single('gif'), async (req, res, next) => {
+    const filePath = req.file.path; // 업로드된 파일 경로
+    const dimensions = await sizeOf(filePath);
+    console.log('Width:', dimensions.width);
+    console.log('Height:', dimensions.height);
     try {
-        console.log(req.body.msg);
-        res.json({success: true, msg: req.body.msg});
+        const chat = await Chat.create({
+            room: req.params.id,
+            user: req.session.color,
+            gif: req.file.filename,
+            gif_height: dimensions.height,
+        });
+        req.app.get('io').of('/chat').to(req.params.id).emit('chat', chat);
+        res.json({success: true, msg: req.body.file});
     } catch (err) {
         console.log(err);
     }
