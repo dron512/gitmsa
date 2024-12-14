@@ -1,0 +1,92 @@
+# docker compose up 명령어
+docker compose -f confluent-compose.yml up -d
+
+# 토픽 생성하기
+kafka-topics --create --topic topic1 --bootstrap-server localhost:9092
+kafka-topics --create --topic topic1 --bootstrap-server 192.168.0.29:9092
+
+./kafka-topics.bat --create --topic orders --bootstrap-server 192.168.0.40:9092
+
+kafka-topics --list --bootstrap-server 192.168.0.29:9092
+
+/d/kafka_2.13-3.8.0/bin/windows
+./kafka-topics.bat --list --bootstrap-server 192.168.0.40:9092
+kafka-topics --list --bootstrap-server localhost:9092
+
+kafka-topics --create --topic order-topic --bootstrap-server 192.168.0.29:9092
+kafka-topics --create --topic topic --bootstrap-server kafka.hellomh.site:9092
+
+# 토픽 삭제하기
+kafka-topics --delete --topic topic1 --bootstrap-server 192.168.0.29:9092
+kafka-topics --delete --topic order-topic --bootstrap-server 192.168.0.29:9092
+./kafka-topics.bat --delete --topic jdbc-orders --bootstrap-server localhost:9092
+
+
+# 컨슈머 실행하기
+kafka-console-consumer --topic topic1 --bootstrap-server localhost:9092
+./kafka-console-consumer.bat --topic orders --bootstrap-server localhost:9092
+./kafka-console-consumer.bat --topic orders --bootstrap-server localhost:9092 --from-beginning
+
+./kafka-console-consumer.bat --topic mariadb-orders --bootstrap-server localhost:9092 --from-beginning --property schema.registry.url=http://schema-registry:8081
+
+./kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic _connect-offsets --formatter "org.apache.kafka.connect.json.JsonConverter" --from-beginning
+./kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic _connect-offsets --formatter "org.apache.kafka.connect.json.JsonConverter" --from-beginning
+./kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic _connect-offsets \
+--formatter org.apache.kafka.tools.consumer.DefaultMessageFormatter  \
+--property print.key=true \
+--property print.value=true \
+--property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer \
+--property value.deserializer=org.apache.kafka.common.serialization.StringDeserializer \
+--from-beginning
+
+# 오프셋 삭제 명령어
+./kafka-delete-records.bat --bootstrap-server 192.168.0.40:9092 --offset-json-file offsets-to-delete.json
+
+./kafka-consumer-groups --bootstrap-server 192.168.0.40:9092 --reset-offsets --to-earliest --execute
+
+./kafka-consumer-groups.bat --bootstrap-server 192.168.0.40:9092 --group console-consumer-50468  --all-topics --reset-offsets --to-earliest --execute
+./kafka-consumer-groups.bat --bootstrap-server 192.168.0.40:9092 --group console-consumer-50468  --topic jdbc-orders --reset-offsets --to-earliest --execute
+
+./kafka-consumer-groups.bat --bootstrap-server 192.168.0.40:9092 --group console-consumer-50468 --describe
+
+./kafka-consumer-groups --bootstrap-server 192.168.0.40:9092 --group console-consumer-50468 --reset-offsets --to-earliest --execute
+
+
+
+kafka-console-consumer --topic topic1 --bootstrap-server 192.168.0.29:9092
+
+kafka-console-consumer --topic order-topic --bootstrap-server 192.168.0.29:9092 --from-beginning
+
+kafka-console-consumer --topic topic1 --bootstrap-server 192.168.0.29:9092 --from-beginning
+
+# 프로듀서 실행하기
+kafka-console-producer --topic topic1 --bootstrap-server 192.168.0.29:9092
+
+# consumer 그룹 삭제하기
+kafka-consumer-groups.bat --bootstrap-server localhost:9092 --delete --group <your-consumer-group>
+
+<<<<<<< HEAD
+# jdbc 커넥터 설치
+# confluent-hub install confluentinc/kafka-connect-jdbc:latest
+
+# 복사 명령어
+docker cp mariadb-java-client-3.5.1.jar kafka-connect:/usr/share/confluent-hub-components/
+docker cp mysql-connector-j-8.3.0.jar kafka-connect:/usr/share/confluent-hub-components/
+docker cp kafka-connect-jdbc-10.8.0.jar kafka-connect:/usr/share/confluent-hub-components/
+
+docker cp mariadb-java-client-3.5.1.jar kafka-connect:/usr/share/java/kafka/
+docker cp mysql-connector-j-8.3.0.jar kafka-connect:/usr/share/java/kafka/
+docker cp kafka-connect-jdbc-10.8.0.jar kafka-connect:/usr/share/java/kafka/
+
+# ADD mariadb-java-client-<version>.jar /usr/share/java/kafka-connect-jdbc/
+
+# 컨슈머 실행
+# kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic jdbc-user_entity --from-beginning
+# kafka-console-consumer.sh --bootstrap-server localhost:9092
+
+# INSERT INTO `msa`.`user_entity` (`idx`, `email`, `name`, `password`, `user_id`) VALUES (4, 'qwer', 'qwer', 'qwer', 'qwer');
+=======
+docker cp mariadb-java-client-3.5.1.jar kafka-connect:/usr/share/java/kafka/
+docker cp mysql-connector-j-8.3.0.jar kafka-connect:/usr/share/java/kafka/
+docker cp kafka-connect-jdbc-10.8.0.jar kafka-connect:/usr/share/java/kafka/
+>>>>>>> main

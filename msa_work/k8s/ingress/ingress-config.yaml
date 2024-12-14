@@ -1,0 +1,45 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pmh-ingress
+spec:
+  rules:
+    - host: localhost
+      http:
+        paths:
+          - path: /first-service
+            pathType: Prefix
+            backend:
+              service:
+                name: first-service
+                port:
+                  number: 40001
+          - path: /second-service
+            pathType: Prefix
+            backend:
+              service:
+                name: second-service
+                port:
+                  number: 40002
+          - path: /user-service
+            pathType: Prefix
+            backend:
+              service:
+                name: user-service
+                port:
+                  number: 40003
+          - path: /order-service
+            pathType: Prefix
+            backend:
+              service:
+                name: order-service
+                port:
+                  number: 40004
+          - path: /catalog-service
+            pathType: Prefix
+            backend:
+              service:
+                name: catalog-service
+                port:
+                  number: 40005
+  ingressClassName: nginx

@@ -9,6 +9,9 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
 
+import { Provider } from 'react-redux';
+import store from '../redux/store';
+
 import { useColorScheme } from "@/hooks/useColorScheme";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -17,7 +20,13 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+    JUA: require("../assets/fonts/BMJUA_ttf.ttf"),
+    NotoSansBlack: require("../assets/fonts/NotoSansKR-Black.ttf"),
+    NotoSansBold: require("../assets/fonts/NotoSansKR-Bold.ttf"),
+    NotoSansLight: require("../assets/fonts/NotoSansKR-Light.ttf"),
+    NotoSansMedium: require("../assets/fonts/NotoSansKR-Medium.ttf"),
+    NotoSansRegular: require("../assets/fonts/NotoSansKR-Regular.ttf"),
+    NotoSansThin: require("../assets/fonts/NotoSansKR-Thin.ttf"),
   });
 
   useEffect(() => {
@@ -31,15 +40,15 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      {/* 상태 표시 없애기 screenOptions={{ headerShown: false }} */}
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="kakao" options={{ headerShown: false }} />
-        <Stack.Screen name="kakaoLogin" options={{ headerShown: false }} />
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="login" options={{ headerShown: false }} />
+          <Stack.Screen name="+not-found" />
+        </Stack>
+      </ThemeProvider>
+    </Provider>
   );
 }

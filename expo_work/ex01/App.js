@@ -12,10 +12,6 @@ export default function App() {
     console.log("test22");
   };
 
-  const doKakao = () => {
-    Linking.openURL("https://kauth.kakao.com/oauth/authorize?client_id=477ea0788a39a67ac40fa6b1bc49e7d8&redirect_uri=http://back.hellomh.site/oauth/kakao/callback&response_type=code")
-  };
-
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Open up App.js to start working on your app!</Text>

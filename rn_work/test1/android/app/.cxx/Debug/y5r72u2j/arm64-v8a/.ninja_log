@@ -1,0 +1,5 @@
+# ninja log v5
+2	24	0	D:/gitmsa/rn_work/test1/android/app/.cxx/Debug/y5r72u2j/arm64-v8a/CMakeFiles/cmake.verify_globs	6ded26d4b6df075
+3	5268	7525619139183682	CMakeFiles/appmodules.dir/D_/gitmsa/rn_work/test1/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	20a1ea5a7ecc895
+1	5639	7525619142878146	CMakeFiles/appmodules.dir/OnLoad.cpp.o	9352beaed7420031
+5639	5710	7525619143638326	D:/gitmsa/rn_work/test1/android/app/build/intermediates/cxx/Debug/y5r72u2j/obj/arm64-v8a/libappmodules.so	e72ccd8f1feedece
