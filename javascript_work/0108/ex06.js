@@ -13,7 +13,7 @@ console.log( typeof {} );
 console.log( typeof [] );
 console.log( typeof( ()=>{} ) );
 
-aaa = { a:10,b:20, id:'aaa@naver.com', pw:"abcd"}
+const aaa = { a:10,b:20, id:'aaa@naver.com', pw:"abcd"}
 
 console.log(aaa);
 delete aaa.a
@@ -24,3 +24,6 @@ console.log(aaa);
 // function aa(){
 //   return {a:10,b:20};
 // }
+
+console.log(aaa.b);
+console.log(aaa["id"]);
