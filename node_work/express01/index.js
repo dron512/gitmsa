@@ -22,7 +22,6 @@ app.post("/save", (req, res) => {
 
 app.post("/login", (req, res) => {
   db.select();
-
   console.log(req.body);
   res.json({ status: 200 });
 });
